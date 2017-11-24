@@ -7,9 +7,10 @@ exports.add = function (app) {
   utils = require(path + 'src/utils');
 
 	app.use( function (req, res, next) {
+    console.log('TDELLA URI == ' + req.url);
 
     res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-with, Content-Type, Accept');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 
 		next();
 

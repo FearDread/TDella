@@ -9,7 +9,7 @@
 	font-style: normal;
 }
 
-[class^="pe-7s-"], [class*=" pe-7s-"] {
+[class^="pe-7s-"], [class*=" pe-7s-"], [class="pe-7s-"]:before {
 	display: inline-block;
 	font-family: 'Pe-icon-7-stroke';
 	speak: none;
