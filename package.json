@@ -4,6 +4,11 @@
   "private": "true",
   "description": "",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "fs": "0.0.1-security",
+    "less": "^2.7.3",
+    "path": "^0.12.7"
   },
   "config": {
     "name": "TDella",
