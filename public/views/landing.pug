@@ -1,380 +1,251 @@
-html(lang='en')
-  head
-    meta(charset='utf-8')
-    link(rel='apple-touch-icon', sizes='76x76', href='../assets/img/apple-icon.png')
-    link(rel='icon', type='image/png', href='../assets/img/favicon.png')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    title Landing Page - Now UI Kit Pro by Creative Tim | Premium Bootstrap 4 UI Kit
-    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no', name='viewport')
-    // Fonts and icons
-    link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700,200', rel='stylesheet')
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css')
-    // CSS Files
-    link(href='/assets/css/bootstrap.min.css', rel='stylesheet')
-    link(href='/assets/css/now-ui-kit.css?v=1.1.0', rel='stylesheet')
-    // CSS Just for demo purpose, don't include it in your project
-    link(href='/assets/css/demo.css', rel='stylesheet')
-    // Canonical SEO
-    link(rel='canonical', href='https://www.creative-tim.com/product/now-ui-kit-pro')
-    // Social tags
-    meta(name='keywords', content='bootstrap 4, bootstrap 4 uit kit, bootstrap 4 kit, now ui, now ui kit pro, creative tim, html kit, html css template, web template, bootstrap, bootstrap 4, css3 template, frontend, responsive bootstrap template, bootstrap ui kit, responsive ui kit')
-    meta(name='description', content='Start your development with a beautiful Bootstrap 4 UI kit.')
-    // Schema.org markup for Google+
-    meta(itemprop='name', content='Now UI Kit Pro by Creative Tim')
-    meta(itemprop='description', content='Start your development with a beautiful Bootstrap 4 UI kit.')
-    meta(itemprop='image', content='http://s3.amazonaws.com/creativetim_bucket/products/62/original/opt_nukp_thumbnail.jpg')
-    // Twitter Card data
-    meta(name='twitter:card', content='product')
-    meta(name='twitter:site', content='@creativetim')
-    meta(name='twitter:title', content='Now UI Kit Pro by Creative Tim')
-    meta(name='twitter:description', content='Start your development with a beautiful Bootstrap 4 UI kit.')
-    meta(name='twitter:creator', content='@creativetim')
-    meta(name='twitter:image', content='http://s3.amazonaws.com/creativetim_bucket/products/62/original/opt_nukp_thumbnail.jpg')
-    meta(name='twitter:data1', content='Now UI Kit Pro by Creative Tim')
-    meta(name='twitter:label1', content='Product Type')
-    meta(name='twitter:data2', content='$69')
-    meta(name='twitter:label2', content='Price')
-    // Open Graph data
-    meta(property='fb:app_id', content='655968634437471')
-    meta(property='og:title', content='Now UI Kit Pro by Creative Tim')
-    meta(property='og:type', content='article')
-    meta(property='og:url', content='http://demos.creative-tim.com/now-ui-kit-pro/presentation.html')
-    meta(property='og:image', content='http://s3.amazonaws.com/creativetim_bucket/products/62/original/opt_nukp_thumbnail.jpg')
-    meta(property='og:description', content='Start your development with a beautiful Bootstrap 4 UI kit.')
-    meta(property='og:site_name', content='Creative Tim')
-  body.landing-page
-    div.header-3
-      nav.navbar.navbar-expand-lg.bg-white.navbar-absolute.navbar-transparent
-        .container
-          .dropdown.button-dropdown
-            a#navbarDropdown.dropdown-toggle(href='#pablo', data-toggle='dropdown')
-              span.button-bar
-              span.button-bar
-              span.button-bar
-            .dropdown-menu(aria-labelledby='navbarDropdown')
-              a.dropdown-header Dropdown header
-              a.dropdown-item(href='#') Action
-              a.dropdown-item(href='#') Another action
-              a.dropdown-item(href='#') Something else here
-              .dropdown-divider
-              a.dropdown-item(href='#') Separated link
-              .dropdown-divider
-              a.dropdown-item(href='#') One more separated link
-          .navbar-translate
-            a.navbar-brand(href='http://demos.creative-tim.com/now-ui-kit-pro/presentation.html', rel='tooltip', title='Designed by Invision. Coded by Creative Tim', data-placement='bottom', target='_blank')
-              | Now Ui Kit Pro
-            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navigation', aria-controls='navigation-index', aria-expanded='false', aria-label='Toggle navigation')
-              span.navbar-toggler-bar.bar1
-              span.navbar-toggler-bar.bar2
-              span.navbar-toggler-bar.bar3
-          .collapse.navbar-collapse(data-nav-image='../assets/img/blurred-image-1.jpg', data-color='orange')
-            ul.navbar-nav.ml-auto
-              li.nav-item
-                a.nav-link(href='../index.html', target='_blank')
-                  i.now-ui-icons.design_app
-                p Components
-            li.nav-item.dropdown
-              a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#', data-toggle='dropdown')
-                i.now-ui-icons.files_paper(aria-hidden='true')
-                p Sections
-              .dropdown-menu.dropdown-menu-right(aria-labelledby='navbarDropdownMenuLink')
-                a.dropdown-item(href='../sections.html#headers')
-                  i.now-ui-icons.shopping_box
-                  |  Headers
-                a.dropdown-item(href='../sections.html#features')
-                  i.now-ui-icons.ui-2_settings-90
-                  |  Features
-                a.dropdown-item(href='../sections.html#blogs')
-                  i.now-ui-icons.text_align-left
-                  |  Blogs
-                a.dropdown-item(href='../sections.html#teams')
-                  i.now-ui-icons.sport_user-run
-                  |  Teams
-                a.dropdown-item(href='../sections.html#projects')
-                  i.now-ui-icons.education_paper
-                  |  Projects
-                a.dropdown-item(href='../sections.html#pricing')
-                  i.now-ui-icons.business_money-coins
-                  |  Pricing
-                a.dropdown-item(href='../sections.html#testimonials')
-                  i.now-ui-icons.ui-2_chat-round
-                  |  Testimonials
-                a.dropdown-item(href='../sections.html#contactus')
-                  i.now-ui-icons.tech_mobile
-                  |  Contact Us
-            li.nav-item.dropdown
-              a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#', data-toggle='dropdown')
-                i.now-ui-icons.design_image(aria-hidden='true')
-                p Examples
-              .dropdown-menu.dropdown-menu-right(aria-labelledby='navbarDropdownMenuLink')
-                a.dropdown-item(href='../examples/about-us.html')
-                  i.now-ui-icons.business_bulb-63
-                  |  About-us
-                a.dropdown-item(href='../examples/blog-post.html')
-                  i.now-ui-icons.text_align-left
-                  |  Blog Post
-                a.dropdown-item(href='../examples/blog-posts.html')
-                  i.now-ui-icons.design_bullet-list-67
-                  |  Blog Posts
-                a.dropdown-item(href='../examples/contact-us.html')
-                  i.now-ui-icons.location_pin
-                  |  Contact Us
-                a.dropdown-item(href='../examples/landing-page.html')
-                  i.now-ui-icons.education_paper
-                  |  Landing Page
-                a.dropdown-item(href='../examples/login-page.html')
-                  i.now-ui-icons.users_circle-08
-                  |  Login Page
-                a.dropdown-item(href='../examples/pricing.html')
-                  i.now-ui-icons.business_money-coins
-                  |  Pricing
-                a.dropdown-item(href='../examples/ecommerce.html')
-                  i.now-ui-icons.shopping_shop
-                  |  Ecommerce Page
-                a.dropdown-item(href='../examples/product-page.html')
-                  i.now-ui-icons.shopping_bag-16
-                  |  Product Page
-                a.dropdown-item(href='../examples/profile-page.html')
-                  i.now-ui-icons.users_single-02
-                  |  Profile Page
-                a.dropdown-item(href='../examples/signup-page.html')
-                  i.now-ui-icons.tech_mobile
-                  |  Signup Page
-            li.nav-item
-              a.nav-link.btn.btn-primary(href='https://www.creative-tim.com/product/now-ui-kit-pro', target='_blank')
-                p Buy Now
-            //
-              <li class="nav-item">
-              <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
-              <i class="fa fa-twitter"></i>
-              <p class="hidden-lg-up">Twitter</p>
-              </a>
-              </li>
-              <li class="nav-item">
-              <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
-              <i class="fa fa-facebook-square"></i>
-              <p class="hidden-lg-up">Facebook</p>
-              </a>
-              </li>
-              <li class="nav-item">
-              <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
-              <i class="fa fa-instagram"></i>
-              <p class="hidden-lg-up">Instagram</p>
-              </a>
-              </li>
-    // End Navbar
-    .wrapper
-      .page-header.page-header-small
-        .page-header-image(data-parallax='true', style="background-image: url('../assets/img/bg26.jpg');")
-        .content-center
-          h1.title T`Della Journals 
-          .text-center
-            a.btn.btn-primary.btn-icon.btn-round(href='#pablo')
-              i.fa.fa-facebook-square
-            a.btn.btn-primary.btn-icon.btn-round(href='#pablo')
-              i.fa.fa-twitter
-            a.btn.btn-primary.btn-icon.btn-round(href='#pablo')
-              i.fa.fa-google-plus
-      .section.section-about-us
-        .container
-          .row
-            .col-md-8.ml-auto.mr-auto.text-center
-              h2.title Who we are?
-              h5.description
-                | According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record low maximum sea ice extent tihs year down to low ice extent in the Pacific and a late drop in ice extent in the Barents Sea.
-          .separator.separator-primary
-          .section-story-overview
-            .row
-              .col-md-6
-                // First image on the left side
-                .image-container.image-left(style="background-image: url('../assets/img/bg38.jpg')")
-                  p.blockquote.blockquote-primary
-                    | "Over the span of the satellite record, Arctic sea ice has been declining significantly, while sea ice in the Antarctichas increased very slightly"
-                    br
-                    br
-                    small -NOAA
-                // Second image on the left side of the article
-                .image-container.image-left-bottom(style="background-image: url('../assets/img/bg24.jpg')")
-              .col-md-5
-                // First image on the right side, above the article
-                .image-container.image-right(style="background-image: url('../assets/img/bg39.jpg')")
-                h3 So what does the new record for the lowest level of winter ice actually mean
-                p
-                  | The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens with climate change. Even if the Arctic continues to be one of the fastest-warming regions of the world, it will always be plunged into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural reasons, there’s huge variety of the state of the ice.
-                p
-                  | For a start, it does not automatically follow that a record amount of ice will melt this summer. More important for determining the size of the annual thaw is the state of the weather as the midnight sun approaches and temperatures rise. But over the more than 30 years of satellite records, scientists have observed a clear pattern of decline, decade-by-decade.
-                p
-                  | The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens with climate change. Even if the Arctic continues to be one of the fastest-warming regions of the world, it will always be plunged into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural reasons, there’s huge variety of the state of the ice.
-      .testimonials-1.section-image(style="background-image: url('../assets/img/bg19.jpg')")
-        .container
-          .row
-            .col-md-6.ml-auto.mr-auto.text-center
-              h2.title What is ALPHA?
-              h4.description.text-white
-                | If you’re selected for ALPHA you’ll also get 3 tickets, opportunity to access Investor Office Hours and Mentor Hours and much more all for €850.
-          .row
-            .col-md-4
-              .card.card-testimonial
-                .card-avatar
-                  a(href='#pablo')
-                    img.img.img-raised(src='../assets/img/michael.jpg')
-                .card-body
-                  p.card-description
-                    | The networking at Web Summit is like no other European tech conference.
-                .icon.icon-primary
-                  i.fa.fa-quote-right
-                .card-footer
-                  h4.card-title Michael Elijah
-                  p.category @michaelelijah
-            .col-md-4
-              .card.card-testimonial
-                .card-avatar
-                  a(href='#pablo')
-                    img.img.img-raised(src='../assets/img/olivia.jpg')
-                .card-body
-                  p.card-description
-                    | The connections you make at Web Summit are unparalleled, we met users all over the world.
-                .icon.icon-primary
-                  i.fa.fa-quote-right
-                .card-footer
-                  h4.card-title Olivia Harper
-                  p.category @oliviaharper
-            .col-md-4
-              .card.card-testimonial
-                .card-avatar
-                  a(href='#pablo')
-                    img.img.img-raised(src='../assets/img/james.jpg')
-                .card-body
-                  p.card-description
-                    | Web Summit will increase your appetite, your inspiration, and your network.
-                .icon.icon-primary
-                  i.fa.fa-quote-right
-                .card-footer
-                  h4.card-title James Logan
-                  p.category @jameslogan
-      .pricing-2
-        .container
-          .row
-            .col-md-6.ml-auto.mr-auto.text-center
-              h2.title Pick the best plan for you
-              ul.nav.nav-pills.nav-pills-primary.justify-content-center(role='tablist')
-                li.nav-item
-                  a.nav-link.active(data-toggle='tab', href='#pill1', role='tablist')
-                    | Legal Entity
-                li.nav-item
-                  a.nav-link(data-toggle='tab', href='#pill2', role='tablist')
-                    | Individual
-          .row
-            .col-md-4
-              .card.card-pricing.card-plain
-                .card-body
-                  h6.category Enterprise
-                  h1.card-title
-                    small $
-                    | 59
-                  ul
-                    li
-                      b 10GB
-                      |  Disk Space
-                    li
-                      b 100GB
-                      |  Monthly Bandwidth
-                    li
-                      b 20
-                      |  Email Accounts
-                    li
-                      b Unlimited
-                      |  subdomains
-                  a.btn.btn-primary.btn-round(href='#pablo')
-                    | Sign Up
-            .col-md-4
-              .card.card-pricing.card-background.card-raised(style="background-image: url('../assets/img/pricing2.jpg')")
-                .card-body
-                  h6.category.text-info Professional
-                  h1.card-title
-                    small $
-                    | 29
-                  ul
-                    li
-                      b 5GB
-                      |  Disk Space
-                    li
-                      b 50GB
-                      |  Monthly Bandwidth
-                    li
-                      b 10
-                      |  Email Accounts
-                    li
-                      b Unlimited
-                      |  subdomains
-                  a.btn.btn-neutral.btn-round(href='#pablo')
-                    | Sign Up
-            .col-md-4
-              .card.card-pricing.card-plain
-                .card-body
-                  h6.category Standard
-                  h1.card-title
-                    small $
-                    | 17
-                  ul
-                    li
-                      b 2GB
-                      |  Disk Space
-                    li
-                      b 25GB
-                      |  Monthly Bandwidth
-                    li
-                      b 5
-                      |  Email Accounts
-                    li
-                      b Unlimited
-                      |  subdomains
-                  a.btn.btn-primary.btn-round(href='#pablo')
-                    | Get Started
-      .section.section-contact-us.text-center
-        .container
-          h2.title Want to work with us?
-          p.description Your project is very important to us.
-          .row
-            .col-lg-6.text-center.ml-auto.mr-auto.col-md-8
-              .input-group.input-lg
-                span.input-group-addon
-                  i.now-ui-icons.users_circle-08
-                input.form-control(type='text', placeholder='First Name...')
-              .input-group.input-lg
-                span.input-group-addon
-                  i.now-ui-icons.ui-1_email-85
-                input.form-control(type='text', placeholder='Email...')
-              .textarea-container
-                textarea.form-control(name='name', rows='4', cols='80', placeholder='Type a message...')
-              .send-button
-                a.btn.btn-primary.btn-round.btn-block.btn-lg(href='#pablo') Send Message
-      footer.footer.footer-default
-        .container
-          nav
-            ul
-              li
-                a(href='https://www.creative-tim.com')
-                  | Creative Tim
-              li
-                a(href='http://presentation.creative-tim.com')
-                  | About Us
-              li
-                a(href='http://blog.creative-tim.com')
-                  | Blog
-              li
-                a(href='https://www.creative-tim.com/license')
-                  | License
-          .copyright
-            | ©
-            script.
-              document.write(new Date().getFullYear())
-            | , Designed by
-            a(href='http://www.invisionapp.com', target='_blank') Invision
-            | . Coded by
-            a(href='https://www.creative-tim.com', target='_blank') Creative Tim
-            | .
 
-  script(src='/assets/js/jquery.3.2.1.min.js', type='text/javascript')
-  script(src='/assets/js/bootstrap.min.js', type='text/javascript')
-  script(src='/assets/js/plugins/moment.min.js')
+extends includes/layout
+
+block css
+  link(href="/assets/css/presentation-page.css", rel="stylesheet")
+
+block content
+  div#skrollr-body
+    .loading
+      .loading-container
+        p Just a sec...
+        img.loader(src='/assets/img/rubik.svg')
+    nav.navbar.navbar-default.navbar-transparent.navbar-fixed-top(role='navigation')
+      // if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"
+      .container
+        .navbar-header
+          button#menu-toggle.navbar-toggle(type='button', data-toggle='collapse', data-target='#example')
+            span.sr-only Toggle navigation
+            span.icon-bar.bar1
+            span.icon-bar.bar2
+            span.icon-bar.bar3
+          a.navbar-brand(href='http://www.creative-tim.com')
+            | RUBIK
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right.navbar-uppercase
+            li
+              a(href='http://www.creative-tim.com/buy/rubik-presentation-page')
+                | Buy Now!
+            li.social-links
+              a#facebookNav(href='javascript:void(0);', data-url='http://demos.creative-tim.com/rubik')
+                i.fa.fa-facebook
+              a#twitterNav(href='javascript:void(0);', data-url='http://demos.creative-tim.com/rubik')
+                i.fa.fa-twitter
+              a#googleplusNav(href='javascript:void(0);', data-url='http://demos.creative-tim.com/rubik')
+                i.fa.fa-google-plus
+        // /.navbar-collapse
+    .wrapper
+      #fullpage
+        #section0.section.section-header.section-plain.section-first
+          .parallax
+            img(src='/assets/img/rubik_background3.jpg')
+            .container
+              .content
+                p.text-muted
+                  span by 
+                  | Creative Tim
+                h1 Rubik
+                .separator-container
+                  .separator.line-separator ✻
+                h5.text-muted
+                  | Create a beautiful and stylish presentation page for 
+                  br
+                  |  your company, agency, personal portfolio or startup.
+            a.scroll-arrow.hidden-xs.hidden-sm(href='javascript:void(0)', data-scroll='true', data-id='#section1')
+              i.fa.fa-angle-down
+        #section1.section.section-builder
+          .container
+            .content
+              .row
+                .col-md-4.col-sm-5.col-md-offset-1
+                  .builder-image
+                    .box-1
+                      figure.slide.jbs-current
+                        img(src='/assets/img/presentation/section_1_2.jpg')
+                      figure.slide
+                        img(src='/assets/img/presentation/section_1_1.jpg')
+                      figure.slide
+                        img(src='/assets/img/presentation/section_1_3.jpg')
+                  .builder-image
+                    .box-2
+                      figure.slide.jbs-current
+                        img(src='/assets/img/presentation/section_2_2.jpg')
+                      figure.slide
+                        img(src='/assets/img/presentation/section_2_1.jpg')
+                      figure.slide
+                        img(src='/assets/img/presentation/section_2_3.jpg')
+                  .builder-image
+                    .box-3
+                      figure.slide
+                        img(src='/assets/img/presentation/section_3_1.jpg')
+                      figure.slide.jbs-current
+                        img(src='/assets/img/presentation/section_3_2.jpg')
+                      figure.slide
+                        img(src='/assets/img/presentation/section_3_3.jpg')
+                .col-md-5.col-sm-5.col-sm-offset-1.col-md-offset-1
+                  .title
+                    h2 Create your own page
+                    .separator-container
+                      .separator.line-separator ♦
+                    p
+                      | Create your own page with many combinations! We created a builder that resembles a rubik cube: just play along and choose the side you like best.  All the possible sections are simply awesome and will create an amazing looking presentation page.
+                    br
+                    a.btn.btn-lg.btn-fill.btn-neutral.btn-animation(href='/rubik-builder')
+                      | Build Your Page
+                      i.fa.fa-wrench
+        #section2.section.section-we-made-3.section-with-hover.section-examples
+          .container
+            .text-area
+              .title
+                h5.text-muted Using this awesome tool we have created
+                h2 4 Useful Showcases
+                .separator-container
+                  .separator.line-separator ♦
+                p
+                  | We have created 4 examples that can help you jump start your new website in just a matter of minutes. Just change the images and the text and you've got a beautiful project!
+            #projectsLine1.row
+              .col-md-6
+                .project
+                  img(alt='...', src='/assets/img/agency_presentation.jpg')
+                  a.over-area.color-presentation(href='/agency')
+                    .content.text-center
+                      h4 Agency
+                      p Customize your agency presentation with many combinations.
+                      br
+                      p.action
+                        | Click to View Example
+              .col-md-6
+                .project
+                  img(alt='...', src='/assets/img/house_presentation.jpg')
+                  a.over-area.color-presentation(href='/company')
+                    .content
+                      h4 Company 
+                      p
+                        | Create a simple and elegant presentation page 
+                        br
+                        |  for your company or enterprise.
+                      br
+                      p.action
+                        | Click to View Example
+              .col-md-6
+                .project
+                  img(alt='...', src='/assets/img/startup_presentation.jpg')
+                  a.over-area.color-presentation(href='/startup')
+                    .content
+                      h4 Startup
+                      p Present your startup team in an unique and beautiful way.
+                      br
+                      p.action
+                        | Click to View Example
+              .col-md-6
+                .project
+                  img(alt='...', src='/assets/img/photographer_presentation.jpg')
+                  a.over-area.color-presentation(href='/portfolio')
+                    .content
+                      h4 Portfolio 
+                      p Create a simple and elegant portfolio page for your projects.
+                      br
+                      p.action
+                        | Click to View Example
+        #section45.section.section-buy.pattern-image
+          .full-background
+            .container
+              .content
+                .title
+                  h2 Buy Now
+                  .separator-container
+                    .separator.line-separator $
+                  p
+                    | Each package comes with Rubik Builder™, Responsive Design, New Icons Font, Documentation, Premium Support and Free Forever Updates.
+                .row
+                  .col-md-5.col-md-offset-1
+                    .card.card-price
+                      .content-inside
+                        h3 Personal
+                        p Create a Single website for you or for a client.
+                        br
+                        h1
+                          small $
+                          span 19
+                        .footer
+                          a.btn.btn-default.btn-fill(href='http://www.creative-tim.com/buy/rubik-presentation-page') Buy now!
+                  .col-md-5
+                    .card.card-price
+                      .content-inside
+                        h3 Developer
+                        p Create Multiple Websites for you or for clients.
+                        br
+                        h1
+                          small $
+                          span 79
+                        .footer
+                          a.btn.btn-default(href='http://www.creative-tim.com/buy/rubik-presentation-page') Buy now!
+            .section-footer.share-area
+              .container
+                .content
+                  p Thank you for share
+                  .separator-container
+                    .separator.line-separator
+                      i.fa.fa-share
+                  .row
+                    .col-md-8.col-md-offset-2
+                      .col-md-6
+                        #twitter(data-url='http://demos.creative-tim.com/rubik')
+                      .col-md-6
+                        #facebook(data-url='http://demos.creative-tim.com/rubik')
+                      .col-md-4.hidden
+                        #googleplus(data-url='http://demos.creative-tim.com/rubik')
+              footer.footer
+                .container
+                  nav.pull-left
+                    ul
+                      li
+                        a(href='http://www.creative-tim.com/about-tim/', target='_blank')
+                          | About Us
+                      li
+                        a(href='http://www.creative-tim.com/license', target='_blank')
+                          | Licenses
+                      li
+                        a(href='http://www.creative-tim.com/contact-us', target='_blank')
+                          | Contact Us
+                      li
+                        a(href='https://github.com/timcreativeissues', target='_blank')
+                          | Report an issue?
+                  .copyright
+                    | © 2015, made with 
+                    i.fa.fa-heart
+                    |  by 
+                    a(href='http://www.creative-tim.com') Creative Tim
+
+block footer
+
+block javascript
+  script(type='text/javascript').
+    $(document).ready(function() {
+    var $box = $('.box');
+    var options_1 = {
+    speed: 1200
+    , autoScroll: true
+    , timeout: 5000
+    , effect: 'scrollHorz3d'
+    };
+    var options_2 = {
+    speed: 1200
+    , timeout: 1800
+    , autoScroll: true
+    , effect: 'scrollHorz3d'
+    };
+    var options_3 = {
+    speed: 1200
+    , timeout: 6200
+    , autoScroll: true
+    , effect: 'scrollHorz3d'
+    };
+    // initialize the plugin with the desired settings
+    $('.box-1').boxSlider(options_1);
+    $('.box-2').boxSlider(options_2);
+    $('.box-3').boxSlider(options_3);
+    });
+
+
+

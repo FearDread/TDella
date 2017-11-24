@@ -1,0 +1,378 @@
+
+extends includes/layout
+
+block content
+  body#skrollr-body
+    .loading
+      .loading-container
+        p Just a sec...
+        img.loader(src='/assets/img/rubik.svg')
+    nav.navbar.navbar-default.navbar-transparent.navbar-fixed-top(role='navigation')
+      .container
+        .navbar-header
+          button#menu-toggle.navbar-toggle(type='button', data-toggle='collapse', data-target='#example')
+            span.sr-only Toggle navigation
+            span.icon-bar.bar1
+            span.icon-bar.bar2
+            span.icon-bar.bar3
+          a.navbar-brand(href='/')
+            i.fa.fa-angle-left
+            |  Back to Home 
+        .navbar-scroll-to.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a.active(href='', data-scroll='true', data-id='#whoWeAre')
+                | About
+            li
+              a(href='', data-scroll='true', data-id='#values')
+                | Values
+            li
+              a(href='', data-scroll='true', data-id='#projects')
+                | Projects
+            li
+              a(href='', data-scroll='true', data-id='#clients')
+                | Clients
+            li
+              a(href='', data-scroll='true', data-id='#team')
+                | Code Names
+            li
+              a(href='', data-scroll='true', data-id='#numbers')
+                | Numbers
+            li
+              a(href='', data-scroll='true', data-id='#contact')
+                | Contact
+        // /.navbar-collapse
+    .wrapper
+      .section.section-header
+        .parallax.pattern-image.filter.filter-color-blue
+          img(src='/assets/img/photographer.jpg')
+          .container
+            .content.content-with-opacity
+              p
+                span by 
+                | Creative Tim
+              h1.responsive-small Photographer
+              .separator-container
+                .separator.line-separator ⌘
+              h5 The right way to present yourself
+        a.scroll-arrow.hidden-xs.hidden-sm(href='', data-scroll='true', data-id='#whoWeAre')
+          i.fa.fa-angle-down
+      #whoWeAre.section.section-we-are-1
+        .text-area
+          .container
+            .row
+              .title.add-animation
+                h2
+                  | Paul Smith
+                  br
+                  |  the photographer
+                .separator-container
+                  .separator.line-separator ⌘
+                p
+                  | I designed this site so you can get to know me on a personal level. My career as a professional photographer, my portfolio, my personal photography, my blog, my favourite quotes, and so much more. So please sit back and enjoy!.
+        #carousel
+          #carousel-example-generic.carousel.slide.add-animation.animation-1(data-interval='false')
+            // Wrapper for slides
+            .carousel-inner.pattern-image
+              .item
+                img.full-image(src='/assets/img/photographer2.jpg', alt='Awesome Image')
+              .item
+                img.full-image(src='/assets/img/photographer3.jpg', alt='Awesome Image')
+              .item.active
+                img.full-image(src='/assets/img/photographer4.jpg', alt='Awesome Image')
+            // Controls
+            a.left.carousel-control(href='#carousel-example-generic', data-slide='prev')
+              span.fa.fa-angle-left.hidden-md.hidden-lg
+            a.right.carousel-control(href='#carousel-example-generic', data-slide='next')
+              span.fa.fa-angle-right.hidden-ms.hidden-lg
+      #values.section.section-we-do-2
+        .container
+          .title.add-animation
+            h2 What I do
+            .separator-container
+              .separator.line-separator ⌘
+            p I am a professional fine art photographer in Sante Fe.
+          .row
+            .col-md-3.col-sm-6
+              .card.add-animation.animation-1
+                .icon
+                  i.pe-7s-medal
+                h3 Best Picture Awarded
+                p
+                  | Not to brag, but I have been awarded for the Best Picture Award, which is a small token of recognition for my life of working in photography.
+            .col-md-3.col-sm-6
+              .card.add-animation.animation-2
+                .icon
+                  i.pe-7s-camera
+                h3 Modern technology
+                p
+                  | I like to use state of the art technology and only the best tools. Since 2010 a great company sponsors me with all the cool suff.
+            .col-md-3.col-sm-6
+              .card.add-animation.animation-3
+                .icon
+                  i.pe-7s-global
+                h3 Many locations
+                p
+                  | I love to move around and visit a lot of places. I have travelled for most of my life and I've taken pictures everywhere I went.
+            .col-md-3.col-sm-6
+              .card.add-animation.animation-4
+                .icon
+                  i.pe-7s-like
+                h3 For every pic
+                p
+                  | I like to tell a story with every photo that I take. I want for the viewers to get an immediate reaction and feeling. From every single picture.
+      #projects.section.section-we-made-2.section-with-hover
+        .projects
+          .text-area
+            .title.add-animation
+              h2 Some of the stuff
+              .separator-container
+                .separator.line-separator ⌘
+              p You cand see some of my stuff here, the full projects are on Tumblr.
+          .info.add-animation.animation-1
+            p.text-center.text-gray The Hipster Invasion
+          .row.scroller
+            .col-lg-3.col-md-6.col-sm-6
+              .project.add-animation.animation-1
+                img(src='/assets/img/projects/photographer_1.jpg')
+            .col-lg-3.col-md-6.col-sm-6
+              .project.add-animation.animation-2
+                img(src='/assets/img/projects/photographer_2.jpg')
+            .col-lg-3.col-md-6.col-sm-6
+              .project.add-animation.animation-3
+                img(src='/assets/img/projects/photographer_3.jpg')
+            .col-lg-3.col-md-6.col-sm-6
+              .project.add-animation.animation-4
+                img(src='/assets/img/projects/photographer_4.jpg')
+                a.over-area.color-blue(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_4')
+                  .content.hidden-xs
+                    h4 Full Project on Tumblr
+          .projects
+            .info.add-animation.animation-1
+              p.text-center.text-gray Wolf's Trip at The Canion
+            .row.scroller.scroller-portrait
+              .col-lg-3.col-md-6.col-sm-6
+                .project.add-animation.animation-1
+                  img(src='/assets/img/projects/photographer_5.jpg', style='margin-top: -100px')
+              .col-lg-3.col-md-6.col-sm-6
+                .project.add-animation.animation-2
+                  img(src='/assets/img/projects/photographer_6.jpg', style='margin-top: -200px')
+              .col-lg-3.col-md-6.col-sm-6
+                .project.add-animation.animation-3
+                  img(src='/assets/img/projects/photographer_7.jpg', style='margin-top: -100px')
+              .col-lg-3.col-md-6.col-sm-6
+                .project.add-animation.animation-4
+                  img(src='/assets/img/projects/photographer_8.jpg', style='margin-top: -200px')
+                  a.over-area.color-blue(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_4')
+                    .content.hidden-xs
+                      h4 Full project on Tumblr
+          .projects
+            .info.add-animation.animation-1
+              p.text-center.text-gray Bear's Oldtimer Muscle Car
+            .row.scroller
+              .col-lg-3.col-md-6.col-sm-6
+                .project.add-animation.animation-1
+                  img(src='/assets/img/projects/photographer_9.jpg')
+              .col-lg-3.col-md-6.col-sm-6
+                .project.add-animation.animation-2
+                  img(src='/assets/img/projects/photographer_10.jpg')
+              .col-lg-3.col-md-6.col-sm-6
+                .project.add-animation.animation-3
+                  img(src='/assets/img/projects/photographer_11.jpg')
+              .col-lg-3.col-md-6.col-sm-6
+                .project.add-animation.animation-4
+                  img(src='/assets/img/projects/photographer_12.jpg')
+                  a.over-area.color-blue(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_4')
+                    .content.hidden-xs
+                      h4 Full project on Tumblr
+      #clients.section.section-clients-1
+        .container
+          .text-area
+            .title.add-animation
+              h2 I've worked with these guys
+              .separator-container
+                .separator.line-separator ⌘
+              p
+                | Creating a happier world. One person, community and company at a time. So far I made these guys happier with my pictures.
+          .list-logos
+            .row
+              .col-md-3
+                .logo.add-animation.animation-1
+                  a(href='#')
+                    img(alt='...', src='/assets/img/clients/nikon.svg')
+                    img(alt='...', src='/assets/img/clients/nikon_h.svg')
+              .col-md-3
+                .logo.add-animation.animation-2
+                  a(href='#')
+                    img(alt='...', src='/assets/img/clients/canon.svg')
+                    img(alt='...', src='/assets/img/clients/canon_h.svg')
+              .col-md-3
+                .logo.add-animation.animation-3
+                  a(href='#')
+                    img(alt='...', src='/assets/img/clients/samsung.svg')
+                    img(alt='...', src='/assets/img/clients/samsung_h.svg')
+              .col-md-3
+                .logo.add-animation.animation-4
+                  a(href='#')
+                    img(alt='...', src='/assets/img/clients/xerox.svg')
+                    img(alt='...', src='/assets/img/clients/xerox_h.svg')
+              .col-md-3
+                .logo.add-animation.animation-1
+                  a(href='#')
+                    img(alt='...', src='/assets/img/clients/qube.svg')
+                    img(alt='...', src='/assets/img/clients/qube_h.svg')
+              .col-md-3
+                .logo.add-animation.animation-2
+                  a(href='#')
+                    img(alt='...', src='/assets/img/clients/skullcandy.svg')
+                    img(alt='...', src='/assets/img/clients/skullcandy_h.svg')
+              .col-md-3
+                .logo.add-animation.animation-3
+                  a(href='#')
+                    img(alt='...', src='/assets/img/clients/lastfm.svg')
+                    img(alt='...', src='/assets/img/clients/lastfm_h.svg')
+              .col-md-3
+                .logo.add-animation.animation-4
+                  a(href='#')
+                    img(alt='...', src='/assets/img/clients/spotify.svg')
+                    img(alt='...', src='/assets/img/clients/spotify_h.svg')
+      #team.section.section-team-2
+        .container
+          .text-area
+            .title.add-animation
+              h2 Collaborators
+              .separator-container
+                .separator.line-separator ⌘
+              p
+                | There are two me's when I take a picture. As Wolf I take pictures to be sold and as Bear all of them are free of charge, take his as a philanthropist.
+          .team
+            .row
+              .col-md-10.col-md-offset-1
+                .row
+                  .col-md-4
+                    .member.add-animation.animation-1
+                      img.img-circle(alt='...', src='/assets/img/faces/face_10.jpg')
+                      .description
+                        h3.big-text Michael
+                        p.small-text Web designer @Creative-Tim
+                  .col-md-4
+                    .member.add-animation.animation-2
+                      img.img-circle(alt='...', src='/assets/img/faces/face_9.jpg')
+                      .description
+                        h3.big-text George
+                        p.small-text Marketing @Shopify
+                  .col-md-4
+                    .member.add-animation.animation-3
+                      img.img-circle(alt='...', src='/assets/img/faces/face_11.jpg')
+                      .description
+                        h3.big-text Andrew
+                        p.small-text Product Designer @Xerox
+                  .col-md-4
+                    .member.add-animation.animation-1
+                      img.img-circle(alt='...', src='/assets/img/faces/face_6.jpg')
+                      .description
+                        h3.big-text Michael
+                        p.small-text Hacker @Canon
+                  .col-md-4
+                    .member.add-animation.animation-2
+                      img.img-circle(alt='...', src='/assets/img/faces/face_7.jpg')
+                      .description
+                        h3.big-text Northon
+                        p.small-text Happiness Hero @Nikon
+                  .col-md-4
+                    .member.add-animation.animation-3
+                      img.img-circle(alt='...', src='/assets/img/faces/face_14.jpg')
+                      .description
+                        h3.big-text Bear
+                        p.small-text Just a friend
+          // end team
+      #numbers3.section.section-numbers-3
+        .full-image.pattern-image
+          .filter.filter-color-black
+            img(src='/assets/img/photographer6.jpg')
+        .container
+          .text-area
+            .title.add-animation
+              h2 Happy People
+              .separator-container
+                .separator.line-separator ⌘
+              p Take a look at these numbers
+          .clearfix
+          .row
+            .col-md-4.col-sm-4
+              .card.add-animation.animation-1
+                h3 Customers
+                h5 Enterprises and small businesses
+                .number
+                  | 5.382
+            .col-md-4.col-sm-4
+              .card.add-animation.animation-2
+                h3 Projects
+                h5 Photography and digital identity
+                .number
+                  | 26.832
+            .col-md-4.col-sm-4
+              .card.add-animation.animation-3
+                h3 Cities
+                h5 Where to find me
+                .number
+                  | 278
+      #contact.section.section-contact-2
+        .container
+          .text-area
+            .title.add-animation
+              h2 Get in Touch
+              .separator-container
+                .separator.line-separator ⌘
+              p
+                | Would you want to talk about something? Just send me your message and I will happily chat
+          .contact-form
+            .row
+              .col-md-4
+                .form-group.add-animation.animation-1
+                  label Your Full Name
+                  input.form-control(type='text', value='', placeholder='Michael Jordan')
+              .col-md-4
+                .form-group.add-animation.animation-2
+                  label Your Email
+                  input.form-control(type='text', value='', placeholder='michael.j@gmail.com')
+              .col-md-4
+                .form-group.add-animation.animation-3
+                  label Subject
+                  input.form-control(type='text', value='', placeholder='Say hi to you')
+              .col-md-12
+                .form-group.add-animation.animation-1
+                  textarea.form-control(placeholder='Here you can write your nice text', rows='8')
+                div
+                  .col-md-2.col-md-offset-5.col-sm-2.col-sm-offset-5
+                    button.btn.btn-lg.btn-black.btn-contact
+                      | SEND 
+                      i.fa.fa-paper-plane
+      footer.footer.footer-color-white
+        .container
+          nav.pull-left
+            ul
+              li
+                a(href='#')
+                  | Home
+              li
+                a(href='#')
+                  | Company
+              li
+                a(href='#')
+                  | Portfolio
+              li
+                a(href='#')
+                  | Blog
+          .social-area.pull-right
+            a.btn.btn-social.btn-facebook.btn-simple
+              i.fa.fa-facebook-square
+            a.btn.btn-social.btn-twitter.btn-simple
+              i.fa.fa-twitter
+            a.btn.btn-social.btn-pinterest.btn-simple
+              i.fa.fa-pinterest
+          .copyright
+            | © 2015 Creative T
+
+block javascript
+
