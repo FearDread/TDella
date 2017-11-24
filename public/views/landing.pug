@@ -6,10 +6,8 @@ block css
 
 block content
   div#skrollr-body
-    .loading
-      .loading-container
-        p Just a sec...
-        img.loader(src='/assets/img/rubik.svg')
+    include includes/loader
+
     nav.navbar.navbar-default.navbar-transparent.navbar-fixed-top(role='navigation')
       // if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"
       .container
@@ -20,7 +18,7 @@ block content
             span.icon-bar.bar2
             span.icon-bar.bar3
           a.navbar-brand(href='http://www.creative-tim.com')
-            | RUBIK
+            | T`Della 
         .collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right.navbar-uppercase
             li
@@ -43,8 +41,8 @@ block content
               .content
                 p.text-muted
                   span by 
-                  | Creative Tim
-                h1 Rubik
+                  | Tracy Delagardel 
+                h1 T`Della Books 
                 .separator-container
                   .separator.line-separator ✻
                 h5.text-muted
