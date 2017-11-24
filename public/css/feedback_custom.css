@@ -1,0 +1,149 @@
+/* iCheck plugin Flat skin, blue
+----------------------------------- */
+.icheckbox_flat-blue,
+.iradio_flat-blue {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    background: url(/images/blue.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_flat-blue {
+    background-position: 0 0;
+}
+    .icheckbox_flat-blue.checked {
+        background-position: -22px 0;
+    }
+    .icheckbox_flat-blue.disabled {
+        background-position: -44px 0;
+        cursor: default;
+    }
+    .icheckbox_flat-blue.checked.disabled {
+        background-position: -66px 0;
+    }
+
+.iradio_flat-blue {
+    background-position: -88px 0;
+}
+    .iradio_flat-blue.checked {
+        background-position: -110px 0;
+    }
+    .iradio_flat-blue.disabled {
+        background-position: -132px 0;
+        cursor: default;
+    }
+    .iradio_flat-blue.checked.disabled {
+        background-position: -154px 0;
+    }
+
+/* Retina support */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (-moz-min-device-pixel-ratio: 1.5),
+       only screen and (-o-min-device-pixel-ratio: 3/2),
+       only screen and (min-device-pixel-ratio: 1.5) {
+    .icheckbox_flat-blue,
+    .iradio_flat-blue {
+        background-image: url(blue@2x.png);
+        -webkit-background-size: 176px 22px;
+        background-size: 176px 22px;
+    }
+}
+
+.fixed-background-feedback{
+  background: url("/images/02.jpg") no-repeat fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.sheet-box{
+    background-color: #ffffff;
+    line-height: 40px;
+    min-height: 200px;
+    padding: 51px 20px 20px 20px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.20);
+}
+.sheet-box h1 {
+	font-size: 30px;
+	letter-spacing: 5px;
+	margin: 0 0 44px 0;
+    text-align: center; 
+}
+
+.sheet-box input{
+    font-size: 1.2em;
+    color: #18326d; 
+}
+
+.sheet-box .form-control{
+    border-bottom: 2px dotted #e4e4e4;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0px;
+    color: #696C70;
+    box-shadow: 0 0 0;
+    padding: 3px 12px;
+    margin-top: 10px;
+}
+.sheet-box-submit{
+    height: 35px;
+    color :#ffffff;
+    font-size: 26px;
+    line-height: 40px;
+    font-weight: 300;
+    padding-left: 40px;
+    background-color: #ecf0f1;
+    border: none;
+    background: url("https://d3levm2kxut31z.cloudfront.net/assets/white-tick-de19ee31b1ec66d7b949a81ebbd8312e.png") no-repeat scroll left center transparent;
+    float: right;
+    margin-bottom: 50px;
+    padding-bottom: 7px;
+    text-shadow: 0 1px 0px rgba(0, 0, 0, 0.4);
+}
+.control-group > .input-icon {
+    background-color: inherit;
+}
+
+.sheet-box-feedback{
+    margin-top: 50px;
+    padding: 50px 50px;
+}
+.sheet-box-feedback > fieldset label{
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+.sheet-box-feedback > h4{
+    padding-top: 35px;
+}
+.sheet-box-feedback > fieldset textarea{
+    height: 30px;
+    font-size: 1em;
+}
+.sheet-box-feedback > .checkbox .icons, .radio .icons{
+    line-height: 30px;
+} 
+.sheet-box-feedback > fieldset .radio{
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 300;
+}
+.radio-block{
+    text-align: center;
+    min-width: 300px;
+}
+.radio-block .iradio_flat-blue{
+    margin:0 20px;
+}
+.radion-inline{
+    margin: 0 auto;
+    display: inline-block;
+}
