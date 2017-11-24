@@ -1,0 +1,38 @@
+{
+  "name": "TDella.com",
+  "version": "0.0.1",
+  "private": "true",
+  "description": "",
+  "dependencies": {
+  },
+  "config": {
+    "name": "TDella",
+    "db": "della_db",
+    "port": 9001,
+    "admin_email": "",
+    "host": "",
+    "login_redirect": "/",
+    "tagline": "Do Whats Next.",
+    "less_src": "src/less",
+    "less_dst": "public/css",
+    "view_tpls": "./public/views",
+    "s3Host": "//s3-us-west-1.amazonaws.com/i.ultimate_totals.com",
+    "support_email": "support@ultimate_totals.com",
+    "captcha_pub": "6LeMYv8SAAAAAE0JDAYMlbtOrCVNnQakcwhL87Fb",
+    "captcha_key": "6LeMYv8SAAAAALf4ir2ELeNjc0HaQzwoCeK_1suH",
+    "twitter_name": "",
+    "facebook_name": "",
+    "google_name": ""
+  },
+  "emailSettings": {
+    "logo": "/logo.png",
+    "support_email": "support@ultimate_totals.com",
+    "twitter_name": "",
+    "facebook_name": "",
+    "google_name": "",
+    "register": {
+      "welcome_title": "!",
+      "welcome_message": "Thank you for joining UT."
+    }
+  }
+}
