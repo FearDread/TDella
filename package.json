@@ -4,11 +4,20 @@
   "private": "true",
   "description": "",
   "dependencies": {
+    "assert": "^1.4.1",
     "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
     "express": "^4.16.2",
+    "express-session": "^1.15.6",
     "fs": "0.0.1-security",
+    "jquery": "^3.2.1",
     "less": "^2.7.3",
-    "path": "^0.12.7"
+    "less-middleware": "^2.2.1",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-rc.4",
+    "request": "^2.83.0",
+    "watch": "^1.0.2",
+    "watchify": "^3.9.0"
   },
   "config": {
     "name": "TDella",
