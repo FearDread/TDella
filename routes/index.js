@@ -1,5 +1,7 @@
+/*******************************************/
+/* TDella Creations Routes Script          */
+/*******************************************/
 var utils, pubdir;
-
 
 exports.add = function (app) {
 
@@ -20,9 +22,21 @@ exports.add = function (app) {
     console.log(utils);
 		console.log('render root');
 
-		res.render('landing', {});
+		res.render('home', {});
 	});
+
+  app.get('/contact', function (req, res) {
+    console.log('Render contact page and add contact form logic here');
+
+    res.render('contact', {});
+  });
 	
+	app.get('/about', function (req, res) {
+		console.log('render about tracy page');
+
+		res.render('about', {});
+	});
+
 	app.get('/portfolio', function (req, res) {
 		console.log('render portfolio page');
 
