@@ -1,0 +1,249 @@
+
+extends includes/layout
+
+block css
+  link(href="/assets/css/presentation-page.css", rel="stylesheet")
+
+block content
+  div#skrollr-body
+
+    include includes/fragment_loader
+
+    nav.navbar.navbar-default.navbar-transparent.navbar-fixed-top(role='navigation')
+      .container
+        .navbar-header
+          button#menu-toggle.navbar-toggle(type='button', data-toggle='collapse', data-target='#example')
+            span.sr-only Toggle navigation
+            span.icon-bar.bar1
+            span.icon-bar.bar2
+            span.icon-bar.bar3
+          a.navbar-brand(href='http://www.creative-tim.com')
+            | T`Della 
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right.navbar-uppercase
+            li
+              a(href='http://www.creative-tim.com/buy/rubik-presentation-page')
+                | Buy Now!
+            li.social-links
+              a#facebookNav(href='javascript:void(0);', data-url='http://demos.creative-tim.com/rubik')
+                i.fa.fa-facebook
+              a#twitterNav(href='javascript:void(0);', data-url='http://demos.creative-tim.com/rubik')
+                i.fa.fa-twitter
+              a#googleplusNav(href='javascript:void(0);', data-url='http://demos.creative-tim.com/rubik')
+                i.fa.fa-google-plus
+        // /.navbar-collapse
+    .wrapper
+      #fullpage
+        #section0.section.section-header.section-plain.section-first
+          .parallax
+            img(src='/assets/img/rubik_background3.jpg')
+            .container
+              .content
+                p.text-muted
+                  span by 
+                  | Tracy Delagardel 
+                h1 T`Della Creations
+                .separator-container
+                  .separator.line-separator ✻
+                h5.text-muted
+                  | Create a beautiful and stylish Travel Journals, Photo Albums, etc... 
+                  br
+                  | T`Della Creations LLC 
+            a.scroll-arrow.hidden-xs.hidden-sm(href='javascript:void(0)', data-scroll='true', data-id='#section1')
+              i.fa.fa-angle-down
+        #section1.section.section-builder
+          .container
+            .content
+              .row
+                .col-md-4.col-sm-5.col-md-offset-1
+                  .builder-image
+                    .box-1
+                      figure.slide.jbs-current
+                        img(src='/assets/img/presentation/section_1_2.jpg')
+                      figure.slide
+                        img(src='/assets/img/presentation/section_1_1.jpg')
+                      figure.slide
+                        img(src='/assets/img/presentation/section_1_3.jpg')
+                  .builder-image
+                    .box-2
+                      figure.slide.jbs-current
+                        img(src='/assets/img/presentation/section_2_2.jpg')
+                      figure.slide
+                        img(src='/assets/img/presentation/section_2_1.jpg')
+                      figure.slide
+                        img(src='/assets/img/presentation/section_2_3.jpg')
+                  .builder-image
+                    .box-3
+                      figure.slide
+                        img(src='/assets/img/presentation/section_3_1.jpg')
+                      figure.slide.jbs-current
+                        img(src='/assets/img/presentation/section_3_2.jpg')
+                      figure.slide
+                        img(src='/assets/img/presentation/section_3_3.jpg')
+                .col-md-5.col-sm-5.col-sm-offset-1.col-md-offset-1
+                  .title
+                    h2 Create your own page
+                    .separator-container
+                      .separator.line-separator ♦
+                    p
+                      | Create your own page with many combinations! We created a builder that resembles a rubik cube: just play along and choose the side you like best.  All the possible sections are simply awesome and will create an amazing looking presentation page.
+                    br
+                    a.btn.btn-lg.btn-fill.btn-neutral.btn-animation(href='/rubik-builder')
+                      | Build Your custom Travlers Journal 
+                      i.fa.fa-wrench
+        #section2.section.section-we-made-3.section-with-hover.section-examples
+          .container
+            .text-area
+              .title
+                h5.text-muted Using this awesome tool we have created
+                h2 4 Useful Showcases
+                .separator-container
+                  .separator.line-separator ♦
+                p
+                  | We have created 4 examples that can help you jump start your new website in just a matter of minutes. Just change the images and the text and you've got a beautiful project!
+            #projectsLine1.row
+              .col-md-6
+                .project
+                  img(alt='...', src='/assets/img/agency_presentation.jpg')
+                  a.over-area.color-presentation(href='/agency')
+                    .content.text-center
+                      h4 Agency
+                      p Customize your agency presentation with many combinations.
+                      br
+                      p.action
+                        | Click to View Example
+              .col-md-6
+                .project
+                  img(alt='...', src='/assets/img/house_presentation.jpg')
+                  a.over-area.color-presentation(href='/company')
+                    .content
+                      h4 Company 
+                      p
+                        | Create a simple and elegant presentation page 
+                        br
+                        |  for your company or enterprise.
+                      br
+                      p.action
+                        | Click to View Example
+              .col-md-6
+                .project
+                  img(alt='...', src='/assets/img/startup_presentation.jpg')
+                  a.over-area.color-presentation(href='/startup')
+                    .content
+                      h4 Startup
+                      p Present your startup team in an unique and beautiful way.
+                      br
+                      p.action
+                        | Click to View Example
+              .col-md-6
+                .project
+                  img(alt='...', src='/assets/img/photographer_presentation.jpg')
+                  a.over-area.color-presentation(href='/portfolio')
+                    .content
+                      h4 Portfolio 
+                      p Create a simple and elegant portfolio page for your projects.
+                      br
+                      p.action
+                        | Click to View Example
+        #section45.section.section-buy.pattern-image
+          .full-background
+            .container
+              .content
+                .title
+                  h2 Buy Now
+                  .separator-container
+                    .separator.line-separator $
+                  p
+                    | Each package comes with Rubik Builder™, Responsive Design, New Icons Font, Documentation, Premium Support and Free Forever Updates.
+                .row
+                  .col-md-5.col-md-offset-1
+                    .card.card-price
+                      .content-inside
+                        h3 Personal
+                        p Create a Single website for you or for a client.
+                        br
+                        h1
+                          small $
+                          span 19
+                        .footer
+                          a.btn.btn-default.btn-fill(href='http://www.creative-tim.com/buy/rubik-presentation-page') Buy now!
+                  .col-md-5
+                    .card.card-price
+                      .content-inside
+                        h3 Developer
+                        p Create Multiple Websites for you or for clients.
+                        br
+                        h1
+                          small $
+                          span 79
+                        .footer
+                          a.btn.btn-default(href='http://www.creative-tim.com/buy/rubik-presentation-page') Buy now!
+            .section-footer.share-area
+              .container
+                .content
+                  p Thank you for share
+                  .separator-container
+                    .separator.line-separator
+                      i.fa.fa-share
+                  .row
+                    .col-md-8.col-md-offset-2
+                      .col-md-6
+                        #twitter(data-url='http://demos.creative-tim.com/rubik')
+                      .col-md-6
+                        #facebook(data-url='http://demos.creative-tim.com/rubik')
+                      .col-md-4.hidden
+                        #googleplus(data-url='http://demos.creative-tim.com/rubik')
+              footer.footer
+                .container
+                  nav.pull-left
+                    ul
+                      li
+                        a(href='http://www.creative-tim.com/about-tim/', target='_blank')
+                          | About Us
+                      li
+                        a(href='http://www.creative-tim.com/license', target='_blank')
+                          | Licenses
+                      li
+                        a(href='http://www.creative-tim.com/contact-us', target='_blank')
+                          | Contact Us
+                      li
+                        a(href='https://github.com/timcreativeissues', target='_blank')
+                          | Report an issue?
+                  .copyright
+                    | © 2015, made with 
+                    i.fa.fa-heart
+                    |  by 
+                    a(href='http://www.creative-tim.com') Creative Tim
+
+block footer
+
+block javascript
+  script(type='text/javascript').
+    $(document).ready(function() {
+    var $box = $('.box');
+    var options_1 = {
+    speed: 1200
+    , autoScroll: true
+    , timeout: 5000
+    , effect: 'scrollHorz3d'
+    };
+    var options_2 = {
+    speed: 1200
+    , timeout: 1800
+    , autoScroll: true
+    , effect: 'scrollHorz3d'
+    };
+    var options_3 = {
+    speed: 1200
+    , timeout: 6200
+    , autoScroll: true
+    , effect: 'scrollHorz3d'
+    };
+    // initialize the plugin with the desired settings
+    $('.box-1').boxSlider(options_1);
+    $('.box-2').boxSlider(options_2);
+    $('.box-3').boxSlider(options_3);
+    });
+
+
+
