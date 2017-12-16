@@ -1,7 +1,9 @@
 /*******************************************/
 /* TDella Creations Routes Script          */
 /*******************************************/
-var utils, pubdir;
+var utils, pubdir, data, config;
+
+config = require('../src/config');
 
 exports.add = function (app) {
 
@@ -19,13 +21,17 @@ exports.add = function (app) {
 	});
 
 	app.get('/', function (req, res) {
+    data = {
+      title: config.website.name,
+      social: config.website.social
+    };
     console.log(utils);
-		console.log('render root');
+		console.log('render root :: ' + config);
 
-		res.render('home', {});
+		res.render('home', data);
 	});
 
-  app.get('/contact', function (req, res) {
+  app.get('/contact-us', function (req, res) {
     console.log('Render contact page and add contact form logic here');
 
     res.render('contact', {});

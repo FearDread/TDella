@@ -40,7 +40,8 @@ server = app.listen(config.port, function () {
 	host = server.address().address;
 	port = server.address().port;
 
-	console.log('TDELLA RUNNING : ' + config.hostname);
+	console.log('TDELLA RUNNING : ' + config.hostname + ' ' + config.port);
+  console.log('Environment == ' + config.environment)
 	console.log('public dir = ' + pubdir);
 });
 
