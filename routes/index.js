@@ -22,31 +22,37 @@ exports.add = function (app) {
 
 	app.get('/', function (req, res) {
     data = {
-      title: config.website.name,
-      social: config.website.social
+      title: 'T`Della Creations',
+      url: config.website.name,
+      social: config.website.social,
+      environment: config.environment
     };
-    console.log(utils);
+
 		console.log('render root :: ' + config);
 
 		res.render('home', data);
+
 	});
 
   app.get('/contact-us', function (req, res) {
     console.log('Render contact page and add contact form logic here');
 
     res.render('contact', {});
+
   });
 	
 	app.get('/about', function (req, res) {
 		console.log('render about tracy page');
 
 		res.render('about', {});
+
 	});
 
 	app.get('/portfolio', function (req, res) {
 		console.log('render portfolio page');
 
 		res.render('portfolio', {});
+
 	});
 
 }
