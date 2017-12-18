@@ -34,13 +34,6 @@ exports.add = function (app) {
 
 	});
 
-  app.get('/contact-us', function (req, res) {
-    console.log('Render contact page and add contact form logic here');
-
-    res.render('contact', {});
-
-  });
-	
 	app.get('/about', function (req, res) {
 		console.log('render about tracy page');
 
