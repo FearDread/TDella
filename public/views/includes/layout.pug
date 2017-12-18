@@ -7,10 +7,11 @@ html(lang='en')
     title #{title}
     meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
 
-    //- Add local resources for when no internet available
-
+    //- Add local resources for when no internet available or in development mode 
     -if ( environment == "development" ) {
+
       link(href='/assets/css/fonts/font-awesome-3.4.0.min.css', rel='stylesheet')
+      link(href='/assets/css/fonts/font-googleapis-Droid-Serif.css', rel='stylesheet')
 
     -} else {
 
