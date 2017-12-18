@@ -3,8 +3,1957 @@ extends includes/layout
 block css
 
 block content
+  body.landing-page
+
+    include includes/fragment_loader
+
+    nav.navbar.navbar-default.navbar-transparent.navbar-fixed-top.navbar-burger(role='navigation')
+      .container
+        .navbar-header
+          button#menu-toggle.navbar-toggle(type='button', data-toggle='collapse', data-target='#example')
+            span.sr-only Toggle navigation
+            span.icon-bar.bar1
+            span.icon-bar.bar2
+            span.icon-bar.bar3
+          a.navbar-brand(href='/rubik')
+            i.fa.fa-angle-left
+            |  Back to RUBIK
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right.navbar-uppercase
+            li.buy-now
+              a.btn.btn-fill.btn-default(href='http://www.creative-tim.com/buy/rubik-presentation-page')
+                | Buy Now!
+            li.social-links
+              a(href='#')
+                i.fa.fa-facebook
+              a(href='#')
+                i.fa.fa-twitter
+              a(href='#')
+                i.fa.fa-instagram
+            li
+              a(href='', data-scroll='true', data-id='#whoWeAre')
+                | About
+            li
+              a(href='', data-scroll='true', data-id='#workflow')
+                | Workflow
+            li
+              a(href='', data-scroll='true', data-id='#projects')
+                | Projects
+            li
+              a(href='', data-scroll='true', data-id='#clients')
+                | Clients
+            li
+              a(href='', data-scroll='true', data-id='#team')
+                | Team
+            li
+              a(href='', data-scroll='true', data-id='#numbers')
+                | Numbers
+            li
+              a(href='', data-scroll='true', data-id='#contact')
+                | Contact
+        // /.navbar-collapse
+    .wrapper
+      #header.rubik-section
+        .fixed-plugin(style='top: 350px')
+          .dropdown.open.header
+            a(href='#', data-toggle='dropdown')
+              i.fa.fa-cog.fa-2x  
+            ul.dropdown-menu
+              li.header-title Adjustments
+              li.adjustments-line
+                a.switch-trigger(href='javascript:void(0)')
+                  p Image Parallax
+                  .switch(data-on-label='ON', data-off-label='OFF')
+                    input(type='checkbox', checked='', data-target='section-header', data-type='parallax')
+                  .clearfix
+              li.adjustments-line
+                a.switch-trigger(href='javascript:void(0)')
+                  p Filter
+                  .pull-right
+                    span.badge.filter.badge-gold(data-color='gold')
+                    span.badge.filter.badge-green(data-color='green')
+                    span.badge.filter.badge-blue(data-color='blue')
+                    span.badge.filter.badge-purple(data-color='purple')
+                    span.badge.filter.badge-black.active(data-color='black')
+                  .clearfix
+              li.header-title Layouts
+              li
+                a(data-slide='0')
+                  img(alt='...', src='/assets/img/builder/header_thumb_1.jpg')
+                  h5 Image with color filter
+              li.active
+                a(data-slide='1')
+                  img(alt='...', src='/assets/img/builder/header_thumb_2.jpg')
+                  h5 Image with gradient filter
+              li
+                a(data-slide='2', data-video='header3')
+                  img(alt='...', src='/assets/img/builder/header_thumb_3.jpg')
+                  h5 Video with color filter
+              li
+                a(data-slide='3', data-video='header4')
+                  img(alt='...', src='/assets/img/builder/header_thumb_4.jpg')
+                  h5 Video with gradient filter
+        ul#header.rubik-slide(data-active-slide='2')
+          li
+            #header1.section.section-header
+              .parallax.pattern-image.filter.filter-color-black(data-color='black')
+                img(alt='...', src='/assets/img/rubik_background_inverted.jpg', responsive-src='https://download.unsplash.com/photo-1428517105157-da7cfd843eb8')
+                .container
+                  .content
+                    p
+                      span by 
+                      | Creative Tim
+                    h1 Rubik
+                    .separator-container
+                      .separator.line-separator ✻
+                    h5 Create a presentation page in 3 minutes or less.
+              a.scroll-arrow.hidden-xs.hidden-sm(href='', data-scroll='true', data-id='#whoWeAre')
+                i.fa.fa-angle-down
+          li
+            #header2.section.section-header
+              .parallax.pattern-image.filter.filter-gradient-black(data-color='black')
+                img(alt='...', src='/assets/img/rubik_background_inverted.jpg', responsive-src='https://download.unsplash.com/photo-1428517105157-da7cfd843eb8')
+                .container
+                  .content
+                    p
+                      span by 
+                      | Creative Tim
+                    h1 Rubik
+                    .separator-container
+                      .separator.line-separator ✻
+                    h5 Create a presentation page in 3 minutes or less.
+              a.scroll-arrow.hidden-xs.hidden-sm(href='', data-scroll='true', data-id='#whoWeAre')
+                i.fa.fa-angle-down
+          li
+            #header3.section.section-header
+              #video-container-3.full-image.pattern-image.filter.filter-color-black(data-color='black')
+                video.bgvid(preload='auto', autoplay='true', loop='loop', muted='muted', volume='0', responsive-src='https://download.unsplash.com/photo-1428517105157-da7cfd843eb8')
+                  source(src='/assets/video/time.webm', type='video/webm')
+                  source(src='/assets/video/time.mp4', type='video/mp4')
+                  |                                     Video not supported
+                .container
+                  .content
+                    p
+                      span by 
+                      | Creative Tim
+                    h1 Rubik
+                    .separator-container
+                      .separator.line-separator ✻
+                    h5 Create a presentation page in 3 minutes or less.
+              a.scroll-arrow.hidden-xs.hidden-sm(href='', data-scroll='true', data-id='#whoWeAre')
+                i.fa.fa-angle-down
+          li
+            #header4.section.section-header
+              #video-container-4.full-image.pattern-image.filter.filter-gradient-black(data-color='black')
+                video.bgvid(preload='auto', autoplay='true', loop='loop', muted='muted', volume='0', responsive-src='https://download.unsplash.com/photo-1428517105157-da7cfd843eb8')
+                  source(src='/assets/video/time.webm', type='video/webm')
+                  source(src='/assets/video/time.mp4', type='video/mp4')
+                  |                                     Video not supported
+                .container
+                  .content
+                    p
+                      span by 
+                      | Creative Tim
+                    h1 Rubik
+                    .separator-container
+                      .separator.line-separator ✻
+                    h5 Create a presentation page in 3 minutes or less.
+              a.scroll-arrow.hidden-xs.hidden-sm(href='', data-scroll='true', data-id='#whoWeAre')
+                i.fa.fa-angle-down
+          li
+      // rubik section end
+      #whoWeAre.rubik-section
+        .fixed-plugin
+          .dropdown
+            a(href='#', data-toggle='dropdown')
+              i.fa.fa-cog.fa-2x  
+            ul.dropdown-menu
+              li.header-title Adjustments
+              li.adjustments-line
+                a.switch-trigger(href='javascript:void(0)')
+                  p Components Animations
+                  .switch(data-on-label='ON', data-off-label='OFF')
+                    input(type='checkbox', data-target='section-we-are', data-type='animations')
+                  .clearfix
+              li.header-title Layouts
+              li
+                a(data-slide='0')
+                  img(alt='...', src='/assets/img/builder/we_are_thumb_1.jpg')
+                  h5 1 Column Text & Images
+              li
+                a(data-slide='1')
+                  img(alt='...', src='/assets/img/builder/we_are_thumb_4.jpg')
+                  h5 2 Columns Text & Images
+              li
+                a(data-slide='2')
+                  img(alt='...', src='/assets/img/builder/we_are_thumb_2.jpg')
+                  h5 1 Column Text & Parallax
+              li
+                a(data-slide='3')
+                  img(alt='...', src='/assets/img/builder/we_are_thumb_5.jpg')
+                  h5 2 Columns Text & Parallax
+              li.active
+                a(data-slide='4')
+                  img(alt='...', src='/assets/img/builder/we_are_thumb_3.jpg')
+                  h5 1 Column Text & Carousel
+              li
+                a(data-slide='5')
+                  img(alt='...', src='/assets/img/builder/we_are_thumb_6.jpg')
+                  h5 2 Columns Text & Carousel
+        ul.rubik-slide(data-active-slide='5')
+          li
+            .section.section-we-are-1
+              .text-area
+                .container
+                  .row
+                    .title.add-animation-stopped
+                      h5.text-gray  1 Column Text & Images
+                      h2 Who we are section
+                      .separator-container
+                        .separator.line-separator ✻
+                      p
+                        | Put down some words about you or your company right here. Do you have a motto? A short description or even a slogan? Here is the best place in the entire page where you can show it to the people.
+              .container
+                .row
+                  .col-md-4.col-md-offset-2
+                    .card.add-animation-stopped.animation-1
+                      img(alt='...', src='/assets/img/builder/projects/project_9.jpg')
+                  .col-md-4
+                    .card.add-animation-stopped.animation-2
+                      img(alt='...', src='/assets/img/builder/projects/project_10.jpg')
+          li
+            .section.section-we-are-2
+              .text-area
+                .container
+                  .row
+                    .col-md-4
+                      .title.add-animation-stopped
+                        h5.text-gray 2 Columns Text
+                        h2 Who we are section.
+                        .separator-container
+                          .separator.line-separator ✻
+                    .col-md-7.col-md-offset-1
+                      .description.add-animation-stopped.animation-1
+                        p
+                          | Put down some words about you or your company right here. Do you have a motto? A short description or even a slogan? Here is the best place in the entire page where you can show it to the people.
+                        p Also you can use the extra space and write a small intro about what you do.
+                        p
+                          | Keep in mind that there is a separate section called "What you do" so don't start detailing here.
+              .container
+                .row
+                  .col-md-10.col-md-offset-1
+                    .row
+                      .col-md-4
+                        .card.add-animation-stopped.animation-1
+                          img(alt='...', src='/assets/img/builder/projects/project_9.jpg')
+                      .col-md-4
+                        .card.add-animation-stopped.animation-2
+                          img(alt='...', src='/assets/img/builder/projects/project_10.jpg')
+                      .col-md-4
+                        .card.add-animation-stopped.animation-3
+                          img(alt='...', src='/assets/img/builder/projects/project_11.jpg')
+          li
+            .section.section-we-are-1
+              .text-area
+                .container
+                  .row
+                    .title.add-animation-stopped
+                      h5.text-gray  1 Column Text & Parallax
+                      h2 Who we are section
+                      .separator-container
+                        .separator.line-separator ✻
+                      p.large
+                        | Put down some words about you or your company right here. Do you have a motto? A short description or even a slogan? Here is the best place in the entire page where you can show it to the people.
+              .parallax.full-image.pattern-image
+                img.parallax-img(alt='...', src='/assets/img/builder/projects/project_5.jpg')
+          li
+            .section.section-we-are-2
+              .text-area
+                .container
+                  .row
+                    .col-md-4
+                      .title.add-animation-stopped
+                        h5.text-gray 2 Columns Text & Parallax
+                        h2 Who we are section.
+                        .separator-container
+                          .separator.line-separator ✻
+                    .col-md-7.col-md-offset-1
+                      .description.add-animation-stopped.animation-1
+                        p
+                          | Put down some words about you or your company right here. Do you have a motto? A short description or even a slogan? Here is the best place in the entire page where you can show it to the people.
+                        p Also you can use the extra space and write a small intro about what you do.
+                        p
+                          | Keep in mind that there is a separate section called "What you do" so don't start detailing here.
+              .parallax.full-image.pattern-image
+                img.parallax-img(alt='...', src='/assets/img/builder/projects/project_5.jpg')
+          li
+            .section.section-we-are-1
+              .text-area
+                .container
+                  .row
+                    .title.add-animation-stopped
+                      h5.text-gray  1 Column Text & Carousel
+                      h2 Who we are section
+                      .separator-container
+                        .separator.line-separator ✻
+                      p.large
+                        | Put down some words about you or your company right here. Do you have a motto? A short description or even a slogan? Here is the best place in the entire page where you can show it to the people.
+              #carousel
+                #section-we-are-1.carousel.slide.add-animation-stopped.add-animation-stopped-1(data-interval='20000')
+                  // Wrapper for slides
+                  .carousel-inner.pattern-image.animate
+                    .item.active
+                      img.full-image(alt='...', src='/assets/img/builder/projects/project_13.jpg')
+                    .item
+                      img.full-image(alt='...', src='/assets/img/builder/projects/project_14.jpg')
+                  // Controls
+                  a.left.carousel-control(href='#section-we-are-1', data-slide='prev')
+                    span.fa.fa-angle-left.hidden-md.hidden-lg
+                  a.right.carousel-control(href='#section-we-are-1', data-slide='next')
+                    span.fa.fa-angle-right.hidden-ms.hidden-lg
+          li
+            .section.section-we-are-2
+              .text-area
+                .container
+                  .row
+                    .col-md-4
+                      .title.add-animation-stopped
+                        h5.text-gray 2 Columns Text & Carousel
+                        h2 Who we are section.
+                        .separator-container
+                          .separator.line-separator ✻
+                    .col-md-7.col-md-offset-1
+                      .description.add-animation-stopped.animation-1
+                        p
+                          | Put down some words about you or your company right here. Do you have a motto? A short description or even a slogan? Here is the best place in the entire page where you can show it to the people.
+                        p Also you can use the extra space and write a small intro about what you do.
+                        p
+                          | Keep in mind that there is a separate section called "What you do" so don't start detailing here.
+              #carousel
+                #section-we-are-2.carousel.slide.add-animation-stopped.add-animation-stopped-1(data-interval='20000')
+                  // Wrapper for slides
+                  .carousel-inner.pattern-image.animate
+                    .item.active
+                      img.full-image(alt='...', src='/assets/img/builder/projects/project_13.jpg')
+                    .item
+                      img.full-image(alt='...', src='/assets/img/builder/projects/project_14.jpg')
+                  // Controls
+                  a.left.carousel-control(href='#section-we-are-2', data-slide='prev')
+                    span.fa.fa-angle-left.hidden-md.hidden-lg
+                  a.right.carousel-control(href='#section-we-are-2', data-slide='next')
+                    span.fa.fa-angle-right.hidden-ms.hidden-lg
+          li
+      // rubik section end
+      #workflow.rubik-section
+        .fixed-plugin
+          .dropdown
+            a(href='#', data-toggle='dropdown')
+              i.fa.fa-cog.fa-2x  
+            ul.dropdown-menu
+              li.header-title Adjustments
+              li.adjustments-line
+                a.switch-trigger(href='javascript:void(0)')
+                  p Components Animations
+                  .switch(data-on-label='ON', data-off-label='OFF')
+                    input(type='checkbox', data-target='section-we-do', data-type='animations')
+                  .clearfix
+              li.header-title Layouts
+              li
+                a(data-slide='0')
+                  img(alt='...', src='/assets/img/builder/what_we_do_thumb_1.jpg')
+                  h5 Small Title & 3 Columns Text
+              li
+                a(data-slide='1')
+                  img(alt='...', src='/assets/img/builder/what_we_do_thumb_2.jpg')
+                  h5 Big Title & 4 Columns Text
+              li
+                a(data-slide='2')
+                  img(alt='...', src='/assets/img/builder/what_we_do_thumb_3.jpg')
+                  h5 Small Title & 3 Columns Icons
+              li.active
+                a(data-slide='3')
+                  img(alt='...', src='/rubik/assets/img/builder/what_we_do_thumb_4.jpg')
+                  h5 Big Title & 4 Columns Icons
+        ul.rubik-slide(data-active-slide='4')
+          li
+            // Section "What We do" example 1: Small Title & 3 columns Text
+            #workflow1.section.section-we-do-1
+              .text-area
+                .container
+                  .row
+                    .title.add-animation-stopped
+                      h5.text-gray Small Title & 3 columns Text
+                      h2 What we do section
+                      .separator-container
+                        .separator.line-separator ✻
+                  .row
+                    .col-md-10.col-md-offset-1
+                      .row
+                        .col-md-4
+                          .card.add-animation-stopped.animation-1
+                            h5.text-gray 01.
+                            h3 Web Development
+                            p
+                              | We look at the experiences of the web development community, find problems and develop solutions. Then we roll them out to help more people in more situations.
+                        .col-md-4
+                          .card.add-animation-stopped.animation-2
+                            h5.text-gray 02.
+                            h3 Successful Branding
+                            p
+                              | Successful people do what unsuccessful people are not willing to do. Don't wish it were easier; wish you were better.
+                        .col-md-4
+                          .card.add-animation-stopped.animation-3
+                            h5.text-gray 03.
+                            h3 Marketing Strategies
+                            p
+                              | Stop chasing the money and start chasing the passion. All progress takes place outside the comfort zone.
+            // End Section "What We do" example 1: Small Title & 3 columns Text
+          li
+            // Section "What We do" example 2: Big Title & 4 columns text
+            #workflow1.section.section-we-do-1
+              .text-area
+                .container
+                  .row
+                    .title.add-animation-stopped
+                      h5.text-gray Big Title & 4 columns text
+                      h2 What we do section
+                      .separator-container
+                        .separator.line-separator ✻
+                      p
+                        | Write something about your skills or your area of expertise. Keep in mind that your expertise is at the heart of what you do.
+                  .row
+                    .col-md-3
+                      .card.add-animation-stopped.animation-1
+                        h5.text-gray 01.
+                        h3 We Design
+                        p
+                          | We look at the experiences of the web design community, find problems and develop solutions. Then we roll them out to help more people in more situations.
+                    .col-md-3
+                      .card.add-animation-stopped.animation-2
+                        h5.text-gray 02.
+                        h3 Business Analysis
+                        p
+                          | Successful people do what unsuccessful people are not willing to do. Don't wish it were easier; wish you were better.
+                    .col-md-3
+                      .card.add-animation-stopped.animation-3
+                        h5.text-gray 03.
+                        h3 Marketing Strategy
+                        p
+                          | An expert is a person who has found out by his own painful experience all the mistakes that one can make in a very narrow field.
+                    .col-md-3
+                      .card.add-animation-stopped.animation4
+                        h5.text-gray 04.
+                        h3 Promotions
+                        p
+                          | Stop chasing the money and start chasing the passion. All progress takes place outside the comfort zone.
+            // End Section "What We do" example 2: Big Title & 4 columns text
+          li
+            // Section "What We do" example 3: Small Title & 3 columns icons
+            #workflow2.section.section-we-do-2
+              .container
+                .row
+                  .title.add-animation-stopped
+                    h5.text-gray Small Title & 3 Columns Icons
+                    h2 What we do section
+                    .separator-container
+                      .separator.line-separator ✻
+                  .col-md-10.col-md-offset-1
+                    .row
+                      .col-md-4
+                        .card.add-animation-stopped.animation-1
+                          .icon
+                            i.pe-7s-paint
+                          h3 Design
+                          p We're a digital agency with our roots in graphic design.
+                      .col-md-4
+                        .card.add-animation-stopped.animation-2
+                          .icon
+                            i.pe-7s-scissors
+                          h3 Adjustments
+                          p We love making the web a better place and we love good reasons for adding to it.
+                      .col-md-4
+                        .card.add-animation-stopped.animation-3
+                          .icon
+                            i.pe-7s-plugin
+                          h3 Branding
+                          p
+                            | We love to create awesome products and we do everything to make them outstanding.
+            // End Section "What We do" example 3: Small Title & 3 columns icons
+          li
+            // Section "What We do" example 4: Big Title & 4 columns icons
+            #workflow2.section.section-we-do-2
+              .container
+                .row
+                  .title.add-animation-stopped
+                    h5.text-gray Big Title & 4 Columns Icons
+                    h2 What we do section
+                    .separator-container
+                      .separator.line-separator ✻
+                    p
+                      | Write something about your skills or your area of expertise. Keep in mind that your expertise is at the heart of what you do.
+                  .col-md-3
+                    .card.add-animation-stopped.animation-1
+                      .icon
+                        i.pe-7s-piggy
+                      h3 Design
+                      p
+                        | We design new websites, we revamp tired old non-performing websites. We get your business online.
+                  .col-md-3
+                    .card.add-animation-stopped.animation-2
+                      .icon
+                        i.pe-7s-headphones
+                      h3 Optimisation
+                      p
+                        | We optimise websites to help them rank higher than their competitors in the search engines.
+                  .col-md-3
+                    .card.add-animation-stopped.animation-3
+                      .icon
+                        i.pe-7s-pen
+                      h3 Photography
+                      p
+                        | We have two qualified photographers with digital SLRs, that can capture the images you need.
+                  .col-md-3
+                    .card.add-animation-stopped.animation-4
+                      .icon
+                        i.pe-7s-plugin
+                      h3 Branding
+                      p
+                        | Our aim is to get your website in front of your target audience and facilitate the 'purchase decision'.
+            // End Section "What We do" example 3: Small Title & 3 columns icons
+      // rubik section end
+      #projects.rubik-section
+        .fixed-plugin
+          .dropdown
+            a(href='#', data-toggle='dropdown')
+              i.fa.fa-cog.fa-2x  
+            ul.dropdown-menu
+              li.header-title Adjustments
+              li.adjustments-line
+                a.switch-trigger(href='javascript:void(0)')
+                  p Components Animations
+                  .switch(data-on-label='ON', data-off-label='OFF')
+                    input(type='checkbox', data-target='section-we-made', data-type='animations')
+                  .clearfix
+              li.header-title Layouts
+              li.active
+                a(data-slide='0')
+                  img(alt='...', src='/rubik/assets/img/builder/projects_thumb_1.jpg')
+                  h5 2 Columns Full Width
+              li
+                a(data-slide='1')
+                  img(alt='...', src='/rubik/assets/img/builder/projects_thumb_2.jpg')
+                  h5 3 Columns Full width
+              li
+                a(data-slide='2')
+                  img(alt='...', src='/rubik/assets/img/builder/projects_thumb_3.jpg')
+                  h5 2 Columns Boxed
+              li
+                a(data-slide='3')
+                  img(alt='...', src='/rubik/assets/img/builder/projects_thumb_4.jpg')
+                  h5 3 Columns Boxed
+              li
+                a(data-slide='4')
+                  img(alt='...', src='/rubik/assets/img/builder/projects_thumb_5.jpg')
+                  h5 Single Line Photos
+              li
+                a(data-slide='5')
+                  img(alt='...', src='/rubik/assets/img/builder/projects_thumb_6.jpg')
+                  h5 Multiple Lines Photos
+        ul.rubik-slide(data-active-slide='1')
+          li
+            // Section "Our Projects" example 1: 2 Columns Full Width
+            #projects1.section.section-we-made-1.section-with-hover
+              .text-area
+                .title.add-animation-stopped
+                  h5.text-gray 2 Columns Full width
+                  h2 Our Projects
+                  .separator-container
+                    .separator.line-separator ✻
+                  p
+                    | In this area you can write some interesting description about the projects that your team created. Don't forget to add some awesome images under this description, like the beautiful ones that we added.
+              #projectsLine1.row
+                .col-md-6
+                  .project.add-animation-stopped.animation-1
+                    img(alt='...', src='/assets/img/builder/projects/project_4.jpg')
+                    a.over-area.color-black(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_1')
+                      .content
+                        h4 Example No.1
+                        p Click to open Rubik modal.
+                .col-md-6
+                  .project.add-animation-stopped.animation-2
+                    img(alt='...', src='/assets/img/builder/projects/project_2.jpg')
+                    a.over-area.color-black(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_2')
+                      .content
+                        h4 Example No.2
+                        p Click to open Rubik modal.
+                .col-md-6
+                  .project.add-animation-stopped.animation-1
+                    img(alt='...', src='/assets/img/builder/projects/project_3.jpg')
+                    a.over-area.color-black(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_3')
+                      .content
+                        h4 Example No.3
+                        p Click to open Rubik modal.
+                .col-md-6
+                  .project.add-animation-stopped.animation-2
+                    img(alt='...', src='/assets/img/builder/projects/project_1.jpg')
+                    a.over-area.color-black(href='#', target='_blank')
+                      .content
+                        h4 Example No.4
+                        p Click to open a new link.
+            // End Section "Our Projects" example 1: 2 Columns Full Width
+          li
+            // Section "Our Projects" example 2: 3 Columns Full Width
+            #projects1.section.section-we-made-1.section-with-hover
+              .text-area
+                .title.add-animation-stopped
+                  h5.text-gray 3 Columns Full Width & Color Hover
+                  h2 Our Projects
+                  .separator-container
+                    .separator.line-separator ✻
+                  p
+                    | In this area you can write some interesting description about the projects that your team created. Don't forget to add some awesome images under this description, like the beautiful ones that we added.
+              #projectsLine1.row
+                .col-md-4
+                  .project.add-animation-stopped.animation-1
+                    img(alt='...', src='/rubik/assets/img/builder/projects/project_2.jpg')
+                    a.over-area.color-green(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_1')
+                      .content
+                        h4 Example No.1
+                        p Click to open Rubik modal.
+                .col-md-4
+                  .project.add-animation-stopped.animation-2
+                    img(alt='...', src='/rubik/assets/img/builder/projects/project_5.jpg')
+                    a.over-area.color-black(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_2')
+                      .content
+                        h4 Example No.2
+                        p Click to open Rubik modal.
+                .col-md-4
+                  .project.add-animation-stopped.animation-3
+                    img(alt='...', src='/rubik/assets/img/builder/projects/project_6.jpg')
+                    a.over-area.color-blue(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_2')
+                      .content
+                        h4 Example No.3
+                        p Click to open Rubik modal.
+                .col-md-4
+                  .project.add-animation-stopped.animation-1
+                    img(alt='...', src='/rubik/assets/img/builder/projects/project_1.jpg')
+                    a.over-area.color-purple(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_3')
+                      .content
+                        h4 Example No.4
+                        p Click to open Rubik modal.
+                .col-md-4
+                  .project.add-animation-stopped.animation-2
+                    img(alt='...', src='/rubik/assets/img/builder/projects/project_3.jpg')
+                    a.over-area.color-green(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_3')
+                      .content
+                        h4 Example No.5
+                        p Click to open Rubik modal.
+                .col-md-4
+                  .project.add-animation-stopped.animation-3
+                    img(alt='...', src='/rubik/assets/img/builder/projects/project_4.jpg')
+                    a.over-area.color-gold(href='#', target='_blank')
+                      .content
+                        h4 Example No.6
+                        p Click to open a new link.
+            // End Section "Our Projects" example 2: 3 Columns Full Width
+          li
+            // Section "Our Projects" example 3: 2 Columns Boxed
+            #projects1.section.section-we-made-3.section-with-hover
+              .text-area
+                .title.add-animation-stopped
+                  h5.text-gray 2 Columns Boxed
+                  h2 Our Projects
+                  .separator-container
+                    .separator.line-separator ✻
+                  p
+                    | In this area you can write some interesting description about the projects that your team created. Don't forget to add some awesome images under this description, like the beautiful ones that we added.
+              .container
+                #projectsLine1.row
+                  .col-md-6
+                    .project.add-animation-stopped.animation-1
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_4.jpg')
+                      a.over-area.color-black(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_1')
+                        .content
+                          h4 Example No.1
+                          p Click to open Rubik modal.
+                  .col-md-6
+                    .project.add-animation-stopped.animation-2
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_2.jpg')
+                      a.over-area.color-black(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_2')
+                        .content
+                          h4 Example No.2
+                          p Click to open Rubik modal.
+                  .col-md-6
+                    .project.add-animation-stopped.animation-1
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_3.jpg')
+                      a.over-area.color-black(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_3')
+                        .content
+                          h4 Example No.3
+                          p Click to open Rubik modal.
+                  .col-md-6
+                    .project.add-animation-stopped.animation-2
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_1.jpg')
+                      a.over-area.color-black(href='#', target='_blank')
+                        .content
+                          h4 Example No.4
+                          p Click to open a new link.
+            // End Section "Our Projects" example 3: 2 Columns Boxed
+          li
+            // Section "Our Projects" example 4: 3 Columns Boxed & Color Hover
+            #projects1.section.section-we-made-3.section-with-hover
+              .text-area
+                .title.add-animation-stopped
+                  h5.text-gray 3 Columns Boxed & Color Hover
+                  h2 Our Projects
+                  .separator-container
+                    .separator.line-separator ✻
+                  p
+                    | In this area you can write some interesting description about the projects that your team created. Don't forget to add some awesome images under this description, like the beautiful ones that we added.
+              .container
+                #projectsLine1.row
+                  .col-md-4
+                    .project.add-animation-stopped.animation-1
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_2.jpg')
+                      a.over-area.color-green(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_1')
+                        .content
+                          h4 Example No.1
+                          p Click to open Rubik modal.
+                  .col-md-4
+                    .project.add-animation-stopped.animation-2
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_5.jpg')
+                      a.over-area.color-black(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_2')
+                        .content
+                          h4 Example No.2
+                          p Click to open Rubik modal.
+                  .col-md-4
+                    .project.add-animation-stopped.animation-3
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_6.jpg')
+                      a.over-area.color-purple(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_2')
+                        .content
+                          h4 Example No.3
+                          p Click to open Rubik modal.
+                  .col-md-4
+                    .project.add-animation-stopped.animation-1
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_1.jpg')
+                      a.over-area.color-blue(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_3')
+                        .content
+                          h4 Example No.4
+                          p Click to open Rubik modal.
+                  .col-md-4
+                    .project.add-animation-stopped.animation-2
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_3.jpg')
+                      a.over-area.color-green(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_3')
+                        .content
+                          h4 Example No.5
+                          p Click to open Rubik modal.
+                  .col-md-4
+                    .project.add-animation-stopped.animation-3
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_4.jpg')
+                      a.over-area.color-gold(href='#', target='_blank')
+                        .content
+                          h4 Example No.6
+                          p Click to open a new link.
+            // End Section "Our Projects" example 4: 3 Columns Boxed & Color Hover
+          li
+            // Section "Our Projects" example 5: Single Line Photos
+            #projects2.section.section-we-made-2.section-with-hover
+              .projects
+                .text-area
+                  .title.add-animation-stopped
+                    h5.text-gray Example No.5
+                    h2 Projects section
+                    .separator-container
+                      .separator.line-separator ✻
+                .info.add-animation-stopped.animation-1
+                  p.text-center.text-gray One of our best projects outside of America
+                .row.scroller
+                  .col-lg-3.col-md-6.col-sm-6
+                    .project.add-animation-stopped.animation-1
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_2.jpg')
+                  .col-lg-3.col-md-6.col-sm-6
+                    .project.add-animation-stopped.animation-2
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_3.jpg')
+                  .col-lg-3.col-md-6.col-sm-6
+                    .project.add-animation-stopped.animation-2
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_6.jpg')
+                  .col-lg-3.col-md-6.col-sm-6
+                    .project.add-animation-stopped.animation-4
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_5.jpg')
+                      a.over-area.color-black(href='#', target='_blank')
+                        .content
+                          h4 America Trip
+                          p Click to open a new link.
+            // End Section "Our Projects" example 5: Single Line Photos
+          li
+            // Section "Our Projects" example 6: Multiple Lines Photos
+            #projects2.section.section-we-made-2.section-with-hover
+              .projects
+                .text-area
+                  .title.add-animation-stopped
+                    h5.text-gray Multiple Lines Photos
+                    h2 Projects section
+                    .separator-container
+                      .separator.line-separator ✻
+                .info.add-animation-stopped.animation-1
+                  p.text-center.text-gray One of our best projects outside of America
+                .row.scroller
+                  .col-lg-3.col-md-6.col-sm-6
+                    .project.add-animation-stopped.animation-1
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_2.jpg')
+                  .col-lg-3.col-md-6.col-sm-6
+                    .project.add-animation-stopped.animation-2
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_3.jpg')
+                  .col-lg-3.col-md-6.col-sm-6
+                    .project.add-animation-stopped.animation-3
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_6.jpg')
+                  .col-lg-3.col-md-6.col-sm-6
+                    .project.add-animation-stopped.animation-4
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_5.jpg')
+                      a.over-area.color-black(href='#', target='_blank')
+                        .content
+                          h4 America Trip
+                          p Click to open a new link.
+                .info.add-animation-stopped.animation-1
+                  p.text-center.text-gray Europe Project that we are proud of:
+                .row.scroller
+                  .col-lg-3.col-md-6.col-sm-6
+                    .project.add-animation-stopped.animation-1
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_7.jpg')
+                  .col-lg-3.col-md-6.col-sm-6
+                    .project.add-animation-stopped.animation-2
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_8.jpg')
+                  .col-lg-3.col-md-6.col-sm-6
+                    .project.add-animation-stopped.animation-3
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_4.jpg')
+                  .col-lg-3.col-md-6.col-sm-6
+                    .project.add-animation-stopped.animation-4
+                      img(alt='...', src='/rubik/assets/img/builder/projects/project_1.jpg')
+                      a.over-area.color-black(href='#', target='_blank')
+                        .content
+                          h4 Europe Trip
+                          p Click to open a new link.
+            // End Section "Our Projects" example 6: Multiple Lines Photos
+      // rubik section end
+      #clients.rubik-section
+        .fixed-plugin
+          .dropdown
+            a(href='#', data-toggle='dropdown')
+              i.fa.fa-cog.fa-2x  
+            ul.dropdown-menu
+              li.header-title Adjustments
+              li.adjustments-line
+                a.switch-trigger(href='javascript:void(0)')
+                  p Components Animations
+                  .switch(data-on-label='ON', data-off-label='OFF')
+                    input(type='checkbox', data-target='section-clients', data-type='animations')
+                  .clearfix
+              li.header-title Layouts
+              li
+                a(data-slide='0')
+                  img(alt='...', src='/rubik/assets/img/builder/clients_thumb_1.jpg')
+                  h5 3 Columns Logos
+              li.active
+                a(data-slide='1')
+                  img(alt='...', src='/rubik/assets/img/builder/clients_thumb_2.jpg')
+                  h5 4 Columns Logos
+              li
+                a(data-slide='2')
+                  img(alt='...', src='/rubik/assets/img/builder/clients_thumb_3.jpg')
+                  h5 Personal Testimonials
+              li
+                a(data-slide='3')
+                  img(alt='...', src='/rubik/assets/img/builder/clients_thumb_4.jpg')
+                  h5 Companies Feedback
+        ul.rubik-slide(data-active-slide='2')
+          li
+            // Section "Clients" example 1: 3 Columns Logos
+            #clients1.section.section-clients-1
+              .container
+                .text-area
+                  .title.add-animation-stopped
+                    h5.text-gray 3 Columns Logos
+                    h2 Clients Section
+                    .separator-container
+                      .separator.line-separator ✻
+                    p Here can be a small description about your working process with your clients.
+                .list-logos
+                  .row
+                    .col-md-4
+                      .logo.add-animation-stopped.animation-1
+                        a(href='#')
+                          img(alt='...', src='/rubik/assets/img/clients/forbes.svg')
+                          img(alt='...', src='/rubik/assets/img/clients/forbes_h.svg')
+                    .col-md-4
+                      .logo.add-animation-stopped.animation-2
+                        a(href='#')
+                          img(alt='...', src='/rubik/assets/img/clients/intel.svg')
+                          img(alt='...', src='/rubik/assets/img/clients/intel_h.svg')
+                    .col-md-4
+                      .logo.add-animation-stopped.animation-3
+                        a(href='#')
+                          img(alt='...', src='/rubik/assets/img/clients/apple.svg')
+                          img(alt='...', src='/rubik/assets/img/clients/apple_h.svg')
+                    .col-md-4
+                      .logo.add-animation-stopped.animation-1
+                        a(href='#')
+                          img(alt='...', src='/rubik/assets/img/clients/vaio.svg')
+                          img(alt='...', src='/rubik/assets/img/clients/vaio_h.svg')
+                    .col-md-4
+                      .logo.add-animation-stopped.animation-2
+                        a(href='#')
+                          img(alt='...', src='/rubik/assets/img/clients/hp.svg')
+                          img(alt='...', src='/rubik/assets/img/clients/hp_h.svg')
+                    .col-md-4
+                      .logo.add-animation-stopped.animation-3
+                        a(href='#')
+                          img(alt='...', src='/rubik/assets/img/clients/samsung.svg')
+                          img(alt='...', src='/rubik/assets/img/clients/samsung_h.svg')
+                    .col-md-4
+                      .logo.add-animation-stopped.animation-1
+                        a(href='#')
+                          img(alt='...', src='/rubik/assets/img/clients/canon.svg')
+                          img(alt='...', src='/rubik/assets/img/clients/canon_h.svg')
+                    .col-md-4
+                      .logo.add-animation-stopped.animation-2
+                        a(href='#')
+                          img(alt='...', src='/rubik/assets/img/clients/siemens.svg')
+                          img(alt='...', src='/rubik/assets/img/clients/siemens_h.svg')
+                    .col-md-4
+                      .logo.add-animation-stopped.animation-3
+                        a(href='#')
+                          img(alt='...', src='/rubik/assets/img/clients/lastfm.svg')
+                          img(alt='...', src='/rubik/assets/img/clients/lastfm_h.svg')
+            // End Section "Clients" example 1: 3 Columns Logos
+          li
+            // Section "Clients" example 1: 4 Columns Logos
+            #clients1.section.section-clients-1
+              .container
+                .text-area
+                  .title.add-animation-stopped
+                    h5.text-gray 4 Columns Logos
+                    h2 Clients Section
+                    .separator-container
+                      .separator.line-separator ✻
+                    p Here can be a small description about your working process with your clients.
+                .list-logos
+                  .row
+                    .col-md-3
+                      .logo.add-animation-stopped.animation-1
+                        a(href='#')
+                          img(alt='...', src='/rubik/assets/img/clients/forbes.svg')
+                          img(alt='...', src='/rubik/assets/img/clients/forbes_h.svg')
+                    .col-md-3
+                      .logo.add-animation-stopped.animation-2
+                        a(href='#')
+                          img(alt='...', src='/rubik/assets/img/clients/intel.svg')
+                          img(alt='...', src='/rubik/assets/img/clients/intel_h.svg')
+                    .col-md-3
+                      .logo.add-animation-stopped.animation-3
+                        a(href='#')
+                          img(alt='...', src='/rubik/assets/img/clients/apple.svg')
+                          img(alt='...', src='/rubik/assets/img/clients/apple_h.svg')
+                    .col-md-3
+                      .logo.add-animation-stopped.animation-1
+                        a(href='#')
+                          img(alt='...', src='/rubik/assets/img/clients/vaio.svg')
+                          img(alt='...', src='/rubik/assets/img/clients/vaio_h.svg')
+                    .col-md-3
+                      .logo.add-animation-stopped.animation-2
+                        a(href='#')
+                          img(alt='...', src='/rubik/assets/img/clients/hp.svg')
+                          img(alt='...', src='/rubik/assets/img/clients/hp_h.svg')
+                    .col-md-3
+                      .logo.add-animation-stopped.animation-3
+                        a(href='#')
+                          img(alt='...', src='/rubik/assets/img/clients/samsung.svg')
+                          img(alt='...', src='/rubik/assets/img/clients/samsung_h.svg')
+                    .col-md-3
+                      .logo.add-animation-stopped.animation-1
+                        a(href='#')
+                          img(alt='...', src='/rubik/assets/img/clients/canon.svg')
+                          img(alt='...', src='/rubik/assets/img/clients/canon_h.svg')
+                    .col-md-3
+                      .logo.add-animation-stopped.animation-2
+                        a(href='#')
+                          img(alt='...', src='/rubik/assets/img/clients/siemens.svg')
+                          img(alt='...', src='/rubik/assets/img/clients/siemens_h.svg')
+            // End Section "Clients" example 2: 4 Columns Logos
+          li
+            // Section "Clients" example 3: Personal Testimonial
+            #clients2.section.section-clients-2
+              .container
+                .title.add-animation-stopped
+                  h5.text-gray Personal Testimonial
+                  h2 What people say
+                  .separator-container
+                    .separator.line-separator ✻
+                .tab-content.quotes.add-animation-stopped.animation-2
+                  #canon.tab-pane.active
+                    p.large
+                      | Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display.
+                      | It’s one continuous form where hardware and software function in perfect unison, creating a new generation of phone that’s better by any measure but efficient.
+                ul.nav.nav-text.list-logos.add-animation-stopped.animation-1(role='tablist')
+                  li.active
+                    h3
+                      a(href='#') Mike Thomson
+            // End Section "Clients" example 3: Personal Testimonial
+          li
+            // Section "Clients" example 4: Companies Feedback
+            #clients2.section.section-clients-2
+              .container
+                .title.add-animation-stopped
+                  h5.text-gray Companies Feedback
+                  h2 What our partners say
+                  .separator-container
+                    .separator.line-separator ✻
+                .tab-content.quotes.add-animation-stopped.animation-2
+                  #canon-4.tab-pane.active
+                    p.large
+                      | Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display.
+                      | It’s one continuous form where hardware and software function in perfect unison, creating a new generation of phone that’s better by any measure but efficient.
+                  #samsung-4.tab-pane
+                    p.large
+                      | The first thing you notice when you hold the phone is how great it feels in your hand. The cover glass curves down around the sides to meet the anodized aluminum enclosure in a remarkable, simplified design.
+                      | There are no distinct edges. No gaps. Just a smooth, seamless bond of metal and glass that feels like one continuous surface.
+                  #sony-4.tab-pane
+                    p.large
+                      | It’s one continuous form where hardware and software function in perfect unison, creating a new generation of phone that’s better by any measure.
+                      | Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display.
+                  #intel-4.tab-pane
+                    p.large
+                      | From the seamless transition of glass and metal to the streamlined profile, every detail was carefully considered to enhance your experience. So while its display is larger, the phone feels just right.
+                      | It’s one continuous form where hardware and software function in perfect unison, creating a new generation of phone that’s better by any measure.
+                ul.nav.nav-text.list-logos.add-animation-stopped.animation-1(role='tablist')
+                  li.active
+                    a(href='#canon-4', role='tab', data-toggle='tab')
+                      img(alt='...', src='/rubik/assets/img/clients/canon.svg')
+                      img(alt='...', src='/rubik/assets/img/clients/canon_h.svg')
+                  li
+                    a(href='#samsung-4', role='tab', data-toggle='tab')
+                      img(alt='...', src='/rubik/assets/img/clients/samsung.svg')
+                      img(alt='...', src='/rubik/assets/img/clients/samsung_h.svg')
+                  li
+                    a(href='#sony-4', role='tab', data-toggle='tab')
+                      img(alt='...', src='/rubik/assets/img/clients/sony.svg')
+                      img(alt='...', src='/rubik/assets/img/clients/sony_h.svg')
+                  li
+                    a(href='#intel-4', role='tab', data-toggle='tab')
+                      img(alt='...', src='/rubik/assets/img/clients/intel.svg')
+                      img(alt='...', src='/rubik/assets/img/clients/intel_h.svg')
+            // Section "Clients" example 4: Companies Testimonials
+          li
+      // rubik section end
+      #team.rubik-section
+        .fixed-plugin
+          .dropdown
+            a(href='#', data-toggle='dropdown')
+              i.fa.fa-cog.fa-2x  
+            ul.dropdown-menu
+              li.header-title Adjustments
+              li.adjustments-line
+                a.switch-trigger(href='javascript:void(0)')
+                  p Components Animations
+                  .switch(data-on-label='ON', data-off-label='OFF')
+                    input(type='checkbox', data-target='section-clients', data-type='animations')
+                  .clearfix
+              li.header-title Layouts
+              li
+                a(data-slide='0')
+                  img(alt='...', src='/rubik/assets/img/builder/team_thumb_1.jpg')
+                  h5 Title & Full Image
+              li
+                a(data-slide='1')
+                  img(alt='...', src='/rubik/assets/img/builder/team_thumb_2.jpg')
+                  h5 Left Title & 3 Profiles
+              li.active
+                a(data-slide='2')
+                  img(alt='...', src='/rubik/assets/img/builder/team_thumb_3.jpg')
+                  h5 4 Profiles Style 1
+              li
+                a(data-slide='3')
+                  img(alt='...', src='/rubik/assets/img/builder/team_thumb_4.jpg')
+                  h5 6 Profiles Style 2
+        ul.rubik-slide(data-active-slide='3')
+          li
+            // Section "Team" example 1: Title & Full Image
+            #team1.section.section-team-1
+              .container
+                .text-area
+                  .title.add-animation-stopped
+                    h5.text-gray Title & Full Image
+                    h2 Team Section
+                    .separator-container
+                      .separator.line-separator ✻
+                    p
+                      | Here you can write an interesting description about your team and you can also place a beautiful image on the background.
+              .full-image.gradient-image
+                img(alt='...', src='/rubik/assets/img/builder/team.jpg')
+            // End Section "Team" example 1: Description & Full Image
+          li
+            // Section "Team" example 2: Left Title & 3 Profiles
+            #team4.section.section-team-4
+              .container
+                .row
+                  .col-md-4
+                    .title.add-animation-stopped
+                      h5 Left Title & 3 Profiles
+                      h2 Team Section
+                      .separator-container
+                        .separator.line-separator ✻
+                  .col-md-7.col-offset-1
+                    .team
+                      .row
+                        .col-md-4
+                          .member.add-animation-stopped.animation-2
+                            img.img-circle(alt='...', src='/rubik/assets/img/faces/face_10.jpg')
+                            .description
+                              h3.big-text Paul
+                              p.small-text Architect
+                        .col-md-4
+                          .member.add-animation-stopped.animation-3
+                            img.img-circle(alt='...', src='/rubik/assets/img/faces/face_12.jpg')
+                            .description
+                              h3.big-text Andrew
+                              p.small-text Designer
+                        .col-md-4
+                          .member.add-animation-stopped.animation-4
+                            img.img-circle(alt='...', src='/rubik/assets/img/faces/face_11.jpg')
+                            .description
+                              h3.big-text Rick
+                              p.small-text Designer
+          li
+            // Section "Team" example 3: 4 Profiles Style 1
+            #team2.section.section-team-2
+              .container
+                .text-area
+                  .title.add-animation-stopped
+                    h5.text-gray 4 Profiles Style 1
+                    h2 Team Section
+                    .separator-container
+                      .separator.line-separator ✻
+                .team
+                  .row
+                    .col-md-3
+                      .member.add-animation-stopped.animation-1
+                        img.img-circle(alt='...', src='/rubik/assets/img/faces/face_10.jpg')
+                        .description
+                          h3.big-text Michael
+                          p.small-text Co-Founder
+                        .social-buttons
+                          button.btn.btn-social.btn-simple(href='#')
+                            i.fa.fa-facebook-square
+                          button.btn.btn-social.btn-simple(href='#')
+                            i.fa.fa-twitter
+                          button.btn.btn-social.btn-simple(href='#')
+                            i.fa.fa-linkedin
+                    .col-md-3
+                      .member.add-animation-stopped.animation-2
+                        img.img-circle(alt='...', src='/rubik/assets/img/faces/face_9.jpg')
+                        .description
+                          h3.big-text George
+                          p.small-text Co-Founder
+                        .social-buttons
+                          button.btn.btn-social.btn-simple(href='#')
+                            i.fa.fa-instagram
+                          button.btn.btn-social.btn-simple(href='#')
+                            i.fa.fa-twitter
+                          button.btn.btn-social.btn-simple(href='#')
+                            i.fa.fa-flickr
+                    .col-md-3
+                      .member.add-animation-stopped.animation-3
+                        img.img-circle(alt='...', src='/rubik/assets/img/faces/face_11.jpg')
+                        .description
+                          h3.big-text Andrew
+                          p.small-text Product Designer
+                        .social-buttons
+                          button.btn.btn-social.btn-simple(href='#')
+                            i.fa.fa-linkedin
+                          button.btn.btn-social.btn-simple(href='#')
+                            i.fa.fa-instagram
+                          button.btn.btn-social.btn-simple(href='#')
+                            i.fa.fa-pinterest
+                    .col-md-3
+                      .member.add-animation-stopped.animation-4
+                        img.img-circle(alt='...', src='/rubik/assets/img/faces/face_12.jpg')
+                        .description
+                          h3.big-text Northon
+                          p.small-text Happiness Hero
+                        .social-buttons
+                          button.btn.btn-social.btn-simple(href='#')
+                            i.fa.fa-facebook-square
+                          button.btn.btn-social.btn-simple(href='#')
+                            i.fa.fa-soundcloud
+                          button.btn.btn-social.btn-simple(href='#')
+                            i.fa.fa-tumblr-square
+            // End Section "Team" example 3: 4 Profiles Style 1
+          li
+            // Section "Team" example 4: 6 Profiles Style 2
+            #team2.section.section-team-2
+              .container
+                .text-area
+                  .title.add-animation-stopped
+                    h5.text-gray 6 Profiles Style 2
+                    h2 Team Section
+                    .separator-container
+                      .separator.line-separator ✻
+                .team
+                  .row
+                    .col-md-10.col-md-offset-1
+                      .row
+                        .col-md-4
+                          .member.add-animation-stopped.animation-1
+                            img.img-circle(alt='...', src='/rubik/assets/img/faces/face_10.jpg')
+                            .description
+                              h3.big-text Michael
+                              p.small-text Co-Founder
+                        .col-md-4
+                          .member.add-animation-stopped.animation-2
+                            img.img-circle(alt='...', src='/rubik/assets/img/faces/face_9.jpg')
+                            .description
+                              h3.big-text George
+                              p.small-text Co-Founder
+                        .col-md-4
+                          .member.add-animation-stopped.animation-3
+                            img.img-circle(alt='...', src='/rubik/assets/img/faces/face_11.jpg')
+                            .description
+                              h3.big-text Andrew
+                              p.small-text Product Designer
+                        .col-md-4
+                          .member.add-animation-stopped.animation-1
+                            img.img-circle(alt='...', src='/rubik/assets/img/faces/face_6.jpg')
+                            .description
+                              h3.big-text Michael
+                              p.small-text Hacker
+                        .col-md-4
+                          .member.add-animation-stopped.animation-2
+                            img.img-circle(alt='...', src='/rubik/assets/img/faces/face_7.jpg')
+                            .description
+                              h3.big-text Northon
+                              p.small-text Happiness Hero
+                        .col-md-4
+                          .member.add-animation-stopped.animation-3
+                            img.img-circle(alt='...', src='/rubik/assets/img/faces/face_14.jpg')
+                            .description
+                              h3.big-text You?
+                              p.small-text Join us
+            // Section "Team" example 4: 6 Profiles Style 2
+      // rubik section end
+      #numbers.rubik-section
+        .fixed-plugin
+          .dropdown
+            a(href='#', data-toggle='dropdown')
+              i.fa.fa-cog.fa-2x  
+            ul.dropdown-menu
+              li.header-title Adjustments
+              li.adjustments-line
+                a.switch-trigger(href='javascript:void(0)')
+                  p Components Animations
+                  .switch(data-on-label='ON', data-off-label='OFF')
+                    input(type='checkbox', data-target='section-numbers', data-type='animations')
+                  .clearfix
+              li.header-title Layouts
+              li
+                a(data-slide='0')
+                  img(alt='...', src='/rubik/assets/img/builder/numbers_thumb_1.jpg')
+                  h5 Simple Text
+              li
+                a(data-slide='1')
+                  img(alt='...', src='/rubik/assets/img/builder/numbers_thumb_2.jpg')
+                  h5 Text & Logos
+              li.active
+                a(data-slide='2')
+                  img(alt='...', src='/rubik/assets/img/builder/numbers_thumb_3.jpg')
+                  h5 Text & Parallax
+              li
+                a(data-slide='3')
+                  img(alt='...', src='/rubik/assets/img/builder/numbers_thumb_4.jpg')
+                  h5 Text & Image
+        ul.rubik-slide(data-active-slide='3')
+          li
+            // Section "Numbers" example 1: Simple Text
+            #numbers1.section.section-numbers-1
+              .container
+                .text-area
+                  .title.add-animation-stopped
+                    h5.text-gray Simple Text
+                    h2 Numbers Section
+                    .separator-container
+                      .separator.line-separator ✻
+                    p
+                      | For those with pure food indulgence in mind, come next door and sate your desires with our ever changing internationally and seasonally inspired small plates.  We love food, lots of different food, just like you.
+                .clearfix
+                .row
+                  .col-md-4
+                    .card.add-animation-stopped.animation-1
+                      h3 Customers
+                      h5.text-gray Enterprises and small businesses
+                      #customersNo.number
+                        | 5.382
+                  .col-md-4
+                    .card.add-animation-stopped.animation-2
+                      h3 Projects
+                      h5.text-gray Design, Strategy and Marketing
+                      #projectsNo.number
+                        | 26.832
+                  .col-md-4
+                    .card.add-animation-stopped.animation-3
+                      h3 Cities
+                      h5.text-gray Where you can find to us
+                      #citiesNo.number
+                        | 278
+            // End Section "Numbers" example 1: Simple Text
+          li
+            // Section "Numbers" example 2: Text & Icons
+            #numbers3.section.section-numbers-1
+              .container
+                .text-area
+                  .title.add-animation-stopped
+                    h5.text-gray Text & Icons
+                    h2 Numbers Section
+                    .separator-container
+                      .separator.line-separator ✻
+                .clearfix
+                .row
+                  .col-md-4
+                    .card.add-animation-stopped.animation-1
+                      .icon
+                        i.pe-7s-users
+                      h3 Customers
+                      h5.text-gray Enterprises and small businesses
+                      #customersNo.number
+                        | 5.382
+                  .col-md-4
+                    .card.add-animation-stopped.animation-2
+                      .icon
+                        i.pe-7s-box1
+                      h3 Projects
+                      h5.text-gray Design, Strategy and Marketing
+                      #projectsNo.number
+                        | 26.832
+                  .col-md-4
+                    .card.add-animation-stopped.animation-3
+                      .icon
+                        i.pe-7s-global
+                      h3 Cities
+                      h5.text-gray Where you can find to us
+                      #citiesNo.number
+                        | 278
+            // End Section "Numbers" example 2: Text & Image
+          li
+            // Section "Numbers" example 3: Text & Parallax
+            #numbers2.section.section-numbers-2
+              .parallax.pattern-image
+                img(alt='...', src='/rubik/assets/img/rubik_background.jpg')
+              .container
+                .row
+                  .col-md-8.col-md-offset-2.text-center
+                    .description
+                      .title
+                        h5 Text & Parallax
+                        h2 Numbers Section
+                        .separator-container
+                          .separator.line-separator ✻
+                .clearfix
+                .row
+                  .col-md-4
+                    .card.card-plain
+                      h3 Customers
+                      h5 Enterprises and private
+                      #customersNo.number
+                        | 574
+                  .col-md-4
+                    .card.card-plain
+                      h3 Projects
+                      h5 Design, Sketch and Plan
+                      #projectsNo.number
+                        | 1.257
+                  .col-md-4
+                    .card.card-plain
+                      h3 Cities
+                      h5 Where you can find our work
+                      #citiesNo.number
+                        | 52
+            // End Section "Numbers" example 3: Text & Parallax
+          li
+            // Section "Numbers" example 4: Text & Image
+            #numbers3.section.section-numbers-3
+              .full-image.pattern-image
+                img(alt='...', src='/rubik/assets/img/rubik_background.jpg')
+              .container
+                .text-area
+                  .title.add-animation-stopped
+                    h5 Text & Image
+                    h2 Numbers Section
+                    .separator-container
+                      .separator.line-separator ✻
+                .clearfix
+                .row
+                  .col-md-4
+                    .card.add-animation-stopped.animation-1
+                      h3 Customers
+                      h5 Enterprises and small businesses
+                      #customersNo.number
+                        | 5.382
+                  .col-md-4
+                    .card.add-animation-stopped.animation-2
+                      h3 Projects
+                      h5 Design, Strategy and Marketing
+                      #projectsNo.number
+                        | 26.832
+                  .col-md-4
+                    .card.add-animation-stopped.animation-3
+                      h3 Cities
+                      h5 Where you can find to us
+                      #citiesNo.number
+                        | 278
+            // End Section "Numbers" example 4: Text & Image
+      // rubik section end
+      #contact.rubik-section
+        .fixed-plugin
+          .dropdown
+            a(href='#', data-toggle='dropdown')
+              i.fa.fa-cog.fa-2x  
+            ul.dropdown-menu
+              li.header-title Adjustments
+              li.adjustments-line
+                a.switch-trigger(href='javascript:void(0)')
+                  p Components Animations
+                  .switch(data-on-label='ON', data-off-label='OFF')
+                    input(type='checkbox', data-target='section-contact', data-type='animations')
+                  .clearfix
+              li.header-title Layouts
+              li
+                a(data-slide='0')
+                  img(alt='...', src='/rubik/assets/img/builder/contact_thumb_4.jpg')
+                  h5 Simple Text
+              li
+                a(data-slide='1')
+                  img(alt='...', src='/rubik/assets/img/builder/contact_thumb_2.jpg')
+                  h5 Text & Logos
+              li.active
+                a(data-slide='2')
+                  img(alt='...', src='/rubik/assets/img/builder/contact_thumb_1.jpg')
+                  h5 Text & Parallax
+              li
+                a(data-slide='3')
+                  img(alt='...', src='/rubik/assets/img/builder/contact_thumb_3.jpg')
+                  h5 Text & Image
+        ul.rubik-slide(data-active-slide='3')
+          li
+            // Section "Contact" example 1: Form Style 1
+            #contact1.section.section-contact-1
+              .container
+                .text-area
+                  .title.add-animation-stopped
+                    h5 Form Style 1
+                    h2 Contact Section
+                    .separator-container
+                      .separator.line-separator ✻
+                    p
+                      | If you wish to write a formal letter, you can open with 'Madam' and close the letter with the form 'I have the honour to be'.
+                .contact-form
+                  form(action='', method='post')
+                    .row
+                      .col-md-4
+                        .form-group.add-animation-stopped.animation-1
+                          input.form-control(type='text', name='name', value='', placeholder='Your Name')
+                      .col-md-4
+                        .form-group.add-animation-stopped.animation-2
+                          input.form-control(type='text', name='email', value='', placeholder='Your Email')
+                      .col-md-4
+                        .form-group.add-animation-stopped.animation-3
+                          input.form-control(type='text', name='subject', value='', placeholder='Subject of contact')
+                      .col-md-12
+                        .form-group.add-animation-stopped.animation-1
+                          textarea.form-control(name='content', placeholder='Here you can write your nice text', rows='5')
+                        div
+                          .col-md-2.col-md-offset-5
+                            button.btn.btn-lg.btn-black.btn-contact(type='button')
+                              | SEND 
+                              i.fa.fa-paper-plane
+            // End Section "Contact" example 1: Form Style 1
+          li
+            // Section "Contact" example 2: Form Style 2
+            #contact2.section.section-contact-2
+              .container
+                .text-area
+                  .title.add-animation-stopped
+                    h5 Form Style 2
+                    h2 Contact Section
+                    .separator-container
+                      .separator.line-separator ✻
+                .contact-form
+                  form(action='', method='post')
+                    .row
+                      .col-md-4
+                        .form-group.add-animation-stopped.animation-1
+                          label Your Full Name
+                          input.form-control(type='text', name='name', value='', placeholder='Michael Jordan')
+                      .col-md-4
+                        .form-group.add-animation-stopped.animation-2
+                          label Your Email
+                          input.form-control(type='text', name='email', value='', placeholder='michael.j@gmail.com')
+                      .col-md-4
+                        .form-group.add-animation-stopped.animation-3
+                          label Subject
+                          input.form-control(type='text', name='subject', value='', placeholder='Say hi to you')
+                      .col-md-12
+                        .form-group.add-animation-stopped.animation-1
+                          textarea.form-control(name='content', placeholder='Here you can write your nice text', rows='8')
+                        div
+                          .col-md-2.col-md-offset-5
+                            button.btn.btn-lg.btn-black.btn-contact(type='button')
+                              | SEND 
+                              i.fa.fa-paper-plane
+            // End Section "Contact" example 2: Form Style 2
+          li
+            // Section "Contact" example 3: Form Style 1 & Address
+            #contact1.section.section-contact-1
+              .container
+                .text-area
+                  .title.add-animation-stopped
+                    h5 Form Style 1 & Address
+                    h2 Contact Section
+                    .separator-container
+                      .separator.line-separator ✻
+                    p
+                      | If you wish to write a formal letter, you can open with 'Madam' and close the letter with the form 'I have the honour to be'.
+                  .contact-form
+                    .row
+                      .col-md-3.right-border
+                        .address.add-animation-stopped.animation-1
+                          h4 Where to meet ?
+                          p.text-gray
+                            | 2578 Paris
+                            br
+                            |                                                         Rue Abel, 12
+                            br
+                            |                                                         France
+                          h4 Phone
+                          p.text-gray 0456 / 71 21 39
+                          h4 By the old way
+                          a(href='mailto:hello@creative-tim.com')
+                            p.text-gray hello@creative-tim.com
+                      .col-md-8.col-md-offset-1
+                        form(action='', method='post')
+                          .form-group.add-animation-stopped.animation-1
+                            input.form-control(type='text', name='name', value='', placeholder='Your Full Name')
+                          .form-group.add-animation-stopped.animation-2
+                            input.form-control(type='text', name='email', value='', placeholder='Your Email')
+                          .form-group.add-animation-stopped.animation-3
+                            textarea.form-control(name='content', placeholder='Here you can write some nice text', rows='8')
+                          button.btn.btn-lg.btn-black.pull-right(type='button')
+                            | SEND 
+                            i.fa.fa-paper-plane
+            // End Section "Contact" example 3: Form Style 1 & Address
+          li
+            // Section "Contact" example 4: Address & Maps
+            #contact3.section.section-contact-3
+              .text-area
+                .title.add-animation-stopped
+                  h5 Example No.3
+                  h2 Contact Section
+                  .separator-container
+                    .separator.line-separator ✻
+              .contact-container
+                .address-container.add-animation-stopped.animation-1
+                  .address
+                    h4 Where to meet ?
+                    p.text-gray
+                      | 2578 Paris
+                      br
+                      |                                             Rue Abel, 12
+                      br
+                      |                                             France
+                    h4 Phone
+                    p.text-gray 0456 / 71 21 39
+                    h4 By the old way
+                    a(href='mailto:hello@creative-tim.com')
+                      p.text-gray hello@creative-tim.com
+                .map
+                  #contactUsMap.big-map
+            // End Section "Contact" example 4: Address & Maps
+          li
+      // rubik section end
+      #footer.rubik-section
+        .fixed-plugin(style='top: 0')
+          .dropdown
+            a(href='#', data-toggle='dropdown')
+              i.fa.fa-cog.fa-2x  
+            ul.dropdown-menu.footer-dropdown
+              li.header-title Adjustments
+              li.adjustments-line
+                a.switch-trigger(href='javascript:void(0)')
+                  p Components Animations
+                  .switch(data-on-label='ON', data-off-label='OFF')
+                    input(type='checkbox', data-target='footer', data-type='animations')
+                  .clearfix
+              li.adjustments-line
+                a.switch-trigger(href='javascript:void(0)')
+                  p Color
+                  .pull-right
+                    span.badge.badge-black.active(data-color='black')
+                    span.badge.badge-gray(data-color='gray')
+                    span.badge.badge-white(data-color='white')
+                  .clearfix
+              li.header-title Layouts
+              li.active
+                a(data-slide='0')
+                  img(alt='...', src='/rubik/assets/img/builder/footer_thumb_1.jpg')
+                  h5 Big Footer
+              li
+                a(data-slide='1')
+                  img(alt='...', src='/rubik/assets/img/builder/footer_thumb_2.jpg')
+                  h5 Small Footer
+        ul.rubik-slide(data-active-slide='1')
+          li
+            footer.footer.footer-big.footer-color-black(data-color='black')
+              .container
+                .row
+                  .col-md-2.col-sm-3
+                    .info.add-animation-stopped.animation-1
+                      h5.title Company
+                      nav
+                        ul
+                          li
+                            a(href='#')
+                              | Home
+                          li
+                            a(href='#')
+                              | Find offers
+                          li
+                            a(href='#')
+                              | Discover Projects
+                          li
+                            a(href='#')
+                              | Our Portfolio
+                          li
+                            a(href='#')
+                              | About Us
+                  .col-md-3.col-md-offset-1.col-sm-3
+                    .info.add-animation-stopped.animation-2
+                      h5.title  Help and Support
+                      nav
+                        ul
+                          li
+                            a(href='#')
+                              | Contact Us
+                          li
+                            a(href='#')
+                              | How it works
+                          li
+                            a(href='#')
+                              | Terms & Conditions
+                          li
+                            a(href='#')
+                              | Company Policy
+                          li
+                            a(href='#')
+                              | Money Back
+                  .col-md-3.col-sm-3
+                    .info.add-animation-stopped.animation-3
+                      h5.title.add-animation-stopped Latest News
+                      nav
+                        ul
+                          li
+                            a(href='#')
+                              i.fa.fa-twitter
+                              b Get Shit Done
+                              |                                                             The best kit in the market is here, just give it a try and let us...
+                              hr.hr-small
+                          li
+                            a(href='#')
+                              i.fa.fa-twitter
+                              |                                                         We've just been featured on 
+                              b  Awwwards Website
+                              | ! Thank you everybody for...
+                  .col-md-2.col-md-offset-1.col-sm-3
+                    .info.add-animation-stopped.animation-4
+                      h5.title.add-animation-stopped Follow us on
+                      nav
+                        ul
+                          li
+                            a.btn.btn-social.btn-facebook.btn-simple(href='#')
+                              i.fa.fa-facebook-square
+                              |  Facebook
+                          li
+                            a.btn.btn-social.btn-dribbble.btn-simple(href='#')
+                              i.fa.fa-dribbble
+                              |  Dribbble
+                          li
+                            a.btn.btn-social.btn-twitter.btn-simple(href='#')
+                              i.fa.fa-twitter
+                              |  Twitter
+                          li
+                            a.btn.btn-social.btn-reddit.btn-simple(href='#')
+                              i.fa.fa-google-plus-square
+                              |  Google+
+                hr
+                .copyright
+                  | © 2015 Creative Tim, made with love
+          li
+            footer.footer.footer-color-black(data-color='black')
+              .container
+                nav.pull-left
+                  ul
+                    li
+                      a(href='#')
+                        | Home
+                    li
+                      a(href='#')
+                        | Company
+                    li
+                      a(href='#')
+                        | Portfolio
+                    li
+                      a(href='#')
+                        | Blog
+                .social-area.pull-right
+                  a.btn.btn-social.btn-facebook.btn-simple
+                    i.fa.fa-facebook-square
+                  a.btn.btn-social.btn-twitter.btn-simple
+                    i.fa.fa-twitter
+                  a.btn.btn-social.btn-pinterest.btn-simple
+                    i.fa.fa-pinterest
+                .copyright
+                  | © 2015 Creative Tim, made with love
+      // rubik section end
+    // end wrapper
+    #project_1.project-content
+      div
+        .project-details
+          span.icon-close
+            i.pe-7s-close-circle
+          .container
+            .project-title
+              h5
+                | Project Content
+                span .
+              h2 Example No.1
+              .separator-container
+                .separator.line-separator ✻
+            .row
+              .col-md-4
+                .project-text
+                  p
+                    span Detail
+                    | 1
+                  p
+                    span Detail
+                    | 2
+                  p
+                    span Detail
+                    | 3
+                  p
+                    span Detail
+                    | 4
+                  br
+                  p
+                    | Not him old music think his found enjoy merry. Listening acuteness dependent at or an. Apartments thoroughly unsatiable terminated sex how themselves. She are ten hours wrong walls stand early. Domestic perceive on an ladyship extended received do. Why jennings our whatever his learning gay perceive. Is against no he without subject. Bed connection unreserved preference partiality not unaffected. Years merit trees so think in hoped we as.
+                  p
+                    | Improved own provided blessing may peculiar domestic. Sight house has sex never. No visited raising gravity outward subject my cottage mr be. Hold do at tore in park feet near my case. Invitation at understood occasional sentiments insipidity inhabiting in. Off melancholy alteration principles old. Is do speedily kindness properly oh. Respect article painted cottage he is offices parlors.
+              .col-md-8
+                .row
+                  .col-md-6
+                    .project-image
+                      img(alt='...', src='/rubik/assets/img/rubik_background2.jpg')
+                  .col-md-6
+                    .project-image
+                      img(alt='...', src='/rubik/assets/img/rubik_background2.jpg')
+                  .col-md-6
+                    .project-image
+                      img(alt='...', src='/rubik/assets/img/rubik_background2.jpg')
+                  .col-md-6
+                    .project-image
+                      img(alt='...', src='/rubik/assets/img/rubik_background2.jpg')
+    #project_2.project-content
+      div
+        .project-details
+          span.icon-close
+            i.pe-7s-close-circle
+          .container
+            .project-title
+              h2 Example No.2
+              .separator-container
+                .separator.line-separator ✻
+              p
+                | We've been working with Kingsman Studios and we are proud that they enjoy our results.
+            .row
+              .col-md-10.col-md-offset-1
+                .article
+                  .project-image
+                    img(alt='...', src='/rubik/assets/img/rubik_background2.jpg')
+                  .project-text
+                    h3
+                      | Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                      span .
+                    p
+                      | Not him old music think his found enjoy merry. Listening acuteness dependent at or an. Apartments thoroughly unsatiable terminated sex how themselves. She are ten hours wrong walls stand early. Domestic perceive on an ladyship extended received do. Why jennings our whatever his learning gay perceive. Is against no he without subject. Bed connection unreserved preference partiality not unaffected. Years merit trees so think in hoped we as.
+                    p
+                      | Improved own provided blessing may peculiar domestic. Sight house has sex never. No visited raising gravity outward subject my cottage mr be. Hold do at tore in park feet near my case. Invitation at understood occasional sentiments insipidity inhabiting in. Off melancholy alteration principles old. Is do speedily kindness properly oh. Respect article painted cottage he is offices parlors
+                      span .
+    #project_3.project-content
+      div
+        .project-details
+          span.icon-close
+            i.pe-7s-close-circle
+          .container
+            .project-title
+              h5 Project Content
+              h2 Example No.3
+              .separator-container
+                .separator.line-separator ✻
+            .product
+              .row
+                .col-md-4
+                  .project-text.text-right
+                    p
+                      | Pencil’s certified Bluetooth Smart wireless delivers a fast, stable connection with industry-leading power conservation
+                    p
+                      | Each Pencil is milled from a single, solid piece of material. Graphite brushed aluminum model shown.
+                .col-md-4
+                  .project-image
+                    img(alt='...', src='/rubik/assets/img/rubik_background3.png')
+                .col-md-4
+                  .project-text
+                    p
+                      | Pencil’s certified Bluetooth Smart wireless delivers a fast, stable connection with industry-leading power conservation
+                    p
+                      | Each Pencil is milled from a single, solid piece of material. Graphite brushed aluminum model shown.
+    .body-layer
+    button.btn.btn-info.btn-block.copy-clipboard.disabled(style='padding: 80px;font-size: 30px;')
+      | Click to Generate HTML Code (available only in the purchased archive)
 
 block javascript
+  script(type='text/javascript', src='/assets/js/gsdk-bootstrapswitch.js')
+  script(type='text/javascript', src='/assets/js/jquery.bxslider.js')
+  script(type='text/javascript', src='/assets/js/rubick.js')
+  script(type='text/javascript').
+    $(document).ready(function(){
+    if(window_width < 979){
+    $('.rubik-notification').show();
+    }
+    $('video').each(function(){
+    $(this).remove();
+    });
+    if($('.switch').length != 0){
+    $('.switch')['bootstrapSwitch']();
+    }
+    $('.rubik-section').each(function(){
+    var $slider = $(this).find('.rubik-slide');
+    var $plugin = $(this).find('.fixed-plugin');
+    var active_slide = parseInt($slider.data('active-slide')) - 1;
+    var slider_plugin = $slider.bxSlider({
+    adaptiveHeight: true,
+    adaptiveHeightSpeed: 1500,
+    pager: false,
+    speed: 800,
+    touchEnabled: false,
+    startSlide: active_slide
+    });
+    $plugin.find('ul a').click(function(event){
+    // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+    if($(this).hasClass('switch-trigger')){
+    if(event.stopPropagation){
+    event.stopPropagation();
+    }
+    else if(window.event){
+    window.event.cancelBubble = true;
+    }
+    } else {
+    slide_no = $(this).data('slide');
+    $parent_list = $(this).closest('.dropdown-menu');
+    $(this).parent().siblings('li').removeClass('active');
+    $(this).parent().addClass('active');
+    video_id = $(this).data('video');
+    console.log('video:' + video_id);
+    if(video_id !== undefined){
+    var video = $('#' + video_id + ' video');
+    if(video.length != 0){
+    video[0].play();
+    }
+    } else {
+    $("video").each(function(){
+    $(this)[0].pause();
+    });
+    }
+    slider_plugin.goToSlide(slide_no);
+    /*
+    setTimeout(function(){
+    rubik.initAnimationsCheck();
+    }, 1500);
+    */
+    }
+    });
+    $plugin.find('.badge').click(function(){
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+    var color = $(this).data('color');
+    if ($slider.find('footer').length) {
+    $slider.find('[class*="footer-color-"]').each(function(){
+    var current_color = $(this).data('color');
+    $(this).removeClass('footer-color-' + current_color)
+    .addClass('footer-color-' + color)
+    .data('color', color);
+    });
+    } else{
+    // we change the color for all headers that have a color
+    $slider.find('[class*="filter-color-"]').each(function(){
+    var current_color = $(this).data('color');
+    $(this).removeClass('filter-color-' + current_color)
+    .addClass('filter-color-' + color)
+    .data('color', color);
+    });
+    // we change the color of the grandient for all the headers that have gradients
+    $slider.find('[class*="filter-gradient-"]').each(function(){
+    var current_color = $(this).data('color');
+    $(this).removeClass('filter-gradient-' + current_color)
+    .addClass('filter-gradient-' + color)
+    .data('color', color);
+    });
+    }
+    });
+    });
+    $('.switch input').change(function(){
+    $input = $(this);
+    target = $input.data('target');
+    type = $input.data('type');
+    if(type == 'parallax'){
+    if($input.is(':checked')){
+    $('.' + target).find('.full-image').each(function(){
+    $(this).removeClass('full-image')
+    .addClass('parallax');
+    });
+    } else {
+    $('.' + target).find('.parallax').each(function(){
+    $(this).removeClass('parallax')
+    .addClass('full-image');
+    });
+    }
+    } else if(type == 'animations'){
+    if ($input.is(':checked')){
+    $('[class*="' + target + '"] .add-animation-stopped').removeClass("add-animation-stopped").addClass("add-animation");
+    } else {
+    $('[class*="' + target + '"] .add-animation').addClass("add-animation-stopped").removeClass("add-animation");
+    }
+    }
+    // Alex: reinitialize the waypoints for the animations
+    setTimeout(function(){
+    rubik.initAnimationsCheck();
+    }, 1500);
+    });
+    var video_1 = '<video class="bgvid" preload="auto" loop="loop" autoplay="false" muted="muted" volume="0"><source src="/rubik/assets/video/time.webm" type="video/webm" responsive-src="https://download.unsplash.com/photo-1428517105157-da7cfd843eb8"><source src="/rubik/assets/video/time.mp4" type="video/mp4">Video not supported</video>';
+    $('#video-container-3, #video-container-4').append(video_1);
+    $("video").each(function(){
+    $(this)[0].pause();
+    });
+    $('.dropdown:not(.header)').on('show.bs.dropdown', function () {
+    $('.body-layer').addClass('black');
+    });
+    $('.dropdown:not(.header)').on('hide.bs.dropdown', function () {
+    $('.body-layer').removeClass('black');
+    });
+    });
 
 
 

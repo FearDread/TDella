@@ -55,4 +55,11 @@ exports.add = function (app) {
 
 	});
 
+  app.get('/builder', function (req, res) {
+    console.log('render builder / demo page');
+
+    res.render('builder', {});
+
+  });
+
 }
