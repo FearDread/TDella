@@ -1,4 +1,3 @@
-
 extends includes/layout
 
 block css
@@ -36,7 +35,7 @@ block content
       #fullpage
         #section0.section.section-header.section-plain.section-first
           .parallax
-            img(src='/images/background_01.jpg')
+            img(src='/assets/images/background_01.jpg')
             .container.alpha-foreground
               .content
                 p.text-muted
@@ -59,63 +58,63 @@ block content
                   .builder-image
                     .box-1
                       figure.slide.jbs-current
-                        img(src='/images/books/img_001.jpg')
+                        img(src='/assets/images/books/img_001.jpg')
                       figure.slide
-                        img(src='/images/books/img_002.jpg')
+                        img(src='/assets/images/books/img_002.jpg')
                       figure.slide
-                        img(src='/images/books/img_003.jpg')
+                        img(src='/assets/images/books/img_003.jpg')
                   .builder-image
                     .box-2
                       figure.slide.jbs-current
-                        img(src='/images/books/img_003.jpg')
+                        img(src='/assets/images/books/img_003.jpg')
                       figure.slide
-                        img(src='/images/books/img_001.jpg')
+                        img(src='/assets/images/books/img_001.jpg')
                       figure.slide
-                        img(src='/images/books/img_002.jpg')
+                        img(src='/assets/images/books/img_002.jpg')
                   .builder-image
                     .box-3
                       figure.slide
-                        img(src='/images/books/img_002.jpg')
+                        img(src='/assets/images/books/img_002.jpg')
                       figure.slide.jbs-current
-                        img(src='/images/books/img_003.jpg')
+                        img(src='/assets/images/books/img_003.jpg')
                       figure.slide
-                        img(src='/images/books/img_001.jpg')
+                        img(src='/assets/images/books/img_001.jpg')
                 .col-md-5.col-sm-5.col-sm-offset-1.col-md-offset-1
                   .title
                     h2 Create your own Book Today! 
                     .separator-container
                       .separator.line-separator ♦
                     p
-                      | Create your own custom junk / travel journals made from repurposed books or templates by Jenofveve Designs.  Custom books for baby, birthday, wedding or any special occasion.  Since all books are hand made no two are alike!! 
+                      | Create your own custom junk / travel journals made from repurposed books or templates by Jenofveve Designs.  Custom books for baby, birthday, wedding or any special occasion.
                     br
-                    a.btn.btn-lg.btn-fill.btn-neutral.btn-animation(href='/builder')
-                      | Build Your custom Travlers Journal 
+                    a.btn.btn-lg.btn-fill.btn-neutral.btn-animation(href='/portfolio')
+                      | Check out the Della Portfolio! 
                       i.fa.fa-wrench
         #section2.section.section-we-made-3.section-with-hover.section-examples
           .container
             .text-area
               .title
-                h5.text-muted Using this awesome tool we have created
-                h2 4 Useful Showcases
+                h5.text-muted You will never see the same two books 
+                h2 Every Book is Crafted by Hand 
                 .separator-container
                   .separator.line-separator ♦
                 p
-                  | We have created 4 examples that can help you jump start your new website in just a matter of minutes. Just change the images and the text and you've got a beautiful project!
+                  | We have created 4 examples that can help you jump start your new Journal in just a matter of minutes. Just click on the images to view the details of each book type.
             #projectsLine1.row
               .col-md-6
-                .project
-                  img(alt='...', src='/assets/img/agency_presentation.jpg')
-                  a.over-area.color-presentation(href='/agency')
+                .project.add-animation-stopped.animation-1
+                  img(alt='...', src='/assets/images/books/img_14.jpg')
+                  a.over-area.color-presentation(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_1')
                     .content.text-center
-                      h4 Junk Book 
+                      h4 Junk Book
                       p Customize your agency presentation with many combinations.
                       br
                       p.action
                         | Click to View Example
               .col-md-6
                 .project
-                  img(alt='...', src='/assets/img/house_presentation.jpg')
-                  a.over-area.color-presentation(href='/company')
+                  img(alt='...', src='/assets/images/books/img_013.jpg')
+                  a.over-area.color-presentation(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_1')
                     .content
                       h4 Travel Journal 
                       p
@@ -127,8 +126,8 @@ block content
                         | Click to View Example
               .col-md-6
                 .project
-                  img(alt='...', src='/assets/img/startup_presentation.jpg')
-                  a.over-area.color-presentation(href='/startup')
+                  img(alt='...', src='/assets/images/books/img_17.jpg')
+                  a.over-area.color-presentation(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_1')
                     .content
                       h4 Photo Album 
                       p Present your startup team in an unique and beautiful way.
@@ -137,8 +136,8 @@ block content
                         | Click to View Example
               .col-md-6
                 .project
-                  img(alt='...', src='/assets/img/photographer_presentation.jpg')
-                  a.over-area.color-presentation(href='/portfolio')
+                  img(alt='...', src='/assets/images/books/img_025.jpg')
+                  a.over-area.color-presentation(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_1')
                     .content
                       h4 Browse Portfolio 
                       p Create a simple and elegant portfolio page for your projects.
@@ -187,44 +186,29 @@ block content
             .section-footer.share-area
               .container
                 .content
-                  p Thank you for share
+                  p Thank you for sharing!!
                   .separator-container
                     .separator.line-separator
                       i.fa.fa-share
                   .row
                     .col-md-8.col-md-offset-2
                       .col-md-6
-                        #twitter(data-url='http://demos.creative-tim.com/rubik')
+                        #twitterNav(data-url='http://demos.creative-tim.com/rubik')
                       .col-md-6
-                        #facebook(data-url='http://demos.creative-tim.com/rubik')
+                        #facebookNav(data-url='http://demos.creative-tim.com/rubik')
                       .col-md-4.hidden
-                        #googleplus(data-url='http://demos.creative-tim.com/rubik')
-              footer.footer
-                .container
-                  nav.pull-left
-                    ul
-                      li
-                        a(href='http://www.creative-tim.com/about-tim/', target='_blank')
-                          | About Us
-                      li
-                        a(href='http://www.creative-tim.com/license', target='_blank')
-                          | Licenses
-                      li
-                        a(href='http://www.creative-tim.com/contact-us', target='_blank')
-                          | Contact Us
-                      li
-                        a(href='https://github.com/timcreativeissues', target='_blank')
-                          | Report an issue?
-                  .copyright
-                    | © 2015, made with 
-                    i.fa.fa-heart
-                    |  by 
-                    a(href='') Dynamix Web Solutions 
+                        #googleplusNav(data-url='http://demos.creative-tim.com/rubik')
 
-block footer
+              include includes/fragment_footer
 
 block javascript
   script(type='text/javascript').
+    var della = new TDella();
+
+    console.log('TDella Object = ', della);
+
+    della.init.home();
+    /*
     $(document).ready(function() {
     var $box = $('.box');
     var options_1 = {
@@ -250,6 +234,7 @@ block javascript
     $('.box-2').boxSlider(options_2);
     $('.box-3').boxSlider(options_3);
     });
+    */
 
 
 

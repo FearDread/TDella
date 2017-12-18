@@ -668,6 +668,11 @@ a.scroll-arrow i:hover{
     font-family: "Slim-Joe";
 }
 
+.section-with-hover .project img {
+  max-width: 1600px;
+  max-height: 1200px;
+}
+
 .section-builder .title{
     margin-top: 115px;
 }

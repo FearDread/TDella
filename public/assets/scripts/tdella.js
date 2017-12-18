@@ -48,36 +48,76 @@ var Browser = {
   ]
 };
 
-$.GUI().create('TDella', function (gui) {
-  var TDella; 
+TDella = function () {
 
-  TDella = {
-    opts: {},
-    debounce: function (func, wait, immediate) {
-      var timeout, context;
+  var _this = this, debounce;
 
-      return function () {
+  debounce = function (func, wait, immediate) {
+    var timeout, context;
 
-        context = this.args = arguments;
-        clearTimeout( timeout );
+    return function () {
 
-        timeout = setTimeout( function () {
+      context = this.args = arguments;
+      clearTimeout( timeout );
 
-          timeout = null;
+      timeout = setTimeout( function () {
 
-          if ( !immediate ) {
+        timeout = null;
 
-            func.apply(context, args);
-          }
-        }, wait);
-
-        if ( immediate && !timeout ) {
+        if ( !immediate ) {
 
           func.apply(context, args);
         }
-      };
-    },
+      }, wait);
+
+      if ( immediate && !timeout ) {
+
+        func.apply(context, args);
+      }
+    };
+  };
+
+  console.log('this obj = ', this);
+
+  return {
+    opts: {},
     init: {
+      home: function () {
+        var $box,
+            options_1,
+            options_2,
+            options_3;
+
+        $(document).ready(function() {
+          $box = $('.box');
+
+          options_1 = {
+            speed: 1200
+              , autoScroll: true
+              , timeout: 5000
+              , effect: 'scrollHorz3d'
+            };
+
+          options_2 = {
+            speed: 1200
+            , timeout: 1800
+            , autoScroll: true
+            , effect: 'scrollHorz3d'
+          };
+
+          options_3 = {
+            speed: 1200
+            , timeout: 6200
+            , autoScroll: true
+            , effect: 'scrollHorz3d'
+          };
+
+          $('.box-1').boxSlider(options_1);
+          $('.box-2').boxSlider(options_2);
+          $('.box-3').boxSlider(options_3);
+
+        });
+      },
       animations: function () {},
       menu: function () {},
       goole: function () {}
@@ -87,21 +127,26 @@ $.GUI().create('TDella', function (gui) {
     },
     checks: {
       responsive: function () {},
-      transparent: this.debounce ( function () {
+      transparent: debounce ( function () {
 
       }),
-      parallax: this.debounce (function () {
+      parallax: debounce (function () {
 
       }),
-      transitions: this.debounce ( function () {
+      transitions: debounce ( function () {
 
       }),
     }
   };
+};
+
+$.GUI().create('TDella', function (gui) {
 
   return {
     load: function () {
-      console.log('Load method called in TDella script');
+      gui.log('Load method called in TDella script');
+
+      var della = new TDella();
 
       Browser.init();
       if ( Browser.type == 'Explorer' && Browser.version <= 9){
@@ -114,17 +159,19 @@ $.GUI().create('TDella', function (gui) {
 
       menu = $('nav[role="navigation"]').hasClass('navbar-burger') ? true : false;
 
-      TDella.init.animations();
+      della.init.animations();
 
       if ( window_width < 952 || menu ) {
-        TDella.init.menu();
+        della.init.menu();
       }
 
-      TDella.checks.responsive();
-      // TDella.init.goole.maps();
+      della.checks.responsive();
+      // della.init.goole.maps();
     },
     unload: function () {
-      console.log('tdella unload method called');
+      gui.log('tdella unload method called');
     }
   };
-}).start();
+});
+
+$.GUI().start('TDella', {});
