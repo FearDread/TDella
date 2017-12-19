@@ -1,5 +1,151 @@
-/* TDella Front End Script */
-/* Wrapped in Guerrilla UI Wrapper */
+/* TDella Front End Object */
+/* Includes Browser detection Object */
+
+var TDella = function () {
+
+  var _this = this, debounce;
+
+  debounce = function (func, wait, immediate) {
+    var timeout, context;
+
+    return function () {
+
+      context = this.args = arguments;
+      clearTimeout( timeout );
+
+      timeout = setTimeout( function () {
+
+        timeout = null;
+
+        if ( !immediate ) {
+
+          func.apply(context, args);
+        }
+      }, wait);
+
+      if ( immediate && !timeout ) {
+
+        func.apply(context, args);
+      }
+    };
+  };
+
+  return {
+    opts: {},
+    init: {
+      home: function () {
+        var $box,
+            options_1,
+            options_2,
+            options_3;
+
+        $(document).ready(function() {
+          $box = $('.box');
+
+          options_1 = {
+            speed: 1200
+              , autoScroll: true
+              , timeout: 5000
+              , effect: 'scrollHorz3d'
+            };
+
+          options_2 = {
+            speed: 1200
+            , timeout: 1800
+            , autoScroll: true
+            , effect: 'scrollHorz3d'
+          };
+
+          options_3 = {
+            speed: 1200
+            , timeout: 6200
+            , autoScroll: true
+            , effect: 'scrollHorz3d'
+          };
+
+          $('.box-1').boxSlider(options_1);
+          $('.box-2').boxSlider(options_2);
+          $('.box-3').boxSlider(options_3);
+
+        });
+      },
+      animations: function () {},
+      menu: function () {},
+      goole: function () {}
+    },
+    showModal: function () {
+      var id, scrollTop, distanceTop, modal;
+      var $project, projectTop, projectLeft, projectHeight, projectWidth;
+
+      id = $(button).data('target');
+      $project = $(button).closest('.project');
+      
+      scrollTop = $(window).scrollTop();
+      distanceTop = $project.offset().top;
+
+      projectTop = distanceTop - scrollTop; 
+      projectLeft = $project.offset().left;
+      projectHeight = $project.innerHeight();
+      projectWidth = $project.innerWidth();
+
+      modal = $('#' + id);
+
+      $(modal).css({
+        'top': projectTop,
+        'left': projectLeft, 
+        'width': projectWidth,
+        'height': projectHeight,
+        'z-index': '1032'
+      }).addClass('has-background');
+      
+      // $(modal).addClass('has-background');
+      
+      setTimeout(function () {
+         $(modal).addClass('open');
+      }, 30);
+
+      setTimeout(function () {
+         $('body').addClass('noscroll');
+         $(modal).addClass('scroll');
+      }, 1000);
+  
+      $('.icon-close').click(function(){
+        $project_content = $(this).closest('.project-content');
+        $project_content.removeClass('open scroll');
+        
+        $('body').removeClass("noscroll");
+        //$('a').removeClass('no-opacity');
+
+          setTimeout(function(){
+              $project_content.removeClass('has-background');
+
+              setTimeout(function(){    
+                  $project_content.removeAttr('style');     
+              }, 450); 
+          },500);
+      });
+    },
+    checks: {
+      responsive: function () {},
+      transparent: debounce ( function () {
+
+      }),
+      parallax: debounce (function () {
+
+      }),
+      transitions: debounce ( function () {
+
+      }),
+    }
+  };
+};
+
+/* TODO:: Make TDella Global a self executing function
+TDella = (function () {
+
+})(TDella);
+*/
+
 var Browser = {
   init: function () {
     this.browser = this.search(this.data) || "Other";
@@ -48,130 +194,3 @@ var Browser = {
   ]
 };
 
-TDella = function () {
-
-  var _this = this, debounce;
-
-  debounce = function (func, wait, immediate) {
-    var timeout, context;
-
-    return function () {
-
-      context = this.args = arguments;
-      clearTimeout( timeout );
-
-      timeout = setTimeout( function () {
-
-        timeout = null;
-
-        if ( !immediate ) {
-
-          func.apply(context, args);
-        }
-      }, wait);
-
-      if ( immediate && !timeout ) {
-
-        func.apply(context, args);
-      }
-    };
-  };
-
-  console.log('this obj = ', this);
-
-  return {
-    opts: {},
-    init: {
-      home: function () {
-        var $box,
-            options_1,
-            options_2,
-            options_3;
-
-        $(document).ready(function() {
-          $box = $('.box');
-
-          options_1 = {
-            speed: 1200
-              , autoScroll: true
-              , timeout: 5000
-              , effect: 'scrollHorz3d'
-            };
-
-          options_2 = {
-            speed: 1200
-            , timeout: 1800
-            , autoScroll: true
-            , effect: 'scrollHorz3d'
-          };
-
-          options_3 = {
-            speed: 1200
-            , timeout: 6200
-            , autoScroll: true
-            , effect: 'scrollHorz3d'
-          };
-
-          $('.box-1').boxSlider(options_1);
-          $('.box-2').boxSlider(options_2);
-          $('.box-3').boxSlider(options_3);
-
-        });
-      },
-      animations: function () {},
-      menu: function () {},
-      goole: function () {}
-    },
-    showModal: function () {
-
-    },
-    checks: {
-      responsive: function () {},
-      transparent: debounce ( function () {
-
-      }),
-      parallax: debounce (function () {
-
-      }),
-      transitions: debounce ( function () {
-
-      }),
-    }
-  };
-};
-
-$.GUI().create('TDella', function (gui) {
-
-  return {
-    load: function () {
-      gui.log('Load method called in TDella script');
-
-      var della = new TDella();
-
-      Browser.init();
-      if ( Browser.type == 'Explorer' && Browser.version <= 9){
-          $('body').html(better_browser);
-        // $('body').html( Browser.notify );
-      }
-
-      window_width = $(window).width();
-      window_height = $(window).height();
-
-      menu = $('nav[role="navigation"]').hasClass('navbar-burger') ? true : false;
-
-      della.init.animations();
-
-      if ( window_width < 952 || menu ) {
-        della.init.menu();
-      }
-
-      della.checks.responsive();
-      // della.init.goole.maps();
-    },
-    unload: function () {
-      gui.log('tdella unload method called');
-    }
-  };
-});
-
-$.GUI().start('TDella', {});
