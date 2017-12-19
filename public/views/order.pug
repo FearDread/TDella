@@ -1,7 +1,167 @@
 extends includes/layout
 
+block css
+
 block content
   include includes/fragment_loader
+
+  div.order-body
+    .image-container.set-full-height(style="background-image: url('assets/img/paper-3.jpeg')")
+      // Creative Tim Branding
+      a(href='http://creative-tim.com')
+        .logo-container
+          .logo
+            img(src='assets/img/new_logo.png')
+          .brand
+            | Creative Tim
+      // Made With Paper Kit
+      a.made-with-pk(href='http://demos.creative-tim.com/paper-kit')
+        .brand PK
+        .made-with
+          | Made with 
+          strong Paper Kit
+      // Big container
+      .container
+        .row
+          .col-sm-8.col-sm-offset-2
+            // Wizard container
+            .wizard-container
+              #wizard.card.wizard-card(data-color='azure')
+                form(action='', method='')
+                  // You can switch " data-color="azure" "  with one of the next bright colors: "blue", "green", "orange", "red"
+                  .wizard-header
+                    h3.wizard-title Find your next desk
+                    p.category Book from thousands of unique work and meeting spaces.
+                  .wizard-navigation
+                    .progress-with-circle
+                      .progress-bar(role='progressbar', aria-valuenow='1', aria-valuemin='1', aria-valuemax='3', style='width: 21%;')
+                    ul
+                      li
+                        a(href='#details', data-toggle='tab')
+                          .icon-circle
+                            i.ti-list
+                          | 												Details
+                      li
+                        a(href='#captain', data-toggle='tab')
+                          .icon-circle
+                            i.ti-briefcase
+                          | 												Timetable
+                      li
+                        a(href='#description', data-toggle='tab')
+                          .icon-circle
+                            i.ti-pencil
+                          | 												Description
+                  .tab-content
+                    #details.tab-pane
+                      .row
+                        .col-sm-12
+                          h5.info-text  Let's start with the basic details
+                        .col-sm-5.col-sm-offset-1
+                          .form-group
+                            label What city do you want to work in?
+                            input#exampleInputEmail1.form-control(type='text', placeholder='e.g Silicon Valley')
+                        .col-sm-5
+                          .form-group
+                            label Space
+                            select.form-control
+                              option(disabled='', selected='') - choose a space -
+                              option Work Space
+                              option Meeting Space
+                        .col-sm-5.col-sm-offset-1
+                          .form-group
+                            label Type of Desk
+                            select.form-control
+                              option(disabled='', selected='') - choose an option -
+                              option Private
+                              option Shared
+                        .col-sm-5
+                          .form-group
+                            label Monthly Budget
+                            .input-group
+                              input.form-control(type='text')
+                              span.input-group-addon $
+                    #captain.tab-pane
+                      h5.info-text How do you want to rent the office? 
+                      .row
+                        .col-sm-8.col-sm-offset-2
+                          .col-sm-4.col-sm-offset-2
+                            .choice(data-toggle='wizard-checkbox')
+                              input(type='checkbox', name='jobb', value='Design')
+                              .card.card-checkboxes.card-hover-effect
+                                i.ti-time
+                                p By hour
+                          .col-sm-4
+                            .choice(data-toggle='wizard-checkbox')
+                              input(type='checkbox', name='jobb', value='Design')
+                              .card.card-checkboxes.card-hover-effect
+                                i.ti-calendar
+                                p By day
+                    #description.tab-pane
+                      .row
+                        h5.info-text  Tell us about your ideal working space. 
+                        .col-sm-6.col-sm-offset-1
+                          .form-group
+                            label Desk description
+                            textarea.form-control(placeholder='', rows='9')
+                        .col-sm-4
+                          .form-group
+                            label Example
+                            p.description
+                              | "If you're heavily armed with a mug, smartphone and a laptop, then our hot desks will provide the pure functionality and space needed to get your work done and move on to the next one."
+                  .wizard-footer
+                    .pull-right
+                      input.btn.btn-next.btn-fill.btn-primary.btn-wd(type='button', name='next', value='Next')
+                      input.btn.btn-finish.btn-fill.btn-primary.btn-wd(type='button', name='finish', value='Finish')
+                    .pull-left
+                      input.btn.btn-previous.btn-default.btn-wd(type='button', name='previous', value='Previous')
+                    .clearfix
+            // wizard container
+        // row
+      // big container
+      .footer
+        .container.text-center
+          | Made with 
+          i.fa.fa-heart.heart
+          |  by 
+          a(href='http://www.creative-tim.com') Creative Tim
+          | . Free download 
+          a(href='http://www.creative-tim.com/product/paper-bootstrap-wizard') here.
+      .fixed-plugin
+        .dropdown.open
+          a(href='#', data-toggle='dropdown')
+            i.fa.fa-cog.fa-2x  
+          ul.dropdown-menu
+            li.header-title Examples
+            li
+              a(href='wizard-create-profile.html')
+                img(src='assets/img/wizard-create-profile.png')
+                | 						   Create Profile
+            li.active
+              a(href='wizard-find-desk.html')
+                img(src='assets/img/wizard-find-desk.png')
+                | 						   Find Desk
+            li
+              a(href='wizard-list-place.html')
+                img(src='assets/img/wizard-list-place.png')
+                | 						   List Your Place
+            li.header-title Colors
+            li.adjustments-line
+              a.switch-trigger(href='javascript:void(0)')
+                .text-center
+                  span.badge.filter.badge-blue(data-color='blue')
+                  span.badge.filter.badge-azure.active(data-color='azure')
+                  span.badge.filter.badge-green(data-color='green')
+                  span.badge.filter.badge-orange(data-color='orange')
+                  span.badge.filter.badge-red(data-color='red')
+                .clearfix
+            li.tutorial
+              .text-center
+                a.btn.btn-default.btn-fill.btn-block(href='documentation/elements.html', target='_blank') Documentation
+            li.license
+              | Personal License
+              .text-center
+                a.btn.btn-info.btn-fill.btn-block(href='http://www.creative-tim.com/product/paper-bootstrap-wizard', target='_blank') Download, it's free!
+
 
 block javascript
 

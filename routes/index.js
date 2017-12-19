@@ -34,6 +34,13 @@ exports.add = function (app) {
 
 	});
 
+  app.get('/order-now', function (req, res) {
+    console.log('render order page / wizard');
+
+    res.render('order', {});
+
+  });
+
 	app.get('/about', function (req, res) {
 		console.log('render about tracy page');
 

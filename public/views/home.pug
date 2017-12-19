@@ -16,19 +16,19 @@ block content
             span.icon-bar.bar1
             span.icon-bar.bar2
             span.icon-bar.bar3
-          a.navbar-brand(href='http://www.creative-tim.com')
+          a.navbar-brand(href='/')
             | T`Della 
         .collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right.navbar-uppercase
             li
-              a(href='/')
+              a(href='/order-now')
                 | Order Now!
             li.social-links
-              a#facebookNav(href='javascript:void(0);', data-url='http://demos.creative-tim.com/rubik')
+              a#facebookNav(href='javascript:void(0);', data-url='/')
                 i.fa.fa-facebook
-              a#twitterNav(href='javascript:void(0);', data-url='http://demos.creative-tim.com/rubik')
+              a#twitterNav(href='javascript:void(0);', data-url='/')
                 i.fa.fa-twitter
-              a#googleplusNav(href='javascript:void(0);', data-url='http://demos.creative-tim.com/rubik')
+              a#googleplusNav(href='javascript:void(0);', data-url='/')
                 i.fa.fa-google-plus
         // /.navbar-collapse
     .wrapper
@@ -153,7 +153,7 @@ block content
                   .separator-container
                     .separator.line-separator $
                   p
-                    | Each package comes with Rubik Builder™, Responsive Design, New Icons Font, Documentation, Premium Support and Free Forever Updates.
+                    | Each package comes with fully designed hand made journal and matching box. 
                 .row
                   .col-md-5.col-md-offset-1
                     .card.card-price
@@ -193,11 +193,11 @@ block content
                   .row
                     .col-md-8.col-md-offset-2
                       .col-md-6
-                        #twitterNav(data-url='http://demos.creative-tim.com/rubik')
+                        #twitterNav(data-url='/')
                       .col-md-6
-                        #facebookNav(data-url='http://demos.creative-tim.com/rubik')
+                        #facebookNav(data-url='/')
                       .col-md-4.hidden
-                        #googleplusNav(data-url='http://demos.creative-tim.com/rubik')
+                        #googleplusNav(data-url='/')
 
               include includes/fragment_footer
 
@@ -208,33 +208,5 @@ block javascript
     console.log('TDella Object = ', della);
 
     della.init.home();
-    /*
-    $(document).ready(function() {
-    var $box = $('.box');
-    var options_1 = {
-    speed: 1200
-    , autoScroll: true
-    , timeout: 5000
-    , effect: 'scrollHorz3d'
-    };
-    var options_2 = {
-    speed: 1200
-    , timeout: 1800
-    , autoScroll: true
-    , effect: 'scrollHorz3d'
-    };
-    var options_3 = {
-    speed: 1200
-    , timeout: 6200
-    , autoScroll: true
-    , effect: 'scrollHorz3d'
-    };
-    // initialize the plugin with the desired settings
-    $('.box-1').boxSlider(options_1);
-    $('.box-2').boxSlider(options_2);
-    $('.box-3').boxSlider(options_3);
-    });
-    */
-
 
 
