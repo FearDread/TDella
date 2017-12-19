@@ -7,7 +7,7 @@ module.exports = {
   environment: 'development',
   website: {
     name: 'tdella.com',
-    author: 'ghaptonstall@gmail.com',
+    developer: 'ghaptonstall@gmail.com',
     social: {
       facebook: '',
       twitter: '',
@@ -39,6 +39,13 @@ module.exports = {
         large: '100',
         boxes: '200',
         custom: '300'
+      },
+      support: {
+        email: '',
+        address: '',
+        city: 'Las Vegas',
+        state: 'NV',
+        zipcode: ''
       }
     }
   }
