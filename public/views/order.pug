@@ -1,21 +1,22 @@
 extends includes/layout
 
 block css
+  link(href='/assets/css/order-page.css', rel='stylesheet')
+  link(href='/assets/css/fonts/themify-icons.css', rel='stylesheet')
 
 block content
+
   include includes/fragment_loader
 
   div.order-body
     .image-container.set-full-height(style="background-image: url('assets/img/paper-3.jpeg')")
       // Creative Tim Branding
-      a(href='http://creative-tim.com')
+      a(href='/')
         .logo-container
-          .logo
-            img(src='assets/img/new_logo.png')
           .brand
-            | Creative Tim
+            | T`Della 
       // Made With Paper Kit
-      a.made-with-pk(href='http://demos.creative-tim.com/paper-kit')
+      a.made-with-pk(href='/')
         .brand PK
         .made-with
           | Made with 
@@ -115,53 +116,13 @@ block content
                     .pull-left
                       input.btn.btn-previous.btn-default.btn-wd(type='button', name='previous', value='Previous')
                     .clearfix
-            // wizard container
-        // row
-      // big container
+
       .footer
         .container.text-center
-          | Made with 
-          i.fa.fa-heart.heart
+          | © 2017, made with 
+          i.fa.fa-heart
           |  by 
-          a(href='http://www.creative-tim.com') Creative Tim
-          | . Free download 
-          a(href='http://www.creative-tim.com/product/paper-bootstrap-wizard') here.
-      .fixed-plugin
-        .dropdown.open
-          a(href='#', data-toggle='dropdown')
-            i.fa.fa-cog.fa-2x  
-          ul.dropdown-menu
-            li.header-title Examples
-            li
-              a(href='wizard-create-profile.html')
-                img(src='assets/img/wizard-create-profile.png')
-                | 						   Create Profile
-            li.active
-              a(href='wizard-find-desk.html')
-                img(src='assets/img/wizard-find-desk.png')
-                | 						   Find Desk
-            li
-              a(href='wizard-list-place.html')
-                img(src='assets/img/wizard-list-place.png')
-                | 						   List Your Place
-            li.header-title Colors
-            li.adjustments-line
-              a.switch-trigger(href='javascript:void(0)')
-                .text-center
-                  span.badge.filter.badge-blue(data-color='blue')
-                  span.badge.filter.badge-azure.active(data-color='azure')
-                  span.badge.filter.badge-green(data-color='green')
-                  span.badge.filter.badge-orange(data-color='orange')
-                  span.badge.filter.badge-red(data-color='red')
-                .clearfix
-            li.tutorial
-              .text-center
-                a.btn.btn-default.btn-fill.btn-block(href='documentation/elements.html', target='_blank') Documentation
-            li.license
-              | Personal License
-              .text-center
-                a.btn.btn-info.btn-fill.btn-block(href='http://www.creative-tim.com/product/paper-bootstrap-wizard', target='_blank') Download, it's free!
-
+          a(href='') Dynamix Web Solutions 
 
 block javascript
 

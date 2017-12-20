@@ -73,7 +73,7 @@ var TDella = function () {
       menu: function () {},
       goole: function () {}
     },
-    showModal: function () {
+    showModal: function (button) {
       var id, scrollTop, distanceTop, modal;
       var $project, projectTop, projectLeft, projectHeight, projectWidth;
 
