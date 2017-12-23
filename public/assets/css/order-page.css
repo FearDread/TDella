@@ -359,10 +359,6 @@ input[type="button"]:focus {
   top: 14px;
   opacity: 0;
   margin: 0;
-  -webkit-transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);
-  -moz-transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);
-  -o-transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);
-  transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);
 }
 .made-with-pk .made-with strong {
   font-weight: 400;
@@ -1164,7 +1160,8 @@ input[type="button"]:focus {
 
 .wizard-card {
   min-height: 410px;
-  box-shadow: 0 20px 16px -15px rgba(0, 0, 0, 0.57);
+  box-shadow: 0 20px 16px -15px rgba(0, 0, 0, 0.77);
+  background: rgba(255,255,255,.8);
 }
 .wizard-card .picture-container {
   position: relative;
@@ -1396,6 +1393,10 @@ input[type="button"]:focus {
   color: #999999;
   font-size: 14px;
 }
+.wizard-card .btn-primary {
+  background-color: #EB5E28;
+  border-color: #EB5E28;
+}
 
 .footer {
   position: relative;
@@ -1432,3 +1433,48 @@ input[type="button"]:focus {
     min-width: 140px;
   }
 }
+
+.logo-container .logo{
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid #333333;
+    width: 50px; 
+    float: left;
+}
+
+.logo-container .brand{
+    font-size: 18px;
+    line-height: 20px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+}
+.navbar-transparent .logo-container .brand{
+    color: #FFF;
+}
+.logo-container{
+    margin-top: 10px;
+}
+.logo-container .logo img{
+    width: 100%;
+}
+.navbar-small .logo-container .brand{
+    color: #333333;
+}
+.parallax .motto{
+    color: #FFFFFF;
+    font-size: 64px;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.27);
+    text-transform: uppercase;
+    z-index: 3;
+    margin: 0 auto;
+    top: 22%;
+    width: 285px;
+}
+
+.presentation .front, .presentation .front:after, .presentation .front .btn, .logo-container .logo, .logo-container .brand{

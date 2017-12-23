@@ -185,48 +185,6 @@
   
 }
 
-.logo-container .logo{
-    overflow: hidden;
-    border-radius: 50%;
-    border: 1px solid #333333;
-    width: 50px; 
-    float: left;
-}
-
-.logo-container .brand{
-    font-size: 18px;
-    line-height: 20px;
-    float: left;
-    margin-left: 10px;
-    margin-top: 5px;
-    width: 50px;
-    height: 50px;
-}
-.navbar-transparent .logo-container .brand{
-    color: #FFF;
-}
-.logo-container{
-    margin-top: 10px;
-}
-.logo-container .logo img{
-    width: 100%;
-}
-.navbar-small .logo-container .brand{
-    color: #333333;
-}
-.parallax .motto{
-    color: #FFFFFF;
-    font-size: 64px;
-    font-weight: 600;
-    position: relative;
-    text-align: center;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.27);
-    text-transform: uppercase;
-    z-index: 3;
-    margin: 0 auto;
-    top: 22%;
-    width: 285px;
-}
 .motto .pro{
     position: absolute;
     bottom: 74px;
