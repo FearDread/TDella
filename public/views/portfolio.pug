@@ -42,29 +42,33 @@ block content
                 | Contact
         // /.navbar-collapse
     .wrapper
-      .section.section-header
-        .parallax.pattern-image.filter.filter-color-blue
-          img(src='/assets/img/photographer.jpg')
+      #header3.section.section-header
+        #video-container-3.full-image.pattern-image.filter.filter-color-black(data-color='black')
+          video.bgvid(preload='auto', autoplay='true', loop='loop', muted='muted', volume='0', responsive-src='https://download.unsplash.com/photo-1428517105157-da7cfd843eb8')
+            source(src='/assets/video/time.webm', type='video/webm')
+            source(src='/assets/video/time.mp4', type='video/mp4')
+            |                                     Video not supported
           .container
-            .content.content-with-opacity
+            .content
               p
                 span by 
-                | Creative Tim
-              h1.responsive-small Photographer
+                | Tracy  
+              h1 T`Della Portfolio 
               .separator-container
-                .separator.line-separator ⌘
-              h5 The right way to present yourself
+                .separator.line-separator ✻
+              h5 See some of my works and how its done! 
         a.scroll-arrow.hidden-xs.hidden-sm(href='', data-scroll='true', data-id='#whoWeAre')
           i.fa.fa-angle-down
+    li
       #whoWeAre.section.section-we-are-1
         .text-area
           .container
             .row
               .title.add-animation
                 h2
-                  | Paul Smith
+                  | Tracy  
                   br
-                  |  the photographer
+                  |  the creator 
                 .separator-container
                   .separator.line-separator ⌘
                 p
@@ -74,11 +78,11 @@ block content
             // Wrapper for slides
             .carousel-inner.pattern-image
               .item
-                img.full-image(src='/assets/img/photographer2.jpg', alt='Awesome Image')
+                img.full-image(src='/assets/images/books/img_01.jpg', alt='Awesome Image')
               .item
-                img.full-image(src='/assets/img/photographer3.jpg', alt='Awesome Image')
+                img.full-image(src='/assets/images/books/img_08.jpg', alt='Awesome Image')
               .item.active
-                img.full-image(src='/assets/img/photographer4.jpg', alt='Awesome Image')
+                img.full-image(src='/assets/images/books/img_12.jpg', alt='Awesome Image')
             // Controls
             a.left.carousel-control(href='#carousel-example-generic', data-slide='prev')
               span.fa.fa-angle-left.hidden-md.hidden-lg
@@ -120,6 +124,7 @@ block content
                 h3 For every pic
                 p
                   | I like to tell a story with every photo that I take. I want for the viewers to get an immediate reaction and feeling. From every single picture.
+
       #projects.section.section-we-made-2.section-with-hover
         .projects
           .text-area
@@ -129,42 +134,42 @@ block content
                 .separator.line-separator ⌘
               p You cand see some of my stuff here, the full projects are on Tumblr.
           .info.add-animation.animation-1
-            p.text-center.text-gray The Hipster Invasion
+            p.text-center.text-gray Custom Made Scrapbooks 
           .row.scroller
             .col-lg-3.col-md-6.col-sm-6
               .project.add-animation.animation-1
-                img(src='/assets/img/projects/photographer_1.jpg')
+                img(src='/assets/images/books/img_04.jpg')
             .col-lg-3.col-md-6.col-sm-6
               .project.add-animation.animation-2
-                img(src='/assets/img/projects/photographer_2.jpg')
+                img(src='/assets/images/books/img_06.jpg')
             .col-lg-3.col-md-6.col-sm-6
               .project.add-animation.animation-3
-                img(src='/assets/img/projects/photographer_3.jpg')
+                img(src='/assets/images/books/img_08.jpg')
             .col-lg-3.col-md-6.col-sm-6
               .project.add-animation.animation-4
-                img(src='/assets/img/projects/photographer_4.jpg')
+                img(src='/assets/images/books/img_22.jpg')
                 a.over-area.color-blue(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_4')
                   .content.hidden-xs
-                    h4 Full Project on Tumblr
+                    h4 Full Project on Youtube 
           .projects
             .info.add-animation.animation-1
-              p.text-center.text-gray Wolf's Trip at The Canion
+              p.text-center.text-gray Stylish Boxes and Journals 
             .row.scroller.scroller-portrait
               .col-lg-3.col-md-6.col-sm-6
                 .project.add-animation.animation-1
-                  img(src='/assets/img/projects/photographer_5.jpg', style='margin-top: -100px')
+                  img(src='/assets/images/books/img_17.jpg', style='margin-top: -100px')
               .col-lg-3.col-md-6.col-sm-6
                 .project.add-animation.animation-2
-                  img(src='/assets/img/projects/photographer_6.jpg', style='margin-top: -200px')
+                  img(src='/assets/images/books/img_09.jpg', style='margin-top: -200px')
               .col-lg-3.col-md-6.col-sm-6
                 .project.add-animation.animation-3
-                  img(src='/assets/img/projects/photographer_7.jpg', style='margin-top: -100px')
+                  img(src='/assets/images/books/img_30.jpg', style='margin-top: -100px')
               .col-lg-3.col-md-6.col-sm-6
                 .project.add-animation.animation-4
-                  img(src='/assets/img/projects/photographer_8.jpg', style='margin-top: -200px')
+                  img(src='/assets/images/books/img_15.jpg', style='margin-top: -200px')
                   a.over-area.color-blue(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_4')
                     .content.hidden-xs
-                      h4 Full project on Tumblr
+                      h4 Full Project on Youtube 
           .projects
             .info.add-animation.animation-1
               p.text-center.text-gray Bear's Oldtimer Muscle Car
@@ -184,7 +189,8 @@ block content
                   a.over-area.color-blue(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_4')
                     .content.hidden-xs
                       h4 Full project on Tumblr
-      #clients.section.section-clients-1
+
+      //-#clients.section.section-clients-1
         .container
           .text-area
             .title.add-animation
@@ -235,7 +241,7 @@ block content
                   a(href='#')
                     img(alt='...', src='/assets/img/clients/spotify.svg')
                     img(alt='...', src='/assets/img/clients/spotify_h.svg')
-      #team.section.section-team-2
+      //-#team.section.section-team-2
         .container
           .text-area
             .title.add-animation
@@ -285,7 +291,7 @@ block content
                         h3.big-text Bear
                         p.small-text Just a friend
           // end team
-      #numbers3.section.section-numbers-3
+      //-#numbers3.section.section-numbers-3
         .full-image.pattern-image
           .filter.filter-color-black
             img(src='/assets/img/photographer6.jpg')
@@ -343,7 +349,36 @@ block content
             a.btn.btn-social.btn-pinterest.btn-simple
               i.fa.fa-pinterest
           .copyright
-            | © 2015 Creative T
+            | © 2017 Dynamix Web Solutions 
+
+    #project_4.project-content
+      div
+        .project-details
+          span.icon-close
+            i.pe-7s-close-circle
+          .container
+            .project-title
+              h5 Project Content
+              h2 Example No.3
+              .separator-container
+                .separator.line-separator ✻
+            .product
+              .row
+                .col-md-4
+                  .project-text.text-right
+                    p
+                      | Pencil’s certified Bluetooth Smart wireless delivers a fast, stable connection with industry-leading power conservation
+                    p
+                      | Each Pencil is milled from a single, solid piece of material. Graphite brushed aluminum model shown.
+                .col-md-4
+                  .project-image
+                    img(alt='...', src='/rubik/assets/img/rubik_background3.png')
+                .col-md-4
+                  .project-text
+                    p
+                      | Pencil’s certified Bluetooth Smart wireless delivers a fast, stable connection with industry-leading power conservation
+                    p
+                      | Each Pencil is milled from a single, solid piece of material. Graphite brushed aluminum model shown.
 
 block javascript
 
