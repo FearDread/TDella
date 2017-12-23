@@ -45,8 +45,8 @@ block content
       #header3.section.section-header
         #video-container-3.full-image.pattern-image.filter.filter-color-black(data-color='black')
           video.bgvid(preload='auto', autoplay='true', loop='loop', muted='muted', volume='0', responsive-src='https://download.unsplash.com/photo-1428517105157-da7cfd843eb8')
-            source(src='/assets/video/time.webm', type='video/webm')
-            source(src='/assets/video/time.mp4', type='video/mp4')
+            source(src='/assets/video/Snow_Wires.webm', type='video/webm')
+            source(src='/assets/video/Snow_Wires.mp4', type='video/mp4')
             |                                     Video not supported
           .container
             .content
@@ -325,31 +325,7 @@ block content
 
       include includes/fragment_contact
 
-      footer.footer.footer-color-white
-        .container
-          nav.pull-left
-            ul
-              li
-                a(href='#')
-                  | Home
-              li
-                a(href='#')
-                  | Company
-              li
-                a(href='#')
-                  | Portfolio
-              li
-                a(href='#')
-                  | Blog
-          .social-area.pull-right
-            a.btn.btn-social.btn-facebook.btn-simple
-              i.fa.fa-facebook-square
-            a.btn.btn-social.btn-twitter.btn-simple
-              i.fa.fa-twitter
-            a.btn.btn-social.btn-pinterest.btn-simple
-              i.fa.fa-pinterest
-          .copyright
-            | © 2017 Dynamix Web Solutions 
+      include includes/fragment_footer
 
     #project_4.project-content
       div
