@@ -1,8 +1,8 @@
 
 
 block content
-  -if ( !modal ) {
-    modal = {};
+  -if ( !modal_4 ) {
+    modal_4 = {};
   -}
   #project_4.project-content
     div
@@ -11,27 +11,20 @@ block content
           i.pe-7s-close-circle
         .container
           .project-title
-            h5 #{ modal.title}
-            h2 #{ modal.pname } 
+            h5 #{ modal_4.title}
+            h2 #{ modal_4.pname } 
             .separator-container
               .separator.line-separator ✻
           .product
             .row
               .col-md-4
                 .project-text.text-right
-                  #{ modal.text_right }
-                  //- p
-                    | Pencil’s certified Bluetooth Smart wireless delivers a fast, stable connection with industry-leading power conservation
-                  //- p
-                    | Each Pencil is milled from a single, solid piece of material. Graphite brushed aluminum model shown.
+                  #{ modal_4.text_right }
               .col-md-4
                 .project-image
                   img(alt='...', src='/assets/img/rubik_background3.png')
               .col-md-4
                 .project-text
-                  p
-                    | Pencil’s certified Bluetooth Smart wireless delivers a fast, stable connection with industry-leading power conservation
-                  p
-                    | Each Pencil is milled from a single, solid piece of material. Graphite brushed aluminum model shown.
+                  #{ modal_4.ptext }
 
 
