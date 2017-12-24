@@ -1,16 +1,22 @@
 /* Home page GUI Script */
 $.GUI().create('Home', function (gui) {
 
+  var window_height, window_width, menu;
+
+  if ( !Modernizr.touch ) {
+
+      $('body').addClass('no-touch');
+      no_touch_screen = true;
+  }
+
   return {
     load: function () {
-      gui.log('Load method called in TDella script');
+      gui.log('Load method called in home.js :', TDella);
 
-      var della = new TDella();
+      TDella.Browser.init();
 
-      Browser.init();
-      if ( Browser.type == 'Explorer' && Browser.version <= 9){
-          $('body').html(better_browser);
-        // $('body').html( Browser.notify );
+      if ( TDella.Browser.type == 'Explorer' && TDella.Browser.version <= 9 ) {
+          $('body').html( TDella.Browser.better_browser );
       }
 
       window_width = $(window).width();
@@ -18,14 +24,14 @@ $.GUI().create('Home', function (gui) {
 
       menu = $('nav[role="navigation"]').hasClass('navbar-burger') ? true : false;
 
-      della.init.animations();
+      TDella.init.animations();
 
       if ( window_width < 952 || menu ) {
-        della.init.menu();
+        TDella.init.menu();
       }
 
-      della.checks.responsive();
-      // della.init.goole.maps();
+      TDella.checks.responsive();
+      TDella.init.home();
     },
     unload: function () {
       gui.log('tdella unload method called');
