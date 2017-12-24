@@ -4,11 +4,9 @@
 var utils, pubdir, data, config;
 
 config = require('../src/config');
+utils = require('../src/utils');
 
 exports.add = function (app) {
-
-  path = '../';
-  utils = require(path + 'src/utils');
 
 	app.use( function (req, res, next) {
 
@@ -26,49 +24,71 @@ exports.add = function (app) {
       social: config.website.social,
       environment: config.environment,
       modal_1: {
-        title: 'Fancy Details',
-        pname: 'Wedding Gift',
+        title: '',
+        pname: '',
+        ptext: '',
         text_right: '',
-        project_text: '',
-        project_img: ''
+        text_left: '',
+        pimage: ''
       },
       modal_4: {
-      
+        title: 'Fancy Details',
+        pname: 'Wedding Gift',
+        text_right: '<p> Pencil’s certified Bluetooth Smart wireless delivers a fast, stable connection with industry-leading power conservation </p><br /><p> Each Pencil is milled from a single, solid piece of material. Graphite brushed aluminum model shown</p>',
+        ptext: '<p> Pencil’s certified Bluetooth Smart wireless delivers a fast, stable connection with industry-leading power conservation </p><br /><p> Each Pencil is milled from a single, solid piece of material. Graphite brushed aluminum model shown</p>',
+        pimage: '/assets/img/rubik_background3.png'
       }
     };
 
-		console.log('render root :: ' + data);
-
 		res.render('home', data);
-
 	});
 
   app.get('/order-now', function (req, res) {
     console.log('render order page / wizard');
 
     res.render('order', {});
-
   });
 
 	app.get('/about', function (req, res) {
 		console.log('render about tracy page');
 
 		res.render('about', {});
-
 	});
 
 	app.get('/portfolio', function (req, res) {
 		console.log('render portfolio page');
+    // utils.cleanObj( data );
+    // TODO: Add utils cleanObj method to verify fresh object used every tiome
 
-		res.render('portfolio', {});
+    data = {
+      title: 'T`Della Creations',
+      url: config.website.name,
+      social: config.website.social,
+      environment: config.environment,
+      modal_1: {
+        title: '',
+        pname: '',
+        ptext: '',
+        text_right: '',
+        text_left: '',
+        pimage: ''
+      },
+      modal_4: {
+        title: 'Fancy Details',
+        pname: 'Wedding Gift',
+        text_right: '<p> Pencil’s certified Bluetooth Smart wireless delivers a fast, stable connection with industry-leading power conservation </p><br /><p> Each Pencil is milled from a single, solid piece of material. Graphite brushed aluminum model shown</p>',
+        ptext: '<p> Pencil’s certified Bluetooth Smart wireless delivers a fast, stable connection with industry-leading power conservation </p><br /><p> Each Pencil is milled from a single, solid piece of material. Graphite brushed aluminum model shown</p>',
+        pimage: '/assets/img/rubik_background3.png'
+      }
+    };
 
+		res.render('portfolio', data);
 	});
 
   app.get('/builder', function (req, res) {
     console.log('render builder / demo page');
 
     res.render('builder', {});
-
   });
 
-}
+};
