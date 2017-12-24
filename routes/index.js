@@ -11,7 +11,6 @@ exports.add = function (app) {
   utils = require(path + 'src/utils');
 
 	app.use( function (req, res, next) {
-    console.log('TDELLA URI == ' + req.url);
 
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
@@ -25,10 +24,20 @@ exports.add = function (app) {
       title: 'T`Della Creations',
       url: config.website.name,
       social: config.website.social,
-      environment: config.environment
+      environment: config.environment,
+      modal_1: {
+        title: 'Fancy Details',
+        pname: 'Wedding Gift',
+        text_right: '',
+        project_text: '',
+        project_img: ''
+      },
+      modal_4: {
+      
+      }
     };
 
-		console.log('render root :: ' + config);
+		console.log('render root :: ' + data);
 
 		res.render('home', data);
 
