@@ -33,6 +33,32 @@ exports.addError = function (msg) {
     };
 };
 
+exports.addPageObj = function (props) {
+  if ( !props ) return {};
+
+  return {
+    title: 'T`Della Creations',
+    url: props.website.name,
+    social: props.website.social,
+    environment: props.environment,
+    modal_1: {
+      title: '',
+      pname: '',
+      ptext: '',
+      text_right: '',
+      text_left: '',
+      pimage: ''
+    },
+    modal_4: {
+      title: 'Fancy Details',
+      pname: 'Wedding Gift',
+      text_right: '<p> Pencil’s certified Bluetooth Smart wireless delivers a fast, stable connection with industry-leading power conservation </p><br /><p> Each Pencil is milled from a single, solid piece of material. Graphite brushed aluminum model shown</p>',
+      ptext: '<p> Pencil’s certified Bluetooth Smart wireless delivers a fast, stable connection with industry-leading power conservation </p><br /><p> Each Pencil is milled from a single, solid piece of material. Graphite brushed aluminum model shown</p>',
+      pimage: '/assets/img/rubik_background3.png'
+    }
+  };
+};
+
 exports.path = function (req) {
     return req.url;
 };
