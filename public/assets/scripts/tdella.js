@@ -8,106 +8,7 @@ $.GUI().create('Init', function ( gui ) {
 
 $.GUI().start('Init', {});
 */
-(function init (TDella) {
-  $(document).ready( function () {
-    TDella.Browser.init();
-
-    if (TDella.Browser.browser == 'Explorer' && TDella.Browser.version <= 9) {
-      $('body').html(better_browser);   
-    }
-
-    window_width = $(window).width();
-    window_height = $(window).height();
-
-    burger_menu = $('nav[role="navigation"]').hasClass('navbar-burger') ? true : false;
-
-    if ( !Modernizr.touch ) {
-
-      $('body').addClass('no-touch');
-      no_touch_screen = true;
-    }
-
-    TDella.initAnimationsCheck();
-
-    if ( window_width < 992 || burger_menu ) {
-      TDella.initRightMenu();   
-    }
-
-    if ( window_width < 992 ) {
-      $('.over-area').each(function () {
-        var click = $(this).attr("onClick"); 
-        if ( click == '' ) {
-          src = "TDella.showModal(this)";
-          $(this).attr("onClick", src);
-        }
-      });
-    
-      TDella.checkResponsiveImage();
-    }
-
-    setTimeout(function () {
-      $('.loading').css('opacity','0');
-
-      setTimeout(function(){
-        $('.loading').addClass('hide');
-      }, 500);
-    }, 3000);
-
-    if ( $('#contactUsMap').length != 0 ) {
-      TDella.initGoogleMaps();   
-    }
-
-    if ( $('.content-with-opacity').length != 0 ) {
-      TDella.opacity = 1;
-    }
-
-  });
-
-  $(window).load(function () {
-    TDella.initAnimationsCheck();
-  });  
-
-  $(window).resize(function () {
-
-    if ( $(window).width() < 992 ) {
-      TDella.initRightMenu();  
-      TDella.checkResponsiveImage(); 
-    }
-
-    if ( $(window).width() > 992 && !burger_menu ) {
-      $('nav[role="navigation"]').removeClass('navbar-burger');
-      TDella.misc.navbar_menu_visible = 1;
-      navbar_initialized = false;
-    }
-  });
-
-  $(window).on('scroll',function () {
-    TDella.checkScrollForTransparentNavbar();    
-
-    if ( window_width > 992 ) {
-      TDella.checkScrollForParallax();
-    }
-
-    if ( TDella.opacity == 1 ) {
-      TDella.checkScrollForContentTransitions();
-    }
-  });
-
-  $('a[data-scroll="true"]').click(function(e){         
-    var scroll_target = $(this).data('id');
-    var scroll_trigger = $(this).data('scroll');
-
-    if ( scroll_trigger == true && scroll_target !== undefined ) {
-      e.preventDefault();
-    
-      $('html, body').animate({
-        scrollTop: $(scroll_target).offset().top - 50
-      }, 1000);
-    }
-  });
-}).call(TDella);
-
-TDella = (function () {
+var TDella = (function () {
 
   var scroll, 
       search = 0, 
@@ -123,15 +24,15 @@ TDella = (function () {
 
   var window_height, window_width, burger_menu, offset_diff;
 
-  scroll = ( 2500 - $(window).width() ) / $(window).width();
+  //scroll = ( 2500 - $(window).width() ) / $(window).width();
 
   function determineScroll (s) {
     return s = ( 2500 - $( window ).width() ) / $( window ).width();
   }
 
   function debounce (func, wait, immediate) {
-
     var timeout;
+
     return function() {
       var context = this, args = arguments;
 
@@ -155,30 +56,30 @@ TDella = (function () {
     return (( elemTop < viewportBottom ) && ( elemBottom > viewportTop ));
   }
 
-  function onMouseMOve () {
-    $('.section-we-made-2 .scroller').mousemove(
-      function ( event ) {
-        if ( !Modernizr.touch ) {
+  function onMouseMove () {
+    var pixels;
 
-          if ( event.clientX < 200 ) { 
-            $(this).css("transform","translateX(0)");
-          }
+    $('.section-we-made-2 .scroller').mousemove(function ( event ) {
+      if ( !Modernizr.touch ) {
 
-          if (event.clientX > 200 && event.clientX < $(window).width()-200 && event.clientX % 2 == 0 ) {
-            pixels = -event.clientX * scroll;
-            
-            $(this).css("transform","translateX(" + pixels + "px)");
-          }
-
-          if(event.clientX > $(window).width()-200) { 
-            pixels = -(2500 - $(window).width());
-            $(this).css("transform","translateX(" + pixels + "px)");
-          }
-
-          $('.projects').css('overflow','hidden');
+        if ( event.clientX < 200 ) { 
+          $(this).css("transform","translateX(0)");
         }
+
+        if (event.clientX > 200 && event.clientX < $(window).width()-200 && event.clientX % 2 == 0 ) {
+          pixels = -event.clientX * scroll;
+            
+          $(this).css("transform","translateX(" + pixels + "px)");
+        }
+
+        if(event.clientX > $(window).width()-200) { 
+          pixels = -(2500 - $(window).width());
+          $(this).css("transform","translateX(" + pixels + "px)");
+        }
+
+        $('.projects').css('overflow','hidden');
       }
-    );
+    });
   }
 
   return {
@@ -323,7 +224,6 @@ TDella = (function () {
                 }
             }
     }, 17),
-    
     checkScrollForParallax: debounce(function() {	
         	no_of_elements = 0;
         	$('.parallax').each(function() {
@@ -340,26 +240,23 @@ TDella = (function () {
             });
     		
     }, 6),
-    
-    checkScrollForContentTransitions: debounce(function() {
-         $('.content-with-opacity').each(function() {
+    checkScrollForContentTransitions: debounce(function () {
+         $('.content-with-opacity').each(function () {
              var $content = $(this);
              
-             if(isElementInViewport($content)){          
-                  var window_top = $(window).scrollTop();
-            	  opacityVal = 1 - (window_top / 230);
+             if ( isElementInViewport ( $content ) ) {
+                var window_top = $(window).scrollTop();
+            	  opacity = 1 - (window_top / 230);
                   
-                  if(opacityVal < 0){
-                      opacityVal = 0;
-                      return;
+                  if ( opacity < 0 ) {
+                    opacity = 0;
+                    return;
                   } else {
-                    $content.css('opacity',opacityVal);    
+                    $content.css('opacity', opacity);
                   }
-                      
         	    }            
          });
     }, 6),
-    
     showModal: function(button){
         var id = $(button).data('target');
         var $project = $(button).closest('.project');
@@ -407,7 +304,6 @@ TDella = (function () {
             },500);
         });
     },
-    
     initGoogleMaps: function(){
         var myLatlng = new google.maps.LatLng(44.433530, 26.093928);
         
@@ -469,4 +365,103 @@ TDella = (function () {
       better_browser: '<div class="container"><div class="better-browser row"><div class="col-md-2"></div><div class="col-md-8"><h3>We are sorry but it looks like your Browser doesn\'t support our website Features. In order to get the full experience please download a new version of your favourite browser.</h3></div><div class="col-md-2"></div><br><div class="col-md-4"><a href="https://www.mozilla.org/ro/firefox/new/" class="btn btn-warning">Mozilla</a><br></div><div class="col-md-4"><a href="https://www.google.com/chrome/browser/desktop/index.html" class="btn ">Chrome</a><br></div><div class="col-md-4"><a href="http://windows.microsoft.com/en-us/internet-explorer/ie-11-worldwide-languages" class="btn">Internet Explorer</a><br></div><br><br><h4>Thank you!</h4></div></div>'
     }
   }
-}).call();
+}).call(this);
+
+(function init () {
+  $(document).ready( function () {
+    TDella.Browser.init();
+
+    if (TDella.Browser.browser == 'Explorer' && TDella.Browser.version <= 9) {
+      $('body').html(better_browser);   
+    }
+
+    window_width = $(window).width();
+    window_height = $(window).height();
+
+    burger_menu = $('nav[role="navigation"]').hasClass('navbar-burger') ? true : false;
+
+    if ( !Modernizr.touch ) {
+
+      $('body').addClass('no-touch');
+      no_touch_screen = true;
+    }
+
+    TDella.initAnimationsCheck();
+
+    if ( window_width < 992 || burger_menu ) {
+      TDella.initRightMenu();   
+    }
+
+    if ( window_width < 992 ) {
+      $('.over-area').each(function () {
+        var click = $(this).attr("onClick"); 
+        if ( click == '' ) {
+          src = "TDella.showModal(this)";
+          $(this).attr("onClick", src);
+        }
+      });
+    
+      TDella.checkResponsiveImage();
+    }
+
+    setTimeout(function () {
+      $('.loading').css('opacity','0');
+
+      setTimeout(function(){
+        $('.loading').addClass('hide');
+      }, 500);
+    }, 3000);
+
+    if ( $('#contactUsMap').length != 0 ) {
+      TDella.initGoogleMaps();   
+    }
+
+    if ( $('.content-with-opacity').length != 0 ) {
+      TDella.opacity = 1;
+    }
+
+  });
+
+  $(window).load(function () {
+    TDella.initAnimationsCheck();
+  });  
+
+  $(window).resize(function () {
+
+    if ( $(window).width() < 992 ) {
+      TDella.initRightMenu();  
+      TDella.checkResponsiveImage(); 
+    }
+
+    if ( $(window).width() > 992 && !burger_menu ) {
+      $('nav[role="navigation"]').removeClass('navbar-burger');
+      TDella.misc.navbar_menu_visible = 1;
+      navbar_initialized = false;
+    }
+  });
+
+  $(window).on('scroll',function () {
+    TDella.checkScrollForTransparentNavbar();    
+
+    if ( window_width > 992 ) {
+      TDella.checkScrollForParallax();
+    }
+
+    if ( TDella.opacity == 1 ) {
+      TDella.checkScrollForContentTransitions();
+    }
+  });
+
+  $('a[data-scroll="true"]').click(function(e){         
+    var scroll_target = $(this).data('id');
+    var scroll_trigger = $(this).data('scroll');
+
+    if ( scroll_trigger == true && scroll_target !== undefined ) {
+      e.preventDefault();
+    
+      $('html, body').animate({
+        scrollTop: $(scroll_target).offset().top - 50
+      }, 1000);
+    }
+  });
+}).call(TDella);

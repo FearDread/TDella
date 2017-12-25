@@ -1,4 +1,5 @@
 /* Home page GUI Script */
+// TODO: Add php script support via backend code, to call sharrre plugin 
 $.GUI().create('Home', function (gui) {
 
   if ( !Modernizr.touch ) {
@@ -45,8 +46,8 @@ $.GUI().create('Home', function (gui) {
       },
       enableHover: false,
       enableTracking: true,
-      buttons: { twitter: {via: 'CreativeTim'}},
-      click: function(api, options){
+      buttons: { twitter: { via: 'T`Della' }},
+      click: function (api, options) {
         api.simulateClick();
         api.openPopup('twitter');
       },
@@ -73,7 +74,7 @@ $.GUI().create('Home', function (gui) {
       },
       enableHover: false,
       enableTracking: true,
-      click: function(api, options){
+      click: function (api, options) {
         api.simulateClick();
         api.openPopup('facebook');
       },
@@ -86,7 +87,10 @@ $.GUI().create('Home', function (gui) {
       },
       enableHover: false,
       enableTracking: true,
-      click: function(api, options){
+      buttons: { 
+        googlePlus: { url: '' }
+      },
+      click: function (api, options) {
         api.simulateClick();
         api.openPopup('googlePlus');
       },
@@ -114,13 +118,15 @@ $.GUI().create('Home', function (gui) {
       },
       enableHover: false,
       enableTracking: true,
-      click: function(api, options){
+      buttons: { 
+        googlePlus: { url: '' }
+      },
+      click: function (api, options) {
         api.simulateClick();
         api.openPopup('googlePlus');
       },
       template: '<button class="btn btn-info btn-social btn-neutral btn-block"><i class="fa fa-google-plus-square"></i> Google+ &middot; {total}</button>'
     });
-
   }
 
   return {
@@ -128,7 +134,7 @@ $.GUI().create('Home', function (gui) {
       gui.log('Load method called in home.js :', TDella);
 
       initBoxSlider();
-      initSharePlugin();
+      // initSharePlugin();
 
       TDella.onMouseMove();
     },
