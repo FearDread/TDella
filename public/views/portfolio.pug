@@ -32,12 +32,6 @@ block content
               a(href='', data-scroll='true', data-id='#clients')
                 | Clients
             li
-              a(href='', data-scroll='true', data-id='#team')
-                | Code Names
-            li
-              a(href='', data-scroll='true', data-id='#numbers')
-                | Numbers
-            li
               a(href='', data-scroll='true', data-id='#contact')
                 | Contact
         // /.navbar-collapse
@@ -52,8 +46,8 @@ block content
             .content
               p
                 span by 
-                | Tracy  
-              h1 T`Della Portfolio 
+                | T`Della Creations
+              h1 Portfolio
               .separator-container
                 .separator.line-separator ✻
               h5 See some of my works and how its done! 
@@ -73,21 +67,9 @@ block content
                   .separator.line-separator ⌘
                 p
                   | I designed this site so you can get to know me on a personal level. My career as a professional photographer, my portfolio, my personal photography, my blog, my favourite quotes, and so much more. So please sit back and enjoy!.
-        #carousel
-          #carousel-example-generic.carousel.slide.add-animation.animation-1(data-interval='false')
-            // Wrapper for slides
-            .carousel-inner.pattern-image
-              .item
-                img.full-image(src='/assets/images/books/img_01.jpg', alt='Awesome Image')
-              .item
-                img.full-image(src='/assets/images/books/img_08.jpg', alt='Awesome Image')
-              .item.active
-                img.full-image(src='/assets/images/books/img_12.jpg', alt='Awesome Image')
-            // Controls
-            a.left.carousel-control(href='#carousel-example-generic', data-slide='prev')
-              span.fa.fa-angle-left.hidden-md.hidden-lg
-            a.right.carousel-control(href='#carousel-example-generic', data-slide='next')
-              span.fa.fa-angle-right.hidden-ms.hidden-lg
+        div.parallax.full-image.pattern-image
+          img.full-image(src='/assets/images/alt_background.jpg', alt='Awesome Image')
+        
       #values.section.section-we-do-2
         .container
           .title.add-animation
@@ -133,6 +115,7 @@ block content
               .separator-container
                 .separator.line-separator ⌘
               p You cand see some of my stuff here, the full projects are on Tumblr.
+        .projects
           .info.add-animation.animation-1
             p.text-center.text-gray Custom Made Scrapbooks 
           .row.scroller
@@ -148,47 +131,47 @@ block content
             .col-lg-3.col-md-6.col-sm-6
               .project.add-animation.animation-4
                 img(src='/assets/images/books/img_22.jpg')
+                a.over-area.color-black(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_4')
+                  .content.hidden-xs
+                    h4 See The Jucie Details! 
+        .projects
+          .info.add-animation.animation-1
+            p.text-center.text-gray Stylish Boxes and Journals 
+          .row.scroller
+            .col-lg-3.col-md-6.col-sm-6
+              .project.add-animation.animation-1
+                img(src='/assets/images/books/img_13.jpg')
+            .col-lg-3.col-md-6.col-sm-6
+              .project.add-animation.animation-2
+                img(src='/assets/images/books/img_14.jpg')
+            .col-lg-3.col-md-6.col-sm-6
+              .project.add-animation.animation-3
+                img(src='/assets/images/books/img_15.jpg')
+            .col-lg-3.col-md-6.col-sm-6
+              .project.add-animation.animation-4
+                img(src='/assets/images/books/img_17.jpg')
+                a.over-area.color-gold(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_4')
+                  .content.hidden-xs
+                    h4 See The Jucie Details! 
+        .projects
+          .info.add-animation.animation-1
+            p.text-center.text-gray Bear's Oldtimer Muscle Car
+          .row.scroller
+            .col-lg-3.col-md-6.col-sm-6
+              .project.add-animation.animation-1
+                img(src='/assets/images/books/img_25.jpg')
+            .col-lg-3.col-md-6.col-sm-6
+              .project.add-animation.animation-2
+                img(src='/assets/images/books/img_26.jpg')
+            .col-lg-3.col-md-6.col-sm-6
+              .project.add-animation.animation-3
+                img(src='/assets/images/books/img_27.jpg')
+            .col-lg-3.col-md-6.col-sm-6
+              .project.add-animation.animation-4
+                img(src='/assets/images/books/img_24.jpg')
                 a.over-area.color-blue(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_4')
                   .content.hidden-xs
                     h4 See The Jucie Details! 
-          .projects
-            .info.add-animation.animation-1
-              p.text-center.text-gray Stylish Boxes and Journals 
-            .row.scroller.scroller-portrait
-              .col-lg-3.col-md-6.col-sm-6
-                .project.add-animation.animation-1
-                  img(src='/assets/images/books/img_17.jpg', style='margin-top: -100px')
-              .col-lg-3.col-md-6.col-sm-6
-                .project.add-animation.animation-2
-                  img(src='/assets/images/books/img_09.jpg', style='margin-top: -200px')
-              .col-lg-3.col-md-6.col-sm-6
-                .project.add-animation.animation-3
-                  img(src='/assets/images/books/img_30.jpg', style='margin-top: -100px')
-              .col-lg-3.col-md-6.col-sm-6
-                .project.add-animation.animation-4
-                  img(src='/assets/images/books/img_15.jpg', style='margin-top: -200px')
-                  a.over-area.color-blue(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_4')
-                    .content.hidden-xs
-                      h4 See The Jucie Details! 
-          .projects
-            .info.add-animation.animation-1
-              p.text-center.text-gray Bear's Oldtimer Muscle Car
-            .row.scroller
-              .col-lg-3.col-md-6.col-sm-6
-                .project.add-animation.animation-1
-                  img(src='/assets/img/projects/photographer_9.jpg')
-              .col-lg-3.col-md-6.col-sm-6
-                .project.add-animation.animation-2
-                  img(src='/assets/img/projects/photographer_10.jpg')
-              .col-lg-3.col-md-6.col-sm-6
-                .project.add-animation.animation-3
-                  img(src='/assets/img/projects/photographer_11.jpg')
-              .col-lg-3.col-md-6.col-sm-6
-                .project.add-animation.animation-4
-                  img(src='/assets/img/projects/photographer_12.jpg')
-                  a.over-area.color-blue(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_4')
-                    .content.hidden-xs
-                      h4 See The Jucie Details! 
 
       include includes/fragment_contact
       include includes/fragment_footer
