@@ -21,7 +21,9 @@ var TDella = (function () {
       navbar_initialized = false,
       timestamp = Date.now();
 
-  var window_height, window_width, burger_menu, offset_diff;
+  var burger_menu, offset_diff;
+  var window_width = $(window).width();
+  var window_height = $(window).height();
 
   scroll = ( 2500 - $( window ).width() ) / $( window ).width();
 
@@ -81,9 +83,6 @@ var TDella = (function () {
     onMouseMove: onMouseMove,
     initAnimationsCheck: function () {
       var waypoints;
-
-      window_width = $(window).width();
-      window_height = $(window).height();
 
       $('[class*="add-animation"]').each(function () {
          offset_diff = 30;
@@ -367,6 +366,8 @@ var TDella = (function () {
 (function init () {
 
   $(document).ready( function () {
+    var window_width = $(window).width();
+    var window_height = $(window).height();
 
     TDella.Browser.init();
 
@@ -374,8 +375,6 @@ var TDella = (function () {
       $('body').html(better_browser);   
     }
 
-    window_width = $(window).width();
-    window_height = $(window).height();
 
     burger_menu = $('nav[role="navigation"]').hasClass('navbar-burger') ? true : false;
 
@@ -440,12 +439,9 @@ var TDella = (function () {
     }
   });
 
-  $(window).on('scroll',function () {
+  $(window).on('scroll', function () {
     TDella.checkScrollForTransparentNavbar();
-
-    if ( window_width > 992 ) {
-      TDella.checkScrollForParallax();
-    }
+    TDella.checkScrollForParallax();
 
     if ( TDella.opacity == 1 ) {
       TDella.checkScrollForContentTransitions();

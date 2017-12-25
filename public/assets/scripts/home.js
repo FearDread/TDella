@@ -40,20 +40,6 @@ $.GUI().create('Home', function (gui) {
   }
 
   function initSharePlugin () {
-    $('#twitter').sharrre({
-      share: {
-        twitter: true
-      },
-      enableHover: false,
-      enableTracking: true,
-      buttons: { twitter: { via: 'T`Della' }},
-      click: function (api, options) {
-        api.simulateClick();
-        api.openPopup('twitter');
-      },
-      template: '<button class="btn btn-info btn-social btn-neutral btn-block"><i class="fa fa-twitter"></i> Twitter &middot; {total}</button>'
-    });
-
     $('#twitterNav').sharrre({
       share: {
         twitter: true
@@ -85,11 +71,9 @@ $.GUI().create('Home', function (gui) {
       share: {
         googlePlus: true
       },
+      urlCurl: '',
       enableHover: false,
       enableTracking: true,
-      buttons: { 
-        googlePlus: { url: '' }
-      },
       click: function (api, options) {
         api.simulateClick();
         api.openPopup('googlePlus');
@@ -116,11 +100,9 @@ $.GUI().create('Home', function (gui) {
       share: {
         googlePlus: true
       },
+      urlCurl: '',
       enableHover: false,
       enableTracking: true,
-      buttons: { 
-        googlePlus: { url: '' }
-      },
       click: function (api, options) {
         api.simulateClick();
         api.openPopup('googlePlus');
@@ -134,7 +116,7 @@ $.GUI().create('Home', function (gui) {
       gui.log('Load method called in home.js :', TDella);
 
       initBoxSlider();
-      // initSharePlugin();
+      initSharePlugin();
 
       TDella.onMouseMove();
     },

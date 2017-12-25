@@ -3616,7 +3616,7 @@ body.noscroll {
   }
   .section-we-made-2 .projects .row.scroller [class^="col-"] .project {
     margin-bottom: 50px;
-    height: 400px;
+    height: 350px;
   }
   .section-we-made-2 .projects .row.scroller.scroller-portrait .project {
     height: 550px;
