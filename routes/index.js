@@ -3,8 +3,9 @@
 /*******************************************/
 // TODO: Add utils cleanObj method to verify fresh object used every tiome
 // TODO: Add utils.pageObj method to add default data object for page renders
-var utils, pubdir, data, config;
+var utils, pubdir, data, config, php;
 
+php = require('../src/modules/php');
 config = require('../src/config');
 utils = require('../src/utils');
 
@@ -18,35 +19,33 @@ exports.add = function (app) {
 		next();
 	});
 
+  app.use('*.php',function (request, response, next) {
+    console.log('php module : ', php);
+
+    php.phpFolder = '../src/php/';
+    php.parseFile(request.originalUrl, function (result) {
+      response.write(result);
+      response.end();
+    });
+  });
+
 	app.get('/', function (req, res) {
-    console.log('render home page');
 
 		res.render('home', data);
 	});
 
   app.get('/order-now', function (req, res) {
-    console.log('render order page wizard');
 
     res.render('order', data);
   });
 
 	app.get('/about', function (req, res) {
-		console.log('render about page');
 
 		res.render('about', data);
 	});
 
 	app.get('/portfolio', function (req, res) {
-		console.log('render portfolio page');
 
 		res.render('portfolio', data);
 	});
-
-  // TODO: Remove this route and its views
-  app.get('/builder', function (req, res) {
-    console.log('render builder page');
-
-    res.render('builder', data);
-  });
-
 };
