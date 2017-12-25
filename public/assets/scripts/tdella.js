@@ -10,11 +10,10 @@ $.GUI().start('Init', {});
 */
 var TDella = (function () {
 
-  var scroll, 
+  var scroll 
       search = 0, 
       test = true,
       ftop = false,
-      opacity = 0,
       elements = 0,
       transition = 0,
       notouch = false,
@@ -24,11 +23,7 @@ var TDella = (function () {
 
   var window_height, window_width, burger_menu, offset_diff;
 
-  //scroll = ( 2500 - $(window).width() ) / $(window).width();
-
-  function determineScroll (s) {
-    return s = ( 2500 - $( window ).width() ) / $( window ).width();
-  }
+  scroll = ( 2500 - $( window ).width() ) / $( window ).width();
 
   function debounce (func, wait, immediate) {
     var timeout;
@@ -38,9 +33,7 @@ var TDella = (function () {
 
       clearTimeout(timeout);
       timeout = setTimeout(function() {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      }, wait);
+        timeout = null; if (!immediate) func.apply(context, args); }, wait);
       if (immediate && !timeout) func.apply(context, args);
     };
   };
@@ -83,12 +76,14 @@ var TDella = (function () {
   }
 
   return {
-    misc:{
-      navbar_menu_visible: 0
-    },
+    opacity: 0,
+    navbar_menu_visible: 0,
     onMouseMove: onMouseMove,
     initAnimationsCheck: function () {
       var waypoints;
+
+      window_width = $(window).width();
+      window_height = $(window).height();
 
       $('[class*="add-animation"]').each(function () {
          offset_diff = 30;
@@ -104,7 +99,7 @@ var TDella = (function () {
              $(this.element).removeClass('animate');
            }}, {
              offset: window_height - offset_diff
-         });
+           });
       });
     },
     initRightMenu: function () {
@@ -159,12 +154,14 @@ var TDella = (function () {
           
           $toggle.click(function (){    
 
-              if(rubik.misc.navbar_menu_visible == 1) {                    
+              if(TDella.navbar_menu_visible == 1) {                    
                   $('html').removeClass('nav-open'); 
-                  rubik.misc.navbar_menu_visible = 0;
                   $('#bodyClick').remove();
-                   setTimeout(function(){
-                      $toggle.removeClass('toggled');
+
+                  TDella.navbar_menu_visible = 0;
+
+                  setTimeout(function(){
+                    $toggle.removeClass('toggled');
                    }, 550);
               
               } else {
@@ -175,7 +172,7 @@ var TDella = (function () {
                   div = '<div id="bodyClick"></div>';
                   $(div).appendTo("body").click(function() {
                       $('html').removeClass('nav-open');
-                      rubik.misc.navbar_menu_visible = 0;
+                      TDella.navbar_menu_visible = 0;
                       $('#bodyClick').remove();
                        setTimeout(function(){
                           $toggle.removeClass('toggled');
@@ -183,7 +180,7 @@ var TDella = (function () {
                   });
                  
                   $('html').addClass('nav-open');
-                  rubik.misc.navbar_menu_visible = 1;
+                  TDella.navbar_menu_visible = 1;
                   
               }
           });
@@ -241,23 +238,23 @@ var TDella = (function () {
     		
     }, 6),
     checkScrollForContentTransitions: debounce(function () {
-         $('.content-with-opacity').each(function () {
-             var $content = $(this);
+      $('.content-with-opacity').each(function () {
+        var $content = $(this);
              
-             if ( isElementInViewport ( $content ) ) {
-                var window_top = $(window).scrollTop();
-            	  opacity = 1 - (window_top / 230);
+        if ( isElementInViewport ( $content ) ) {
+          var window_top = $(window).scrollTop();
+          opacityVal = 1 - (window_top / 230);
                   
-                  if ( opacity < 0 ) {
-                    opacity = 0;
-                    return;
-                  } else {
-                    $content.css('opacity', opacity);
-                  }
-        	    }            
-         });
+          if ( opacityVal < 0 ) {
+            opacityVal = 0;
+            return;
+          } else {
+            $content.css('opacity', opacityVal);
+          }
+        }            
+      });
     }, 6),
-    showModal: function(button){
+    showModal: function ( button ) {
         var id = $(button).data('target');
         var $project = $(button).closest('.project');
         
@@ -368,7 +365,9 @@ var TDella = (function () {
 }).call(this);
 
 (function init () {
+
   $(document).ready( function () {
+
     TDella.Browser.init();
 
     if (TDella.Browser.browser == 'Explorer' && TDella.Browser.version <= 9) {
@@ -383,7 +382,7 @@ var TDella = (function () {
     if ( !Modernizr.touch ) {
 
       $('body').addClass('no-touch');
-      no_touch_screen = true;
+      var no_touch_screen = true;
     }
 
     TDella.initAnimationsCheck();
@@ -435,13 +434,14 @@ var TDella = (function () {
 
     if ( $(window).width() > 992 && !burger_menu ) {
       $('nav[role="navigation"]').removeClass('navbar-burger');
-      TDella.misc.navbar_menu_visible = 1;
+
+      TDella.navbar_menu_visible = 1;
       navbar_initialized = false;
     }
   });
 
   $(window).on('scroll',function () {
-    TDella.checkScrollForTransparentNavbar();    
+    TDella.checkScrollForTransparentNavbar();
 
     if ( window_width > 992 ) {
       TDella.checkScrollForParallax();

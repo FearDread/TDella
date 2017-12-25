@@ -1,7 +1,6 @@
 /* Portfolio page GUI Script */
 $.GUI().create('Portfolio', function ( gui ) {
 
-
   return {
     load: function () {
       gui.log('Load called in folio.js', gui);

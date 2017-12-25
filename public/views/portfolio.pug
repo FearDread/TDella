@@ -42,7 +42,7 @@ block content
                 | Contact
         // /.navbar-collapse
     .wrapper
-      #header3.section.section-header
+      #header3.section.section-header.content-with-opacity
         #video-container-3.full-image.pattern-image.filter.filter-color-black(data-color='black')
           video.bgvid(preload='auto', autoplay='true', loop='loop', muted='muted', volume='0', responsive-src='https://download.unsplash.com/photo-1428517105157-da7cfd843eb8')
             source(src='/assets/video/Snow_Wires.webm', type='video/webm')
@@ -59,7 +59,7 @@ block content
               h5 See some of my works and how its done! 
         a.scroll-arrow.hidden-xs.hidden-sm(href='', data-scroll='true', data-id='#whoWeAre')
           i.fa.fa-angle-down
-    li
+
       #whoWeAre.section.section-we-are-1
         .text-area
           .container
@@ -148,7 +148,7 @@ block content
             .col-lg-3.col-md-6.col-sm-6
               .project.add-animation.animation-4
                 img(src='/assets/images/books/img_22.jpg')
-                a.over-area.color-blue(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_4')
+                a.over-area.color-blue(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_4')
                   .content.hidden-xs
                     h4 See The Jucie Details! 
           .projects
@@ -167,7 +167,7 @@ block content
               .col-lg-3.col-md-6.col-sm-6
                 .project.add-animation.animation-4
                   img(src='/assets/images/books/img_15.jpg', style='margin-top: -200px')
-                  a.over-area.color-blue(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_4')
+                  a.over-area.color-blue(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_4')
                     .content.hidden-xs
                       h4 See The Jucie Details! 
           .projects
@@ -186,11 +186,11 @@ block content
               .col-lg-3.col-md-6.col-sm-6
                 .project.add-animation.animation-4
                   img(src='/assets/img/projects/photographer_12.jpg')
-                  a.over-area.color-blue(href='javascript:void(0)', onclick='rubik.showModal(this)', data-target='project_4')
+                  a.over-area.color-blue(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_4')
                     .content.hidden-xs
                       h4 See The Jucie Details! 
-      include includes/fragment_contact
 
+      include includes/fragment_contact
       include includes/fragment_footer
 
     include includes/modals/modal_1 
