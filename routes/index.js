@@ -48,4 +48,9 @@ exports.add = function (app) {
 
 		res.render('portfolio', data);
 	});
+
+  app.get('/privacy-policy', function (req, res) {
+
+    res.render('privacy', {});
+  });
 };
