@@ -81,6 +81,9 @@ var TDella = (function () {
     opacity: 0,
     navbar_menu_visible: 0,
     onMouseMove: onMouseMove,
+    initCommingSoonCheck: function () {
+
+    },
     initAnimationsCheck: function () {
       var waypoints;
 

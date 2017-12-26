@@ -154,3 +154,13 @@ exports.xmlToJson = function (xml) {
 exports.each = function(array) {
     return array.forEach.call(array);
 };
+
+exports.showCommingSoon = function(app) {
+
+  app.get('*', function (req, res) {
+
+    res.render('comingsoon', undefined);
+
+  });
+
+};
