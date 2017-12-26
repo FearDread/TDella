@@ -81,9 +81,6 @@ var TDella = (function () {
     opacity: 0,
     navbar_menu_visible: 0,
     onMouseMove: onMouseMove,
-    initCommingSoonCheck: function () {
-
-    },
     initAnimationsCheck: function () {
       var waypoints;
 
@@ -368,7 +365,9 @@ var TDella = (function () {
 
 (function init () {
 
+
   $(document).ready( function () {
+
     var window_width = $(window).width();
     var window_height = $(window).height();
 
