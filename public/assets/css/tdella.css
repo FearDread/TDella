@@ -1815,7 +1815,8 @@ a:hover {
   top: 0;
   width: 100%;
   height: 100%;
-  background: white;
+  /* background: white; */
+  background: rgba(2,5,5,1);
   z-index: 1032;
   opacity: 1;
   transition: opacity 0.5s cubic-bezier(0.7, 0, 0.3, 1);
@@ -1840,8 +1841,9 @@ a:hover {
   width: 40px;
 }
 .loading .loading-container p {
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom: 30px;
+  color: rgba(255,255,255,.6);
 }
 
 /* SECTIONS */
@@ -2418,7 +2420,6 @@ a.carousel-control span.fa {
   font-weight: 100;
   font-size: 6em;
   font-family: "Slim-Joe";
-  text-transform: uppercase;
   text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.3), -2px 4px 2px rgba(0, 0, 0, 0.1);
 }
 .section-header h5 {
@@ -3832,4 +3833,9 @@ body.noscroll {
   footer .row div:first-child .title {
     margin-top: 0;
   }
+}
+
+.cursive {
+  font-family: 'Grand Hotel',cursive !important;
+  text-transform: none !important;
 }
