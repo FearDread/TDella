@@ -4,7 +4,8 @@ module.exports = {
   port: 4005,
   secret: 'tracy',
   hostname:'dev.tdella.com',
-  environment: 'development',
+  //environment: 'development',
+  environment: 'production',
   website: {
     name: 'tdella.com',
     developer: 'ghaptonstall@gmail.com',

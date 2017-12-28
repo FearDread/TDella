@@ -13,10 +13,13 @@ exports.add = function (app) {
 
 
   // tmp call to comming soon page via utils
-  utils.showCommingSoon(app);
-  return;
-
-  data = utils.addPageObj( config );
+  if ( config.environment == 'development' ) {
+    utils.showCommingSoon(app);
+    return;
+  } else if ( config.environment == 'production' ) {
+  
+    data = utils.addPageObj( config );
+  }
 
 	app.use( function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
