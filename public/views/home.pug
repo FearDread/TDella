@@ -41,7 +41,7 @@ block content
                 p.text-muted
                   span by 
                   | Tracy Delagardel 
-                h1 T`Della Creations
+                h1.color-white.cursive T`Della Creations
                 .separator-container
                   .separator.line-separator ✻
                 h5.text-muted
@@ -81,17 +81,17 @@ block content
                         img(src='/assets/images/books/img_001.jpg')
                 .col-md-5.col-sm-5.col-sm-offset-1.col-md-offset-1
                   .title
-                    h2 Create your own Book Today! 
+                    h2.cursive Create your own Book Today! 
                     .separator-container
                       .separator.line-separator ♦
                     p
                       | Create your own custom junk / travel journals made from repurposed books or templates by Jenofveve Designs.  Custom books for baby, birthday, wedding or any special occasion.
                     br
                     a.btn.btn-lg.btn-fill.btn-neutral.btn-animation(href='/portfolio')
-                      | Check out the Portfolio! 
+                      | View Portfolio! 
                       i.fa.fa-wrench
 
-        #section2.section.section-we-made-1.section-with-hover.section-examples
+        #section2.section.section-we-made-3.section-with-hover.section-examples
           .container
             .text-area
               .title
@@ -115,7 +115,7 @@ block content
               .col-md-6
                 .project.add-animation-stopped.animation-1.animate 
                   img(alt='...', src='/assets/images/books/img_013.jpg')
-                  a.over-area.color-presentation(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_4')
+                  a.over-area.color-presentation(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_2')
                     .content
                       h4 Travel Journal 
                       p
@@ -128,7 +128,7 @@ block content
               .col-md-6
                 .project.add-animation-stopped.animation-1.animate 
                   img(alt='...', src='/assets/images/books/img_17.jpg')
-                  a.over-area.color-presentation(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_1')
+                  a.over-area.color-presentation(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_3')
                     .content
                       h4 Photo Album 
                       p Keep memories forever in a unique way. 
@@ -200,6 +200,8 @@ block content
               include includes/fragment_footer
     
     include includes/modals/modal_1
+    include includes/modals/modal_2
+    include includes/modals/modal_3
     include includes/modals/modal_4
 
 block javascript
