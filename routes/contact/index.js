@@ -5,29 +5,21 @@
 var utils, pubdir, data, config, mailer;
 
 mailer = require('nodemailer');
-config = require('../src/config');
-utils = require('../src/utils');
+config = require('../../src/config');
+utils = require('../../src/utils');
 
 exports.add = function (app) {
+
 
   app.get('/contact-us', function (req, res) {
     console.log('render contact page and add email logic');
 
-    data = {
-      lat: '',
-      lng: '',
-      phone: config.support.phone,
-      email: config.support.email,
-      zip: '',
-      city: '',
-      state: '',
-      address: '',
-    };
+    data = utils.addPageObj(data);
     res.render('contact', data);
 
   });
 
-  app.post('/contact', function (req, res) {
+  app.post('/contact-us', function (req, res) {
       var opts, transport, edata;
 
       opts = {
@@ -61,6 +53,6 @@ exports.add = function (app) {
           res.render('contact', edata);
 
         };
-     });
+    });
   });
 };

@@ -1,7 +1,7 @@
 /*******************************************/
 /* TDella Creations Application Script     */
 /*******************************************/
-var server, host, port, utils, conig, routes;
+var server, host, port, utils, conig, routes, order, contact;
 
 /* NPM Modules */
 var fs = require('fs');
@@ -15,7 +15,11 @@ var bodyParser = require('body-parser');
 /* Begin App */
 app = express();
 pubdir = __dirname;
+
 routes = require('./routes');
+order = require('./routes/order');
+contact = require('./routes/contact');
+
 utils = require('./src/utils');
 config = require('./src/config');
 
@@ -35,6 +39,8 @@ app.use(session({ secret: config.secret }));
 app.use(flash());
 
 routes.add(app);
+order.add(app);
+contact.add(app);
  
 server = app.listen(config.port, function () {
 	host = server.address().address;
