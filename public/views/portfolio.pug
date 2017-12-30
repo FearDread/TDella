@@ -180,6 +180,7 @@ block content
     include includes/modals/modal_4 
 
 block javascript
+  script(defer src="https://maps.googleapis.com/maps/api/js?key=" + config.google.maps.key + "&callback=initMap", type="text/javascript")
   script(type='text/javascript', src='/assets/scripts/folio.js')
 
 

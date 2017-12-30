@@ -9,10 +9,11 @@ html(lang='en')
     meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
 
     -if ( environment == "development" ) {
-      //- link(href='/assets/css/fonts/font-awesome-3.4.0.min.css', rel='stylesheet')
+      link(href='/assets/css/fonts/font-awesome-3.4.0.min.css', rel='stylesheet')
       link(href='/assets/css/fonts/font-googleapis-Droid-Serif.css', rel='stylesheet')
       link(href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', rel='stylesheet')
     -} else {
+      link(href='#{ config.google.fonts.droid }', rel='stylesheet')
       link(href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', rel='stylesheet')
       link(href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700', rel='stylesheet', type='text/css')
     -} 
@@ -20,7 +21,7 @@ html(lang='en')
     link(href='/assets/css/bootstrap.css', rel='stylesheet')
     link(href='/assets/css/tdella.css', rel='stylesheet')
     link(href='/assets/css/fonts/pe-icon-7-stroke.css', rel='stylesheet')
-    link(href='/assets/css/fonts/Rubik-Fonts.css', rel='stylesheet')
+    link(href='/assets/css/fonts/Della-Fonts.css', rel='stylesheet')
     link(href='http://fonts.googleapis.com/css?family=Grand+Hotel', rel='stylesheet', type='text/css')
 
     block css
