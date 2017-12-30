@@ -38,10 +38,12 @@ exports.addPageObj = function (props) {
 
   return {
     title: 'T`Della Creations',
-    config: props,
-    url: props.website.name,
-    social: props.website.social,
-    environment: props.environment,
+    google: {
+      key: props.website.google.maps.key || '' 
+    },
+    url: props.website.name || '',
+    social: props.website.social || '',
+    environment: props.environment || '',
     modal_1: {
       title: '',
       pname: '',

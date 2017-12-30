@@ -38,7 +38,8 @@ exports.add = function (app) {
 		res.render('home', data);
 	});
 
-	app.get(['/about-us','portfolio'], function (req, res) {
+	app.get(['/about-us','/portfolio'], function (req, res) {
+
 		res.render('portfolio', data);
 	});
 

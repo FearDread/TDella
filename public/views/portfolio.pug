@@ -34,7 +34,7 @@ block content
             li
               a(href='', data-scroll='true', data-id='#contact')
                 | Contact
-        // /.navbar-collapse
+
     .wrapper
       #header3.section.section-header.content-with-opacity
         #video-container-3.full-image.pattern-image.filter.filter-color-black(data-color='black')
@@ -47,7 +47,7 @@ block content
               p
                 span by 
                 | T`Della Creations
-              h1 Portfolio
+              h1.cursive Portfolio
               .separator-container
                 .separator.line-separator ✻
               h5 See some of my works and how its done! 
@@ -180,7 +180,7 @@ block content
     include includes/modals/modal_4 
 
 block javascript
-  script(defer src="https://maps.googleapis.com/maps/api/js?key=" + config.google.maps.key + "&callback=initMap", type="text/javascript")
+  script(defer src="https://maps.googleapis.com/maps/api/js?key=" + google.key + "&callback=initMap", type="text/javascript")
   script(type='text/javascript', src='/assets/scripts/folio.js')
 
 
