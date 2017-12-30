@@ -3,24 +3,25 @@ module.exports = {
   db: 'mongodb://localhost/tdella_db',
   port: 4005,
   secret: 'tracy',
-  hostname:'dev.tdella.com',
-  //environment: 'development',
+  hostname:'tdella.com',
   environment: 'production',
   website: {
     name: 'tdella.com',
     developer: 'ghaptonstall@gmail.com',
     social: {
-      facebook: '',
-      twitter: '',
+      facebook: 'https://www.faacebook.com/tdellacreations',
+      youtube: '',
       gplus: '',
-      instagram: ''
     },
     google: {
       api: '',
-      font: '',
+      fonts: {
+        droid: 'http://fonts.googleapis.com/css?family=Droid+Serif:400,700',
+        grand: 'http://fonts.googleapis.com/css?family=Grand+Hotel'
+      },
       maps: {
-        key: '',
-        lat: 0, 
+        key: 'AIzaSyBygXxRQ9G2Zw8zHWdBcg9GpoyxCOvehfM',
+        lat: 0,
         lng: 0
       }, 
     },
@@ -42,7 +43,8 @@ module.exports = {
         custom: '300'
       },
       support: {
-        email: '',
+        email: 'support@tdella.com',
+        sales: 'sales@tdella.com',
         address: '',
         city: 'Las Vegas',
         state: 'NV',

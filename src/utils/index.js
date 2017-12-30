@@ -38,6 +38,7 @@ exports.addPageObj = function (props) {
 
   return {
     title: 'T`Della Creations',
+    config: props,
     url: props.website.name,
     social: props.website.social,
     environment: props.environment,
@@ -81,6 +82,18 @@ exports.isAuth = function (req, res, next) {
     }
 
     return res.json({success: false, message: 'Your not authenticated, please login.'});
+};
+
+exports.cleanObj = function (obj) {
+  var key, val;
+
+  if ( !utils.isObj(obj) ) {
+    console.log('Error:: ', obj);
+  }
+
+  for ( var i = 0; i < obj.keys; i++ ) {
+
+  }
 };
 
 exports.merge = function (out) {
@@ -158,9 +171,6 @@ exports.each = function(array) {
 exports.showCommingSoon = function(app) {
 
   app.get('*', function (req, res) {
-
     res.render('comingsoon', undefined);
-
   });
-
 };
