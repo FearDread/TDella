@@ -1,6 +1,5 @@
 /* Home page GUI Script */
-// TODO: Add php script support via backend code, to call sharrre plugin 
-$.GUI().create('Home', function (gui) {
+$.GUI().create('Home', function ( gui ) {
 
   if ( !Modernizr.touch ) {
       $('body').addClass('no-touch');
@@ -8,38 +7,41 @@ $.GUI().create('Home', function (gui) {
   }
 
   function initBoxSlider () {
-    $(document).ready(function() {
+    gui.$(document).ready(function() {
+      var $box, opts_1, opts_2, opts_3;
 
-      var $box = $('.box');
+      $box = gui.$('.box');
 
-        var options_1 = {
-            speed: 1200
-          , autoScroll: true
-          , timeout: 5000
-          , effect: 'scrollHorz3d'
-        };
+      opts_1 = {
+        speed: 1200,
+        autoScroll: true,
+        timeout: 5000,
+        effect: 'scrollHorz3d'
+      };
 
-        var options_2 = {
-            speed: 1200
-          , timeout: 1800
-          , autoScroll: true
-          , effect: 'scrollHorz3d'
-        };
+      opts_2 = {
+        speed: 1200,
+        timeout: 1800,
+        autoScroll: true,
+        effect: 'scrollHorz3d'
+      };
 
-        var options_3 = {
-            speed: 1200
-          , timeout: 6200
-          , autoScroll: true
-          , effect: 'scrollHorz3d'
-        };
+      opts_3 = {
+        speed: 1200,
+        timeout: 6200,
+        autoScroll: true,
+        effect: 'scrollHorz3d'
+      };
 
-      $('.box-1').boxSlider(options_1);
-      $('.box-2').boxSlider(options_2);
-      $('.box-3').boxSlider(options_3);
+      $('.box-1').boxSlider(opts_1);
+      $('.box-2').boxSlider(opts_2);
+      $('.box-3').boxSlider(opts_3);
     });
   }
 
   function initSharePlugin () {
+
+    /* Navigation Share Icons */
     $('#twitterNav').sharrre({
       share: {
         twitter: true
@@ -81,7 +83,7 @@ $.GUI().create('Home', function (gui) {
       template: '<i class="fa fa-google-plus"></i>'
     });
 
-
+    /* Share Buttons */
 
     $('#facebook').sharrre({
       share: {
@@ -126,4 +128,4 @@ $.GUI().create('Home', function (gui) {
   };
 });
 
-$.GUI().start('Home', {});
+$.GUI().start('Home', TDella.globals);
