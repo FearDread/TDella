@@ -40,6 +40,15 @@ exports.add = function (app) {
 
 	app.get(['/about-us','/portfolio'], function (req, res) {
 
+    data.modal_1 = {
+      title: '',
+      pname: '',
+      ptext: '',
+      text_right: '',
+      text_left: '',
+      pimage: ''
+    };
+
 		res.render('portfolio', data);
 	});
 

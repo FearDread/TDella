@@ -41,15 +41,15 @@ module.exports = {
         large: '100',
         boxes: '200',
         custom: '300'
-      },
-      support: {
-        email: 'support@tdella.com',
-        sales: 'sales@tdella.com',
-        address: '',
-        city: 'Las Vegas',
-        state: 'NV',
-        zipcode: ''
       }
+    },
+    support: {
+      email: 'support@tdella.com',
+      sales: 'sales@tdella.com',
+      address: '',
+      city: 'Las Vegas',
+      state: 'NV',
+      zipcode: ''
     }
   }
 }

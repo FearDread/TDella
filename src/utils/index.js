@@ -44,14 +44,7 @@ exports.addPageObj = function (props) {
     url: props.website.name || '',
     social: props.website.social || '',
     environment: props.environment || '',
-    modal_1: {
-      title: '',
-      pname: '',
-      ptext: '',
-      text_right: '',
-      text_left: '',
-      pimage: ''
-    },
+    support: props.support || {},
     modal_4: {
       title: 'Fancy Details',
       pname: 'Wedding Gift',
