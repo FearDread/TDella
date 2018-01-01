@@ -173,14 +173,11 @@ block content
                   .content.hidden-xs
                     h4 See The Jucie Details! 
 
-      include includes/fragment_contact
+        include includes/fragment_contact_2
       include includes/fragment_footer
 
     include includes/modals/modal_1 
     include includes/modals/modal_4 
 
 block javascript
-  script(defer src="https://maps.googleapis.com/maps/api/js?key=" + google.key + "&callback=initMap", type="text/javascript")
   script(type='text/javascript', src='/assets/scripts/folio.js')
-
-
