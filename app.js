@@ -23,6 +23,8 @@ contact = require('./routes/contact');
 utils = require('./src/utils');
 config = require('./src/config');
 
+config.environment = process.env.NODE_ENV;
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
