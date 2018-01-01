@@ -9,18 +9,18 @@ block content
     .section.contact-container
       .address-container.add-animation-stopped.animation-1.animate
         .address
-          h4 Where to meet ?
+          h4 The Della Mailing Address 
           p.text-gray
-            | 2578 Paris
+            | #{ support.street }
             br
-            | Rue Abel, 12
+            | #{ support.appartment }
             br
-            | Las Vegas, NV 
+            | #{ support.city }, #{ support.state } #{ support.zipcode }
           h4 Phone
-          p.text-gray 0456 / 71 21 39
-          h4 By the old way
-          a(href='mailto:tdellacreations@gmail.com')
-            p.text-gray tdellacreations@gmail.com 
+          p.text-gray #{ support.phone } 
+          h4 The Old Fashion way ... 
+          a(href='mailto:' + support.email)
+            p.text-gray #{ support.email }
       .map
         #contactUsMap.big-map(style='position: relative; overflow: hidden;')
 

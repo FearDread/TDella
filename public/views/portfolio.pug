@@ -131,12 +131,12 @@ block content
             .col-lg-3.col-md-6.col-sm-6
               .project.add-animation.animation-4
                 img(src='/assets/images/books/img_22.jpg')
-                a.over-area.color-black(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_4')
+                a.over-area.color-black(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_1')
                   .content.hidden-xs
-                    h4 See The Jucie Details! 
+                    h4 See Whats Included! 
         .projects
           .info.add-animation.animation-1
-            p.text-center.text-gray Stylish Boxes and Journals 
+            //-p.text-center.text-gray Stylish Boxes and Journals 
           .row.scroller
             .col-lg-3.col-md-6.col-sm-6
               .project.add-animation.animation-1
@@ -150,12 +150,12 @@ block content
             .col-lg-3.col-md-6.col-sm-6
               .project.add-animation.animation-4
                 img(src='/assets/images/books/img_17.jpg')
-                a.over-area.color-gold(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_4')
+                a.over-area.color-gold(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_2')
                   .content.hidden-xs
                     h4 See The Jucie Details! 
         .projects
           .info.add-animation.animation-1
-            p.text-center.text-gray Bear's Oldtimer Muscle Car
+            //-p.text-center.text-gray Bear's Oldtimer Muscle Car
           .row.scroller
             .col-lg-3.col-md-6.col-sm-6
               .project.add-animation.animation-1
@@ -169,7 +169,7 @@ block content
             .col-lg-3.col-md-6.col-sm-6
               .project.add-animation.animation-4
                 img(src='/assets/images/books/img_24.jpg')
-                a.over-area.color-blue(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_4')
+                a.over-area.color-blue(href='javascript:void(0)', onclick='TDella.showModal(this)', data-target='project_3')
                   .content.hidden-xs
                     h4 See The Jucie Details! 
 
@@ -177,7 +177,11 @@ block content
       include includes/fragment_footer
 
     include includes/modals/modal_1 
+    include includes/modals/modal_2 
+    include includes/modals/modal_3 
     include includes/modals/modal_4 
 
 block javascript
+  script(src="https://maps.googleapis.com/maps/api/js?key=" + google.key, type="text/javascript")
   script(type='text/javascript', src='/assets/scripts/folio.js')
+
