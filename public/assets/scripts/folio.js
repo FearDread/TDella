@@ -18,9 +18,7 @@ $.GUI().create('Portfolio', function ( gui ) {
         }
 
       });
-
     });
-
   }
 
   return {
