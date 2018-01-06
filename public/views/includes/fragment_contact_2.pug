@@ -19,7 +19,7 @@ block content
           h4 Phone
           p.text-gray #{ support.phone } 
           h4 The Old Fashion way ... 
-          a(href='mailto:' + support.email)
+          a(href='' + support.email).btn-contact
             p.text-gray #{ support.email }
       .map
         #contactUsMap.big-map(style='position: relative; overflow: hidden;')
