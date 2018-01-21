@@ -1,5 +1,6 @@
 /* TDella order page Module */
 $.GUI().create('Order', function ( gui ) {
+
   var searchVisible, transparent;
 
   searchVisible = 0;
@@ -74,7 +75,7 @@ $.GUI().create('Order', function ( gui ) {
 
   return {
     load: function () {
-      gui.log('order load method called');
+      gui.log('order load method called :: ', gui);
 
       _InitWizard();
 

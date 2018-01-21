@@ -15,6 +15,7 @@ exports.add = function (app) {
     console.log('render contact page and add email logic');
 
     data = utils.addPageObj(data);
+
     res.render('contact', data);
 
   });
